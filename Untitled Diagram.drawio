@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-17T20:52:13.376Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="yN-NOBiXpyUA7ubcsixo" version="22.1.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-17T22:46:57.023Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="WvPCQkPg0gQgmPFYUv-z" version="22.1.3" type="github">
   <diagram name="Page-1" id="QnDPWNosyGdadTyW6Ekd">
     <mxGraphModel dx="649" dy="1887" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
       <root>
@@ -171,6 +171,9 @@
         <mxCell id="_cTKvnzmP2ruFUYqaLfK-5" value="&quot;/messages&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#00CC00;" vertex="1" parent="_cTKvnzmP2ruFUYqaLfK-1">
           <mxGeometry x="20" y="129" width="60" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="_cTKvnzmP2ruFUYqaLfK-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="_cTKvnzmP2ruFUYqaLfK-1" source="_cTKvnzmP2ruFUYqaLfK-6" target="_cTKvnzmP2ruFUYqaLfK-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="_cTKvnzmP2ruFUYqaLfK-6" value="&quot;/posts&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#00CC00;" vertex="1" parent="_cTKvnzmP2ruFUYqaLfK-1">
           <mxGeometry x="20" y="162" width="60" height="30" as="geometry" />
         </mxCell>
@@ -185,6 +188,18 @@
         </mxCell>
         <mxCell id="_cTKvnzmP2ruFUYqaLfK-15" value="Shows the User their messages sent by other users, while also giving the option to create and send a new message" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="_cTKvnzmP2ruFUYqaLfK-1">
           <mxGeometry x="189.75" y="129" width="313.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_cTKvnzmP2ruFUYqaLfK-17" value="Contains all of the posts in the database, as well as the ability to create a new post and filter posts" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="_cTKvnzmP2ruFUYqaLfK-1">
+          <mxGeometry x="195.5" y="167" width="249" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_cTKvnzmP2ruFUYqaLfK-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="_cTKvnzmP2ruFUYqaLfK-1" source="_cTKvnzmP2ruFUYqaLfK-19" target="_cTKvnzmP2ruFUYqaLfK-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_cTKvnzmP2ruFUYqaLfK-19" value="&quot;/tagged_animals&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#00CC00;fontSize=15;" vertex="1" parent="_cTKvnzmP2ruFUYqaLfK-1">
+          <mxGeometry x="34" y="206" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_cTKvnzmP2ruFUYqaLfK-20" value="Shows all of the animals that a User has &quot;tagged&quot; to revisit latter" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="_cTKvnzmP2ruFUYqaLfK-1">
+          <mxGeometry x="215" y="226" width="188" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
