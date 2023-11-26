@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-25T21:47:43.039Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="CMyzCuJDte3_RK1_6TIV" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T20:34:35.909Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="vqMI222wqZsSrsYb6zkl" version="22.1.4" type="github">
   <diagram name="Page-1" id="QnDPWNosyGdadTyW6Ekd">
-    <mxGraphModel dx="1979" dy="1884" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
+    <mxGraphModel dx="1979" dy="1881" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -370,28 +370,28 @@
         <mxCell id="1Y42PiByceGQKW-uyaXE-60" value="SOMETHING NEW" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;" parent="1" vertex="1">
           <mxGeometry x="673" y="-1090" width="356" height="720" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-23" value="THE PROBLEM AND MY SOLUTION" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-23" value="THE PROBLEM AND MY SOLUTION" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-943" y="-1092" width="859" height="369" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-4" value="ANIMAL ABANDONMENT" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-4" value="ANIMAL ABANDONMENT" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="373" y="87" width="154" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-5" value="PROFITING PUPPYMILLS" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-5" value="PROFITING PUPPYMILLS" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="375" y="131" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-6" value="KENNEL AND SHELTER OVERCROWDING" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-6" value="KENNEL AND SHELTER OVERCROWDING" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="596" y="117" width="246" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-4" target="MYKW1UoXWGAR3DtBjXnS-6">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-4" target="MYKW1UoXWGAR3DtBjXnS-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-5" target="MYKW1UoXWGAR3DtBjXnS-6">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-5" target="MYKW1UoXWGAR3DtBjXnS-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-9" target="MYKW1UoXWGAR3DtBjXnS-5">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-9" target="MYKW1UoXWGAR3DtBjXnS-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d80073;strokeColor=#A50040;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-9" target="MYKW1UoXWGAR3DtBjXnS-26">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d80073;strokeColor=#A50040;strokeWidth=2;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-9" target="MYKW1UoXWGAR3DtBjXnS-26" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="202" y="195" />
@@ -400,13 +400,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-9" value="PEOPLE LOOKING FOR A NEW COMPANION" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-9" value="PEOPLE LOOKING FOR A NEW COMPANION" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="73" y="131" width="257" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-7" target="MYKW1UoXWGAR3DtBjXnS-4">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-7" target="MYKW1UoXWGAR3DtBjXnS-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#d80073;strokeColor=#A50040;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-7" target="MYKW1UoXWGAR3DtBjXnS-24">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#d80073;strokeColor=#A50040;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-7" target="MYKW1UoXWGAR3DtBjXnS-24" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="194" y="125" />
@@ -415,17 +415,44 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-7" value="TOUGH SITUATIONS WITHOUT EASY SAFE SOLUTIONS" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;glass=0;shadow=0;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-7" value="TOUGH SITUATIONS WITHOUT EASY SAFE SOLUTIONS" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;glass=0;shadow=0;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="58" y="87" width="272" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-7" target="MYKW1UoXWGAR3DtBjXnS-7">
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-7" target="MYKW1UoXWGAR3DtBjXnS-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-24" value="Make it easier for owners in tough situations, to find a new safe and loving home for their animal(s)." style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#FFFFFF;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-24" target="66fBQwTO3rRXyVcx0N7x-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-24" value="Make it easier for owners in tough situations, to find a new safe and loving home for their animal(s)." style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#FFFFFF;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="38" y="217" width="303" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="MYKW1UoXWGAR3DtBjXnS-26" value="&lt;font color=&quot;#ffffff&quot;&gt;Make it easier for people looking for a new companion, to more easily find one that fits their life&lt;/font&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-26" target="66fBQwTO3rRXyVcx0N7x-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MYKW1UoXWGAR3DtBjXnS-26" value="&lt;font color=&quot;#ffffff&quot;&gt;Make it easier for people looking for a new companion, to more easily find one that fits their life&lt;/font&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="38" y="278" width="299" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="66fBQwTO3rRXyVcx0N7x-1" target="66fBQwTO3rRXyVcx0N7x-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-1" value="Reduced Animal Abandonment" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+          <mxGeometry x="373" y="217" width="169" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="66fBQwTO3rRXyVcx0N7x-2" target="66fBQwTO3rRXyVcx0N7x-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-2" value="Less people looking for a companion through puppy mills" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+          <mxGeometry x="382" y="278" width="217" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="66fBQwTO3rRXyVcx0N7x-3" target="66fBQwTO3rRXyVcx0N7x-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-3" value="Reduction of animals in shelters and kennels" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+          <mxGeometry x="631.5" y="214" width="175" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-4" value="More happy, healthy animals!" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+          <mxGeometry x="646" y="278" width="153" height="30" as="geometry" />
         </mxCell>
         <mxCell id="WfwidvhYrzyNlVmAxbwn-4" value="&lt;h1&gt;How this application can help change things:&lt;/h1&gt;&lt;div&gt;- Make it easier for owners in tough situations to find a new safe and loving home for their animal(s).&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Make it easier for people who are looking for a new companion to find one that fits their household.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Making it easier for future animal owners to find the right pet for their needs results in more animals being removed from bad situations, and less funding towards puppy mills.&lt;/div&gt;" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-509" y="-550" width="310" height="230" as="geometry" />
