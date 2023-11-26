@@ -1,14 +1,9 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T20:35:27.264Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="xZpsHgWZhMpoygVhWV0o" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T20:36:12.963Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="vGwSA7CQ2NcBG2JOm-B6" version="22.1.4" type="github">
   <diagram name="Page-1" id="QnDPWNosyGdadTyW6Ekd">
-    <mxGraphModel dx="2116" dy="2001" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
+    <mxGraphModel dx="1316" dy="2001" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="WfwidvhYrzyNlVmAxbwn-6" value="PROPOSAL AND IMPACT" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;" parent="1" vertex="1">
-          <mxGeometry x="2" y="-1103" width="640" height="290" as="geometry">
-            <mxRectangle x="10" y="-1090" width="180" height="30" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="AdRa6NuN1TQCRi0MgPPj-2" value="MODELS AND TABLES" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;rounded=0;strokeWidth=3;" parent="1" vertex="1">
           <mxGeometry x="10" y="-780" width="640" height="570" as="geometry">
             <mxRectangle x="10" y="-780" width="170" height="30" as="alternateBounds" />
@@ -371,7 +366,7 @@
           <mxGeometry x="673" y="-1090" width="356" height="720" as="geometry" />
         </mxCell>
         <mxCell id="MYKW1UoXWGAR3DtBjXnS-23" value="THE PROBLEM AND MY SOLUTION" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;startSize=27;" parent="1" vertex="1">
-          <mxGeometry x="-943" y="-1039" width="859" height="316" as="geometry" />
+          <mxGeometry x="-209" y="-1129" width="859" height="316" as="geometry" />
         </mxCell>
         <mxCell id="MYKW1UoXWGAR3DtBjXnS-4" value="ANIMAL ABANDONMENT" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="372.47" y="47.5" width="154" height="30" as="geometry" />
@@ -453,9 +448,6 @@
         </mxCell>
         <mxCell id="66fBQwTO3rRXyVcx0N7x-4" value="More happy, healthy animals!" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
           <mxGeometry x="645.47" y="238.5" width="153" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="WfwidvhYrzyNlVmAxbwn-4" value="&lt;h1&gt;How this application can help change things:&lt;/h1&gt;&lt;div&gt;- Make it easier for owners in tough situations to find a new safe and loving home for their animal(s).&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Make it easier for people who are looking for a new companion to find one that fits their household.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Making it easier for future animal owners to find the right pet for their needs results in more animals being removed from bad situations, and less funding towards puppy mills.&lt;/div&gt;" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-509" y="-550" width="310" height="230" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
