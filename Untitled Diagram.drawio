@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T20:36:12.963Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="vGwSA7CQ2NcBG2JOm-B6" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T23:38:33.200Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="m-0MvQzFVqIq3IncFWlk" version="22.1.4" type="github">
   <diagram name="Page-1" id="QnDPWNosyGdadTyW6Ekd">
-    <mxGraphModel dx="1316" dy="2001" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
+    <mxGraphModel dx="1164" dy="1957" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -362,8 +362,20 @@
         <mxCell id="1Y42PiByceGQKW-uyaXE-59" value="User" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#007FFF;fontSize=15;" parent="_cTKvnzmP2ruFUYqaLfK-1" vertex="1">
           <mxGeometry x="522" y="269" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="1Y42PiByceGQKW-uyaXE-60" value="SOMETHING NEW" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;" parent="1" vertex="1">
-          <mxGeometry x="673" y="-1090" width="356" height="720" as="geometry" />
+        <mxCell id="1Y42PiByceGQKW-uyaXE-60" value="SOMETHING NEW" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="678" y="-1115" width="356" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-11" value="GOOGLE MAPS IMPLEMENTATION" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;fontStyle=4" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
+          <mxGeometry x="10" y="38.5" width="262" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-13" value="Usage" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
+          <mxGeometry y="68.5" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-14" value="Using Google Maps will allow the user to locate the animal, as well as the distance between them and the animal. Giving the User an idea of travel time if they were to adopt the animal." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
+          <mxGeometry x="10" y="119" width="223" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-15" value="Implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontStyle=4;fontSize=15;" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
+          <mxGeometry x="10" y="178" width="93" height="30" as="geometry" />
         </mxCell>
         <mxCell id="MYKW1UoXWGAR3DtBjXnS-23" value="THE PROBLEM AND MY SOLUTION" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;startSize=27;" parent="1" vertex="1">
           <mxGeometry x="-209" y="-1129" width="859" height="316" as="geometry" />
@@ -448,6 +460,9 @@
         </mxCell>
         <mxCell id="66fBQwTO3rRXyVcx0N7x-4" value="More happy, healthy animals!" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
           <mxGeometry x="645.47" y="238.5" width="153" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-17" value="Each animal profile will contain a current location of the animal." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="720" y="-853" width="184" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
