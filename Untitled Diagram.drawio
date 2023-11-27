@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T23:38:33.200Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="m-0MvQzFVqIq3IncFWlk" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-27T23:55:06.067Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="zj6DXgaSYm5JmsUOkfYz" version="22.1.4" type="github">
   <diagram name="Page-1" id="QnDPWNosyGdadTyW6Ekd">
-    <mxGraphModel dx="1164" dy="1957" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
+    <mxGraphModel dx="1209" dy="2001" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -34,7 +34,7 @@
           <mxGeometry y="210" width="140" height="29" as="geometry" />
         </mxCell>
         <mxCell id="AdRa6NuN1TQCRi0MgPPj-14" value="Animal (animals)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" parent="AdRa6NuN1TQCRi0MgPPj-2" vertex="1">
-          <mxGeometry x="440" y="40" width="140" height="270" as="geometry" />
+          <mxGeometry x="440" y="40" width="140" height="300" as="geometry" />
         </mxCell>
         <mxCell id="AdRa6NuN1TQCRi0MgPPj-15" value="id" style="text;strokeColor=#005700;fillColor=#008a00;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="AdRa6NuN1TQCRi0MgPPj-14" vertex="1">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
@@ -60,6 +60,9 @@
         <mxCell id="xWQlsnRgKybAR5OPVelj-19" value="posts" style="text;strokeColor=#A50040;fillColor=#d80073;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="AdRa6NuN1TQCRi0MgPPj-14" vertex="1">
           <mxGeometry y="240" width="140" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="NabJ1j5PiPljuUzlyFTk-1" value="Sex" style="text;strokeColor=#005700;fillColor=#008a00;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" vertex="1" parent="AdRa6NuN1TQCRi0MgPPj-14">
+          <mxGeometry y="270" width="140" height="30" as="geometry" />
+        </mxCell>
         <mxCell id="xWQlsnRgKybAR5OPVelj-2" value="Post (posts)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d80073;strokeColor=#A50040;fontColor=#ffffff;" parent="AdRa6NuN1TQCRi0MgPPj-2" vertex="1">
           <mxGeometry x="80" y="308" width="140" height="210" as="geometry" />
         </mxCell>
@@ -82,7 +85,7 @@
           <mxGeometry y="180" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="AdRa6NuN1TQCRi0MgPPj-22" value="Message (messages)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="AdRa6NuN1TQCRi0MgPPj-2" vertex="1">
-          <mxGeometry x="440" y="340" width="140" height="150" as="geometry" />
+          <mxGeometry x="440" y="371" width="140" height="150" as="geometry" />
         </mxCell>
         <mxCell id="AdRa6NuN1TQCRi0MgPPj-23" value="id" style="text;strokeColor=#006EAF;fillColor=#1ba1e2;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="AdRa6NuN1TQCRi0MgPPj-22" vertex="1">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
@@ -365,16 +368,16 @@
         <mxCell id="1Y42PiByceGQKW-uyaXE-60" value="SOMETHING NEW" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="678" y="-1115" width="356" height="720" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-11" value="GOOGLE MAPS IMPLEMENTATION" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;fontStyle=4" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-11" value="GOOGLE MAPS IMPLEMENTATION" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;fontStyle=4" parent="1Y42PiByceGQKW-uyaXE-60" vertex="1">
           <mxGeometry x="10" y="38.5" width="262" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-13" value="Usage" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-13" value="Usage" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4;fontSize=15;fontColor=#FFFFFF;" parent="1Y42PiByceGQKW-uyaXE-60" vertex="1">
           <mxGeometry y="68.5" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-14" value="Using Google Maps will allow the user to locate the animal, as well as the distance between them and the animal. Giving the User an idea of travel time if they were to adopt the animal." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-14" value="Using Google Maps will allow the user to locate the animal, as well as the distance between them and the animal. Giving the User an idea of travel time if they were to adopt the animal." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" parent="1Y42PiByceGQKW-uyaXE-60" vertex="1">
           <mxGeometry x="10" y="119" width="223" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-15" value="Implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontStyle=4;fontSize=15;" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-15" value="Implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontStyle=4;fontSize=15;" parent="1Y42PiByceGQKW-uyaXE-60" vertex="1">
           <mxGeometry x="10" y="178" width="93" height="30" as="geometry" />
         </mxCell>
         <mxCell id="MYKW1UoXWGAR3DtBjXnS-23" value="THE PROBLEM AND MY SOLUTION" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;startSize=27;" parent="1" vertex="1">
@@ -428,40 +431,40 @@
         <mxCell id="MYKW1UoXWGAR3DtBjXnS-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-7" target="MYKW1UoXWGAR3DtBjXnS-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-24" target="66fBQwTO3rRXyVcx0N7x-1">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-24" target="66fBQwTO3rRXyVcx0N7x-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MYKW1UoXWGAR3DtBjXnS-24" value="Make it easier for owners in tough situations, to find a new safe and loving home for their animal(s)." style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#FFFFFF;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="37.47" y="177.5" width="303" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-26" target="66fBQwTO3rRXyVcx0N7x-2">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="MYKW1UoXWGAR3DtBjXnS-26" target="66fBQwTO3rRXyVcx0N7x-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MYKW1UoXWGAR3DtBjXnS-26" value="&lt;font color=&quot;#ffffff&quot;&gt;Make it easier for people looking for a new companion, to more easily find one that fits their life&lt;/font&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="37.47" y="238.5" width="299" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="66fBQwTO3rRXyVcx0N7x-1" target="66fBQwTO3rRXyVcx0N7x-3">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="66fBQwTO3rRXyVcx0N7x-1" target="66fBQwTO3rRXyVcx0N7x-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-1" value="Reduced Animal Abandonment" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-1" value="Reduced Animal Abandonment" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="372.47" y="177.5" width="169" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="66fBQwTO3rRXyVcx0N7x-2" target="66fBQwTO3rRXyVcx0N7x-3">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="66fBQwTO3rRXyVcx0N7x-2" target="66fBQwTO3rRXyVcx0N7x-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-2" value="Less people looking for a companion through puppy mills" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-2" value="Less people looking for a companion through puppy mills" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="381.47" y="238.5" width="217" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="MYKW1UoXWGAR3DtBjXnS-23" source="66fBQwTO3rRXyVcx0N7x-3" target="66fBQwTO3rRXyVcx0N7x-4">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" parent="MYKW1UoXWGAR3DtBjXnS-23" source="66fBQwTO3rRXyVcx0N7x-3" target="66fBQwTO3rRXyVcx0N7x-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-3" value="Reduction of animals in shelters and kennels" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-3" value="Reduction of animals in shelters and kennels" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="630.97" y="174.5" width="175" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-4" value="More happy, healthy animals!" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" vertex="1" parent="MYKW1UoXWGAR3DtBjXnS-23">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-4" value="More happy, healthy animals!" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="645.47" y="238.5" width="153" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="66fBQwTO3rRXyVcx0N7x-17" value="Each animal profile will contain a current location of the animal." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1">
+        <mxCell id="66fBQwTO3rRXyVcx0N7x-17" value="Each animal profile will contain a current location of the animal." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="720" y="-853" width="184" height="30" as="geometry" />
         </mxCell>
       </root>
