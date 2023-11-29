@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-28T21:08:14.256Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="EsoX8ICfC6Idbrr79gry" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-29T19:26:44.397Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="exb7tVpRjYYcwWm6unJB" version="22.1.4" type="github">
   <diagram name="Page-1" id="QnDPWNosyGdadTyW6Ekd">
-    <mxGraphModel dx="1426" dy="1789" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
+    <mxGraphModel dx="1161" dy="1885" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -365,11 +365,14 @@
         <mxCell id="1Y42PiByceGQKW-uyaXE-59" value="User" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#007FFF;fontSize=15;" parent="_cTKvnzmP2ruFUYqaLfK-1" vertex="1">
           <mxGeometry x="522" y="269" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="1Y42PiByceGQKW-uyaXE-60" value="IMPLEMENTING SOMETHING NEW" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;fontColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="673" y="-1129" width="356" height="720" as="geometry" />
+        <mxCell id="1Y42PiByceGQKW-uyaXE-60" value="NEW IMPLEMENTATION IDEAS" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="663" y="-1129" width="582" height="315" as="geometry" />
         </mxCell>
-        <mxCell id="rTGL_3dFPh7_Ok8thwQr-2" value="For Implementing something not taught in the Flatiron curriculum, I have decided to use Bootstrap. The benefits to using Bootstrap in my applications are:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
-          <mxGeometry x="7" y="47.5" width="318" height="30" as="geometry" />
+        <mxCell id="rTGL_3dFPh7_Ok8thwQr-4" value="&lt;h1&gt;Bootstrap&lt;/h1&gt;&lt;div&gt;Bootstrap is a front-end framework used to make the development process, specifically with CSS and HTML, easier. Bootstrap also makes the application more accessible across different devices. Not everyone has access to a laptop but may have access to a phone. Bootstrap would help make this web application more accessible to mobile users.&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
+          <mxGeometry x="26" y="32.5" width="190" height="224.5" as="geometry" />
+        </mxCell>
+        <mxCell id="rTGL_3dFPh7_Ok8thwQr-6" value="&lt;h1&gt;Google Sign-In Option&lt;/h1&gt;&lt;p&gt;Integrating Google sign-in / sign-up can help to keep my users&#39; information more secure, detecting any suspicious activity before I can. Allowing the user an option to use Google sign-in / sign-up also gives users a quicker and easier way to sign-up / sign-in.&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
+          <mxGeometry x="295" y="32.5" width="263" height="143.5" as="geometry" />
         </mxCell>
         <mxCell id="MYKW1UoXWGAR3DtBjXnS-23" value="THE PROBLEM AND MY SOLUTION" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;startSize=27;" parent="1" vertex="1">
           <mxGeometry x="-209" y="-1129" width="859" height="316" as="geometry" />
@@ -454,6 +457,12 @@
         </mxCell>
         <mxCell id="66fBQwTO3rRXyVcx0N7x-4" value="More happy, healthy animals!" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontColor=#ffffff;" parent="MYKW1UoXWGAR3DtBjXnS-23" vertex="1">
           <mxGeometry x="645.47" y="238.5" width="153" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rTGL_3dFPh7_Ok8thwQr-5" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1Y42PiByceGQKW-uyaXE-60" target="1Y42PiByceGQKW-uyaXE-60">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="920" y="-881" as="sourcePoint" />
+            <mxPoint x="924" y="-1092" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
