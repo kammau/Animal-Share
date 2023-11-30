@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2023-11-29T19:37:27.586Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="Tc1nBsQd68FQEp0UOVtX" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-30T00:35:46.342Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="X1XVuzHofT3WywxmU8NF" version="22.1.4" type="github">
   <diagram name="Page-1" id="QnDPWNosyGdadTyW6Ekd">
-    <mxGraphModel dx="1922" dy="2570" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
+    <mxGraphModel dx="2680" dy="2504" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#0D0D0D" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="rTGL_3dFPh7_Ok8thwQr-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="AdRa6NuN1TQCRi0MgPPj-2" target="_cTKvnzmP2ruFUYqaLfK-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="AdRa6NuN1TQCRi0MgPPj-2" value="MODELS AND TABLES" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;rounded=0;strokeWidth=3;" parent="1" vertex="1">
           <mxGeometry x="-209" y="-786" width="640" height="570" as="geometry">
             <mxRectangle x="10" y="-780" width="170" height="30" as="alternateBounds" />
@@ -143,8 +146,11 @@
         <mxCell id="JQjJ9PsffKk6_SLziyI5-9" value="Many-To-Many" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" parent="AdRa6NuN1TQCRi0MgPPj-2" vertex="1">
           <mxGeometry x="340" y="272" width="85" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="rTGL_3dFPh7_Ok8thwQr-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="_cTKvnzmP2ruFUYqaLfK-1" target="1Y42PiByceGQKW-uyaXE-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="_cTKvnzmP2ruFUYqaLfK-1" value="VIEWS AND ROUTES:" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;" parent="1" vertex="1">
-          <mxGeometry x="470" y="-786" width="699" height="328" as="geometry">
+          <mxGeometry x="699" y="-786" width="699" height="328" as="geometry">
             <mxRectangle x="9" y="-199" width="156" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -365,14 +371,17 @@
         <mxCell id="1Y42PiByceGQKW-uyaXE-59" value="User" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#007FFF;fontSize=15;" parent="_cTKvnzmP2ruFUYqaLfK-1" vertex="1">
           <mxGeometry x="522" y="269" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="1Y42PiByceGQKW-uyaXE-60" value="NEW IMPLEMENTATION IDEAS" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;fontColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="663" y="-1129" width="582" height="315" as="geometry" />
+        <mxCell id="1Y42PiByceGQKW-uyaXE-60" value="NEW IMPLEMENTATION IDEAS" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;fontColor=#000000;startSize=29;" parent="1" vertex="1">
+          <mxGeometry x="699" y="-390" width="582" height="315" as="geometry" />
         </mxCell>
         <mxCell id="rTGL_3dFPh7_Ok8thwQr-4" value="&lt;h1&gt;Bootstrap&lt;/h1&gt;&lt;div&gt;Bootstrap is a front-end framework used to make the development process, specifically with CSS and HTML, easier. Bootstrap also makes the application more accessible across different devices. Not everyone has access to a laptop but may have access to a phone. Bootstrap would help make this web application more accessible to mobile users.&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
           <mxGeometry x="26" y="32.5" width="190" height="224.5" as="geometry" />
         </mxCell>
         <mxCell id="rTGL_3dFPh7_Ok8thwQr-6" value="&lt;h1&gt;Google Sign-In Option&lt;/h1&gt;&lt;p&gt;Integrating Google sign-in / sign-up can help to keep my users&#39; information more secure, detecting any suspicious activity before I can. Allowing the user an option to use Google sign-in / sign-up also gives users a quicker and easier way to sign-up / sign-in.&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1Y42PiByceGQKW-uyaXE-60">
           <mxGeometry x="295" y="32.5" width="263" height="143.5" as="geometry" />
+        </mxCell>
+        <mxCell id="rTGL_3dFPh7_Ok8thwQr-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="MYKW1UoXWGAR3DtBjXnS-23" target="rTGL_3dFPh7_Ok8thwQr-9">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MYKW1UoXWGAR3DtBjXnS-23" value="THE PROBLEM AND MY SOLUTION" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;startSize=27;" parent="1" vertex="1">
           <mxGeometry x="-209" y="-1129" width="859" height="316" as="geometry" />
@@ -469,6 +478,20 @@
             <mxPoint x="920" y="-881" as="sourcePoint" />
             <mxPoint x="924" y="-1092" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="rTGL_3dFPh7_Ok8thwQr-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="rTGL_3dFPh7_Ok8thwQr-9" target="AdRa6NuN1TQCRi0MgPPj-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="667" y="-1029" />
+              <mxPoint x="667" y="-501" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rTGL_3dFPh7_Ok8thwQr-9" value="MY APPLICATION" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="699" y="-1129" width="619" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="rTGL_3dFPh7_Ok8thwQr-10" value="My application is for animal owners looking for a safe new home for their animals. It is also for people looking for a new companion to fit their specific lifestyle. A user can create a post for their animal, who is in need of a new home. Other users on the platform can scroll through different posts made by different users, and if seeing a post they like they can click on the animal to find more information about it. Once on the animal&#39;s page, they can also tag the animal to save to look at later. For users looking for a new companion, they have the opportunity on the post page to narrow down their search using a search bar with specific filters for breed, species, age, etc. If a user finds an animal that they are very interested in, they can direct message the current owner of the animal for more information concerning specific details they would like to know." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="rTGL_3dFPh7_Ok8thwQr-9">
+          <mxGeometry x="11" y="85" width="561.03" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
