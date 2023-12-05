@@ -17,6 +17,7 @@ class Animal(db.Model, SerilaizerMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
+    img = db.Column(db.String)
     species = db.Column(db.String, nullable=False)
     breed = db.Column(db.String)
     age = db.Column(db.Integer)
@@ -36,6 +37,11 @@ class Message(db.Model, SerilaizerMixin):
     #Add __repr__
 
 class Post(db.Model, SerilaizerMixin):
-    pass
+    __tablename__ = "posts"
+
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String, nullable=False)
+    postBody = db.Column(db.String, nullable=False)
+    img = db.Column(db.String)
 
     #Add __repr__
