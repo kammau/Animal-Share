@@ -28,7 +28,10 @@ class Animal(db.Model, SerilaizerMixin):
     
 
 class Message(db.Model, SerilaizerMixin):
-    pass
+    __tablename__ = "messages"
+
+    id = db.Column(db.Integer, primary_key=True)
+    messageBody = db.Column(db.String, nullable=False)
 
     #Add __repr__
 
