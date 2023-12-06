@@ -35,7 +35,6 @@ class Animal(db.Model, SerilaizerMixin):
     currentOwner = db.relationship("User", back_populates="currentAnimal")
 
 
-    #Add __repr__
     def __repr__(self):
         return f"<Animal {self.name} | {self.species} | {self.id}>"
     
@@ -46,7 +45,11 @@ class Message(db.Model, SerilaizerMixin):
     id = db.Column(db.Integer, primary_key=True)
     messageBody = db.Column(db.String, nullable=False)
 
-    #Add __repr__
+    sender = db.relationship("User", back_populates="username") #? username
+    reciever = db.relationship("User", back_populates="messages")
+
+    def __repr__(self):
+        return f"<Message {self.id} | {self.sender}>"
 
 class Post(db.Model, SerilaizerMixin):
     __tablename__ = "posts"
