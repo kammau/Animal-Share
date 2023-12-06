@@ -11,8 +11,11 @@ class User(db.Model, SerilaizerMixin):
     accountType = db.Column(db.String)
 
     currentAnimal = db.relationship("Animal", back_populates="user")
-    taggedAnimals = db.relationship("Animal", back_populates="user") #Should this relationship be many-to-many?
+    taggedAnimals = db.relationship("Animal", back_populates="user") #Make sure back_populates is correct!
 
+    posts = db.relationship("Post", back_populates="user")
+
+    messages = db.relationship("Message", back_populates="receiver")
     
     def __repr__(self):
         return f"<User {self.username} | {self.id} | {self.accountType}>"
