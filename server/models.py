@@ -10,7 +10,7 @@ class User(db.Model, SerilaizerMixin):
     username = db.Column(db.String, unique=True, nullable=False)
     accountType = db.Column(db.String)
 
-    currentAnimal = db.relationship("Animal", back_populates="user")
+    currentAnimal = db.relationship("Animal", back_populates="currentOwner")
     taggedAnimals = db.relationship("Animal", back_populates="user") #Make sure back_populates is correct!
 
     posts = db.relationship("Post", back_populates="user")
@@ -32,8 +32,12 @@ class Animal(db.Model, SerilaizerMixin):
     location = db.Column(db.String)
     sex = db.Column(db.String, nullable=False)
 
+    currentOwner = db.relationship("User", back_populates="currentAnimal")
+
 
     #Add __repr__
+    def __repr__(self):
+        return f"<Animal {self.name} | {self.species} | {self.id}>"
     
 
 class Message(db.Model, SerilaizerMixin):
