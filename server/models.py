@@ -10,7 +10,12 @@ class User(db.Model, SerilaizerMixin):
     username = db.Column(db.String, unique=True, nullable=False)
     accountType = db.Column(db.String)
 
-    #Add __repr__
+    currentAnimal = db.relationship("Animal", back_populates="user")
+    taggedAnimals = db.relationship("Animal", back_populates="user") #Should this relationship be many-to-many?
+
+    
+    def __repr__(self):
+        return f"<User {self.username} | {self.id} | {self.accountType}>"
 
 class Animal(db.Model, SerilaizerMixin):
     __tablename__ = "animals"
