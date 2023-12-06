@@ -13,13 +13,18 @@ animal_post = db.Table(
 class User(db.Model, SerilaizerMixin):
     __tablename__ = "users"
 
+    serialize_rules = (
+
+    )
+
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique=True, nullable=False)
     _password_hash = db.Column(db.String)
     accountType = db.Column(db.String)
+    taggedAnimals = db.Column(db.String)
 
     currentAnimal = db.relationship("Animal", back_populates="currentOwner")
-    taggedAnimals = db.relationship("Animal", back_populates="user") #Make sure back_populates is correct!
+    # taggedAnimals = db.relationship("Animal", back_populates="user")
 
     posts = db.relationship("Post", back_populates="user")
 
