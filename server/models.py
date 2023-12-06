@@ -3,6 +3,12 @@ from sqlalchemy.ext.associationproxy import association_proxy
 
 from config import db
 
+animal_post = db.Table(
+    "animal_post",
+    db.Column("animal_id", db.Integer, db.ForeignKey("animals.id")),
+    db.Column("post_id", db.Integer, db.ForeignKey("posts.id"))
+)
+
 class User(db.Model, SerilaizerMixin):
     __tablename__ = "users"
 
@@ -34,6 +40,8 @@ class Animal(db.Model, SerilaizerMixin):
 
     currentOwner = db.relationship("User", back_populates="currentAnimal")
 
+    posts = db.relationship("Post", secondary=animal_post, back_populates="animals")
+
 
     def __repr__(self):
         return f"<Animal {self.name} | {self.species} | {self.id}>"
@@ -60,6 +68,8 @@ class Post(db.Model, SerilaizerMixin):
     img = db.Column(db.String)
 
     user = db.relationship("User", back_populates="posts")
+
+    animals = db.relationship("Animal", secondary=animal_post, back_populates="posts")
 
     def __repr__(self):
         return f"<Post {self.id} | {self.title} | {self.user}>"
