@@ -59,4 +59,7 @@ class Post(db.Model, SerilaizerMixin):
     postBody = db.Column(db.String, nullable=False)
     img = db.Column(db.String)
 
-    #Add __repr__
+    user = db.relationship("User", back_populates="posts")
+
+    def __repr__(self):
+        return f"<Post {self.id} | {self.title} | {self.user}>"
