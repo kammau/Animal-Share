@@ -13,9 +13,9 @@ animal_post = db.Table(
 class User(db.Model, SerilaizerMixin):
     __tablename__ = "users"
 
-    serialize_rules = (
+    # serialize_rules = (
 
-    )
+    # )
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique=True, nullable=False)
