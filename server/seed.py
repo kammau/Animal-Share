@@ -17,14 +17,23 @@ if __name__ == "__main__":
         Post.query.delete()
 
         #User Seed:
+        print("Seeding users...")
+
         users = []
+        user1 = User()
 
 
         #Animal Seed:
+        print("Seeding animals...")
+
         animals = []
 
         #Message Seed:
+        print("Seeding messages...")
+
         messages = []
 
         #Post Seed:
+        print("Seeding posts...")
+
         posts = []

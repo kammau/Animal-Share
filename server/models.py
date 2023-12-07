@@ -74,8 +74,9 @@ class Message(db.Model, SerilaizerMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     messageBody = db.Column(db.String, nullable=False)
+    sender = db.Column(db.String)
 
-    sender = db.relationship("User", back_populates="username") #? username
+    # sender = db.relationship("User", back_populates="username")
     reciever = db.relationship("User", back_populates="messages")
 
     def __repr__(self):
