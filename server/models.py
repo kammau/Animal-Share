@@ -1,4 +1,4 @@
-from sqlalchemy_serializer import SerilaizerMixin
+from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy.ext.hybrid import hybrid_property
 
@@ -10,7 +10,7 @@ animal_post = db.Table(
     db.Column("post_id", db.Integer, db.ForeignKey("posts.id"))
 )
 
-class User(db.Model, SerilaizerMixin):
+class User(db.Model, SerializerMixin):
     __tablename__ = "users"
 
     # serialize_rules = (
@@ -47,7 +47,7 @@ class User(db.Model, SerilaizerMixin):
     def __repr__(self):
         return f"<User {self.username} | {self.id} | {self.accountType}>"
 
-class Animal(db.Model, SerilaizerMixin):
+class Animal(db.Model, SerializerMixin):
     __tablename__ = "animals"
 
     id = db.Column(db.Integer, primary_key=True)
@@ -69,7 +69,7 @@ class Animal(db.Model, SerilaizerMixin):
         return f"<Animal {self.name} | {self.species} | {self.id}>"
     
 
-class Message(db.Model, SerilaizerMixin):
+class Message(db.Model, SerializerMixin):
     __tablename__ = "messages"
 
     id = db.Column(db.Integer, primary_key=True)
@@ -82,7 +82,7 @@ class Message(db.Model, SerilaizerMixin):
     def __repr__(self):
         return f"<Message {self.id} | {self.sender}>"
 
-class Post(db.Model, SerilaizerMixin):
+class Post(db.Model, SerializerMixin):
     __tablename__ = "posts"
 
     id = db.Column(db.Integer, primary_key=True)
