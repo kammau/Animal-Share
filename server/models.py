@@ -21,10 +21,9 @@ class User(db.Model, SerilaizerMixin):
     username = db.Column(db.String, unique=True, nullable=False)
     _password_hash = db.Column(db.String)
     accountType = db.Column(db.String)
-    taggedAnimals = db.Column(db.String)
 
     currentAnimal = db.relationship("Animal", back_populates="currentOwner")
-    # taggedAnimals = db.relationship("Animal", back_populates="user")
+    taggedAnimals = db.relationship("Animal", back_populates="taggedBy")
 
     posts = db.relationship("Post", back_populates="user")
 
@@ -61,6 +60,7 @@ class Animal(db.Model, SerilaizerMixin):
     sex = db.Column(db.String, nullable=False)
 
     currentOwner = db.relationship("User", back_populates="currentAnimal")
+    taggedBy = db.relationship("User", back_populates="taggedAnimals")
 
     posts = db.relationship("Post", secondary=animal_post, back_populates="animals")
 

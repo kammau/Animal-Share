@@ -20,7 +20,11 @@ if __name__ == "__main__":
         print("Seeding users...")
 
         users = []
-        user1 = User()
+        user1 = User(
+            username=fake.user_name(),
+            accountType="looking",
+            taggedAnimals=[]
+        )
 
 
         #Animal Seed:
