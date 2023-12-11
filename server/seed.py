@@ -2,15 +2,15 @@ from random import randint, choice as rc
 
 from faker import Faker
 
-from app import app
-from models import db, User, Message, Animal, Post, animal_post
+from config import app, db
+from models import User, Message, Animal, Post, animal_post
 
 if __name__ == "__main__":
     fake = Faker()
     with app.app_context():
         print("Starting seed...")
 
-        db.session.query(animal_post).delete()
+        # db.session.query(animal_post).delete()
         User.query.delete()
         Message.query.delete()
         Animal.query.delete()
@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
         user1 = User(
             username=fake.user_name(),
-            accountType="looking"
+            accountType="looking",
         )
         user1.password_hash = user1.username + "salty"
         users.append(user1)

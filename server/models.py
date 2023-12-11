@@ -22,12 +22,12 @@ class User(db.Model, SerializerMixin):
     _password_hash = db.Column(db.String)
     accountType = db.Column(db.String)
 
-    currentAnimal = db.relationship("Animal", back_populates="currentOwner")
-    taggedAnimals = db.relationship("Animal", back_populates="taggedBy")
+    # currentAnimal = db.relationship("Animal", back_populates="currentOwner")
+    # taggedAnimals = db.relationship("Animal", back_populates="taggedBy")
 
-    posts = db.relationship("Post", back_populates="user")
+    # posts = db.relationship("Post", back_populates="user")
 
-    messages = db.relationship("Message", back_populates="receiver")
+    # messages = db.relationship("Message", back_populates="receiver")
 
     @hybrid_property
     def password_hash(self):
@@ -59,10 +59,10 @@ class Animal(db.Model, SerializerMixin):
     location = db.Column(db.String)
     sex = db.Column(db.String, nullable=False)
 
-    currentOwner = db.relationship("User", back_populates="currentAnimal")
-    taggedBy = db.relationship("User", back_populates="taggedAnimals")
+    # currentOwner = db.relationship("User", back_populates="currentAnimal")
+    # taggedBy = db.relationship("User", back_populates="taggedAnimals")
 
-    posts = db.relationship("Post", secondary=animal_post, back_populates="animals")
+    # posts = db.relationship("Post", secondary=animal_post, back_populates="animals")
 
 
     def __repr__(self):
@@ -77,7 +77,7 @@ class Message(db.Model, SerializerMixin):
     sender = db.Column(db.String)
 
     # sender = db.relationship("User", back_populates="username")
-    reciever = db.relationship("User", back_populates="messages")
+    # reciever = db.relationship("User", back_populates="messages")
 
     def __repr__(self):
         return f"<Message {self.id} | {self.sender}>"
@@ -90,9 +90,9 @@ class Post(db.Model, SerializerMixin):
     postBody = db.Column(db.String, nullable=False)
     img = db.Column(db.String)
 
-    user = db.relationship("User", back_populates="posts")
+    # user = db.relationship("User", back_populates="posts")
 
-    animals = db.relationship("Animal", secondary=animal_post, back_populates="posts")
+    # animals = db.relationship("Animal", secondary=animal_post, back_populates="posts")
 
     def __repr__(self):
         return f"<Post {self.id} | {self.title} | {self.user}>"
