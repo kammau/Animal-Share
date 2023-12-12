@@ -54,8 +54,9 @@ if __name__ == "__main__":
 
         message1 = Message(
             messageBody="Hello!",
-            sender="alfa121212"
+            sender="purple85555"
         )
+        message1.reciever = user1
 
         messages.append(message1)
 
