@@ -3,7 +3,7 @@ from random import randint, choice as rc
 from faker import Faker
 
 from config import app, db
-from models import User, Message, Animal, Post, animal_post
+from models import User, Message, Animal, Post
 
 if __name__ == "__main__":
     fake = Faker()
@@ -27,6 +27,8 @@ if __name__ == "__main__":
         user1.password_hash = user1.username + "salty"
         users.append(user1)
 
+        db.session.add_all(users)
+
 
         #Animal Seed:
         print("Seeding animals...")
@@ -40,7 +42,10 @@ if __name__ == "__main__":
             location="Mammoth Lakes, CA",
             sex="M"
         )
+        animal1.currentOwner = user1
         animals.append(animal1)
+
+        db.session.add_all(animals)
 
         #Message Seed:
         print("Seeding messages...")
@@ -53,6 +58,8 @@ if __name__ == "__main__":
 
         messages.append(message1)
 
+        db.session.add_all(messages)
+
         #Post Seed:
         print("Seeding posts...")
         posts = []
@@ -64,7 +71,8 @@ if __name__ == "__main__":
 
         posts.append(post1)
 
-        db.session.add_all(users, animals, messages, posts)
+        db.session.add_all(posts)
+
         db.session.commit()
 
         print("Seeding Complete!")

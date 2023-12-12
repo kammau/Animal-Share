@@ -4,30 +4,21 @@ from sqlalchemy.ext.hybrid import hybrid_property
 
 from config import db, bcrypt
 
-animal_post = db.Table(
-    "animal_post",
-    db.Column("animal_id", db.Integer, db.ForeignKey("animals.id")),
-    db.Column("post_id", db.Integer, db.ForeignKey("posts.id"))
-)
+# animal_post = db.Table(
+#     "animal_post",
+#     db.Column("animal_id", db.Integer, db.ForeignKey("animals.id")),
+#     db.Column("post_id", db.Integer, db.ForeignKey("posts.id"))
+# )
 
 class User(db.Model, SerializerMixin):
     __tablename__ = "users"
-
-    # serialize_rules = (
-
-    # )
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique=True, nullable=False)
     _password_hash = db.Column(db.String)
     accountType = db.Column(db.String)
 
-    # currentAnimal = db.relationship("Animal", back_populates="currentOwner")
-    # taggedAnimals = db.relationship("Animal", back_populates="taggedBy")
-
-    # posts = db.relationship("Post", back_populates="user")
-
-    # messages = db.relationship("Message", back_populates="receiver")
+    currentAnimals = db.relationship("Animal", back_populates="currentOwner")
 
     @hybrid_property
     def password_hash(self):
@@ -59,10 +50,9 @@ class Animal(db.Model, SerializerMixin):
     location = db.Column(db.String)
     sex = db.Column(db.String, nullable=False)
 
-    # currentOwner = db.relationship("User", back_populates="currentAnimal")
-    # taggedBy = db.relationship("User", back_populates="taggedAnimals")
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
-    # posts = db.relationship("Post", secondary=animal_post, back_populates="animals")
+    currentOwner = db.relationship("User", back_populates="currentAnimals")
 
 
     def __repr__(self):
@@ -76,9 +66,6 @@ class Message(db.Model, SerializerMixin):
     messageBody = db.Column(db.String, nullable=False)
     sender = db.Column(db.String)
 
-    # sender = db.relationship("User", back_populates="username")
-    # reciever = db.relationship("User", back_populates="messages")
-
     def __repr__(self):
         return f"<Message {self.id} | {self.sender}>"
 
@@ -89,10 +76,6 @@ class Post(db.Model, SerializerMixin):
     title = db.Column(db.String, nullable=False)
     postBody = db.Column(db.String, nullable=False)
     img = db.Column(db.String)
-
-    # user = db.relationship("User", back_populates="posts")
-
-    # animals = db.relationship("Animal", secondary=animal_post, back_populates="posts")
 
     def __repr__(self):
         return f"<Post {self.id} | {self.title} | {self.user}>"
