@@ -43,6 +43,7 @@ if __name__ == "__main__":
             sex="M"
         )
         animal1.currentOwner = user1
+
         animals.append(animal1)
 
         db.session.add_all(animals)
@@ -68,6 +69,7 @@ if __name__ == "__main__":
             title="Looking for new home",
             postBody="Looking for a new home for this sweet pup!"
         )
+        post1.user = user1
 
         posts.append(post1)
 

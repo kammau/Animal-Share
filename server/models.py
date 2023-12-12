@@ -19,6 +19,7 @@ class User(db.Model, SerializerMixin):
     accountType = db.Column(db.String)
 
     currentAnimals = db.relationship("Animal", back_populates="currentOwner")
+    posts = db.relationship("Post", back_populates="user")
 
     @hybrid_property
     def password_hash(self):
@@ -76,6 +77,10 @@ class Post(db.Model, SerializerMixin):
     title = db.Column(db.String, nullable=False)
     postBody = db.Column(db.String, nullable=False)
     img = db.Column(db.String)
+    
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+
+    user = db.relationship("User", back_populates="posts")
 
     def __repr__(self):
         return f"<Post {self.id} | {self.title} | {self.user}>"
