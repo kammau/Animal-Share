@@ -4,11 +4,11 @@ from sqlalchemy.ext.hybrid import hybrid_property
 
 from config import db, bcrypt
 
-# animal_post = db.Table(
-#     "animal_post",
-#     db.Column("animal_id", db.Integer, db.ForeignKey("animals.id")),
-#     db.Column("post_id", db.Integer, db.ForeignKey("posts.id"))
-# )
+animal_post = db.Table(
+    "animal_post",
+    db.Column("animal_id", db.Integer, db.ForeignKey("animals.id")),
+    db.Column("post_id", db.Integer, db.ForeignKey("posts.id"))
+)
 
 class User(db.Model, SerializerMixin):
     __tablename__ = "users"
@@ -55,6 +55,7 @@ class Animal(db.Model, SerializerMixin):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
     currentOwner = db.relationship("User", back_populates="currentAnimals")
+    posts = db.relationship("Post", secondary=animal_post, back_populates="animals")
 
 
     def __repr__(self):
@@ -86,6 +87,7 @@ class Post(db.Model, SerializerMixin):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
     user = db.relationship("User", back_populates="posts")
+    animals = db.relationship("Animal", secondary=animal_post, back_populates="posts")
 
     def __repr__(self):
         return f"<Post {self.id} | {self.title} | {self.user}>"

@@ -76,6 +76,8 @@ if __name__ == "__main__":
 
         db.session.add_all(posts)
 
+        post1.animals.append(animal1)
+
         db.session.commit()
 
         print("Seeding Complete!")
