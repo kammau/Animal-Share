@@ -76,7 +76,10 @@ if __name__ == "__main__":
 
         db.session.add_all(posts)
 
+        # Many-to-Many's:
         post1.animals.append(animal1)
+
+        user1.taggedAnimals.append(animal1)
 
         db.session.commit()
 
