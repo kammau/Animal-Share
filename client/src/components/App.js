@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "../redux/store";
 
 import Login from "./Login";
 
 function App() {
     return (
-        <div>
-            <Login />
-        </div>
+        <Provider>
+            <div>
+                <Login />
+            </div>
+        </Provider>
     )
 }
 
