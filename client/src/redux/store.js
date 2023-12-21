@@ -1,4 +1,4 @@
-import { createStore } from "redux"
+import {configureStore} from "@reduxjs/toolkit"
 import userReducer from "./users/userReducer"
 
 const store = createStore(userReducer)

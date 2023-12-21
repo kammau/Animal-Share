@@ -7,7 +7,7 @@ import Login from "./Login";
 
 function App() {
     return (
-        <Provider>
+        <Provider store={store}>
             <div>
                 <Login />
             </div>
