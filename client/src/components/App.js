@@ -3,11 +3,17 @@ import { Switch, Route } from "react-router-dom";
 
 
 import Login from "../features/users/Login";
+import Signup from "../features/users/Signup";
 
 function App() {
     return (
         <div>
-            <Login />
+            <Route exact path="/login">
+                <Login />
+            </Route>
+            <Route exact path="/signup">
+                <Signup />
+            </Route>
         </div>
     )
 }

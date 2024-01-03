@@ -1,0 +1,27 @@
+/* LOGIN AND SIGNUP FORMS: */
+
+.log_sign_form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.username_input {
+    margin-bottom: 30px;
+    width: 500px;
+    height: 35px;
+
+}
+
+.password_input {
+    width: 500px;
+    height: 35px;
+}
+
+.log_sign_header {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+
