@@ -1,27 +1,54 @@
 /* LOGIN AND SIGNUP FORMS: */
+.log_sign_body {
+    background-color: rgb(88, 134, 213);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
 
-.log_sign_form {
+.log_sign_div {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #696969;
+    width: 500px;
+    height: 550px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px 2px #171706;
 }
 
 .username_input {
     margin-bottom: 30px;
-    width: 500px;
+    width: 350px;
     height: 35px;
 
 }
 
 .password_input {
-    width: 500px;
+    width: 350px;
     height: 35px;
 }
 
 .log_sign_header {
     font-family: sans-serif;
-    text-align: center;
 }
+
+.log_sign_btn {
+    margin-top: 25px;
+    width: 200px;
+    height: 35px;
+}
+
+#goto_login {
+    margin-top: 100px;
+    margin-right: 25px;
+    padding: 10px;
+}
+
+
 
 

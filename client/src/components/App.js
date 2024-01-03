@@ -2,17 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 
 
-import Login from "../features/users/Login";
-import Signup from "../features/users/Signup";
+import LoginSignup from "../features/users/LoginSignup";
 
 function App() {
     return (
-        <div>
-            <Route exact path="/login">
-                <Login />
-            </Route>
-            <Route exact path="/signup">
-                <Signup />
+        <div id="body">
+            <Route exact path="/login_signup">
+                <LoginSignup />
             </Route>
         </div>
     )
