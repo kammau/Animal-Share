@@ -1,6 +1,6 @@
 /* LOGIN AND SIGNUP FORMS: */
 .log_sign_body {
-    background-color: rgb(88, 134, 213);
+    background: linear-gradient(90deg, #00B4D8, #023E8A);
     position: absolute;
     top: 0px;
     right: 0px;
@@ -14,7 +14,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: #696969;
+    background-color: #1c3144;
     width: 500px;
     height: 550px;
     border-radius: 10px;
@@ -43,10 +43,45 @@
     height: 35px;
 }
 
-#goto_login {
-    margin-top: 100px;
-    margin-right: 25px;
+.on_logsign_btn {
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+
+    width: 80px;
+    height: 40px;
+}
+
+.off_logsign_btn {
+    background-color: rgb(130, 174, 189);
+    border: none;
+    outline: none;
+
+    width: 80px;
+    height: 40px;
+}
+
+.logsign_view_btns {
+    margin-top: 80px;
+    transition: 2s;
+}
+
+
+#welcome {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjNQmWJ3V88_6tYrdtWRMVcffsraIxSwHZfg&usqp=CAU);
+    background-size: 250px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: sans-serif;
+    font-size: 50px;
     padding: 10px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
 
 

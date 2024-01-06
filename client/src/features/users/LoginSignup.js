@@ -4,8 +4,17 @@ import { useState } from "react";
 function LoginSignup() {
     const [view, setView] = useState("login")
 
+    // function login() {
+
+    // }
+
+    // function signup() {
+
+    // }
+
     return (
         <React.Fragment>
+            <h1 id="welcome">WELCOME TO PETIFY</h1>
             {view === "login" ? (
                 <div className="log_sign_body">
                     <div className="log_sign_div">
@@ -23,11 +32,16 @@ function LoginSignup() {
                                 placeholder="Your Password"
                             />
                         </form>
-                        <button className="log_sign_btn">Login</button>
+                        <button className="log_sign_btn">LOGIN</button>
                         <br />
 
-                        <button id="goto_login">Login</button>
-                        <button id="goto_signup">Signup</button>
+                        <section className="logsign_view_btns">
+                            <button className="on_logsign_btn">LOGIN</button>
+                            <button 
+                                className="off_logsign_btn"
+                                onClick={() => setView("signup")}
+                            >SIGNUP</button>
+                        </section>
                     </div>
                 </div>
             ) : (
@@ -47,7 +61,16 @@ function LoginSignup() {
                                 placeholder="Your Password"
                             />
                         </form>
-                        <button className="log_sign_btn">Signup</button>
+                        <button className="log_sign_btn">SIGNUP</button>
+                        <br />
+
+                        <section className="logsign_view_btns">
+                            <button 
+                                className="off_logsign_btn"
+                                onClick={() => setView("login")}
+                            >LOGIN</button>
+                            <button className="on_logsign_btn">SIGNUP</button>
+                        </section>
                     </div>
                 </div>
             )}
