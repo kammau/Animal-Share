@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 
 
-import LoginSignup from "../features/users/LoginSignup";
+import LoginSignup from "./LoginSignup";
 
 function App() {
     return (
