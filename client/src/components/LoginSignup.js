@@ -33,7 +33,7 @@ function LoginSignup() {
         },
         validationSchema: formSchema,
         onSubmit: (values) => {
-            console.log(`Login ${values}`)
+            console.log(`Login ${values.username} ${values.password}`)
         }
     })
 
@@ -48,20 +48,27 @@ function LoginSignup() {
                 <div className="log_sign_body">
                     <div className="log_sign_div">
                         <h1 className="log_sign_header">Login</h1>
-                        <form id="login_form" autoComplete="off">
+                        <form id="login_form" autoComplete="off" onSubmit={loginFormik.handleSubmit}>
                             <input
+                                id="login_username"
                                 className="username_input"
                                 type="text"
                                 placeholder="Your Username"
+                                value={loginFormik.values.username}
+                                onChange={loginFormik.handleChange}
                             />
                             <br />
                             <input 
+                                id="login_password"
                                 className="password_input"
                                 type="password"
                                 placeholder="Your Password"
+                                value={loginFormik.values.password}
+                                onChange={loginFormik.handleChange}
                             />
+
+                            <button type="submit" className="log_sign_btn">LOGIN</button>
                         </form>
-                        <button className="log_sign_btn">LOGIN</button>
                         <br />
 
                         <section className="logsign_view_btns">
@@ -81,7 +88,7 @@ function LoginSignup() {
                         <h1 className="log_sign_header">Signup</h1>
                         <form id="signup_form" autoComplete="off" onSubmit={signupFormik.handleSubmit}>
                             <input
-                                name="username"
+                                id="signup_username"
                                 className="username_input"
                                 type="text"
                                 placeholder="Your Username"
@@ -90,7 +97,7 @@ function LoginSignup() {
                             />
                             <br />
                             <input 
-                                name="password"
+                                id="signup_password"
                                 className="password_input"
                                 type="password"
                                 placeholder="Your Password"
