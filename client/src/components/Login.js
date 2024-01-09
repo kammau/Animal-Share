@@ -1,8 +1,12 @@
 import { useState } from "react";
 import * as yup from "yup";
 import { useFormik } from "formik";
+import { useDispatch } from "react-redux";
+import { viewSignup } from "./reducers/viewSlice";
 
 function Login() {
+    const dispatch = useDispatch();
+
     const formSchema = yup.object().shape({
         username: yup.string().required("Please enter a username"),
         password: yup.string().required("Please enter a password"),
@@ -46,13 +50,10 @@ function Login() {
                 </form>
                 <br />
 
-                {/* <section className="logsign_view_btns">
+                <section className="logsign_view_btns">
                     <button className="on_logsign_btn">LOGIN</button>
-                    <button 
-                        className="off_logsign_btn"
-                        onClick={() => setView("signup")}
-                    >SIGNUP</button>
-                </section> */}
+                    <button className="off_logsign_btn" onClick={() => dispatch(viewSignup())}>SIGNUP</button>
+                </section>
             </div>
         </div>
     )
