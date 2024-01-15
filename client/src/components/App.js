@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logIn } from "./reducers/sessionSlice";
@@ -8,6 +8,9 @@ import Login from "./Login";
 import Signup from "./Signup";
 import NavBar from "./NavBar";
 import Posts from "./Posts";
+import Messages from "./Messages";
+import Animals from "./Animals";
+import TaggedAnimals from "./TaggedAnimals";
 
 function App() {
     const dispatch = useDispatch();
@@ -22,7 +25,7 @@ function App() {
                 res.json().then(() => dispatch(logIn()))
             }
         })
-    }, [])
+    })
 
     return (
         <div>
@@ -32,6 +35,15 @@ function App() {
                     <Switch>
                         <Route exact path="/posts">
                             <Posts />
+                        </Route>
+                        <Route exact path="/messages">
+                            <Messages />
+                        </Route>
+                        <Route exact path="/animals">
+                            <Animals />
+                        </Route>
+                        <Route exact path="/tagged_animals">
+                            <TaggedAnimals />
                         </Route>
                     </Switch>
                 </>

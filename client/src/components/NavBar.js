@@ -21,6 +21,9 @@ function NavBar() {
     return (
         <div>
             <NavLink to="/posts" exact>POSTS</NavLink>
+            <NavLink to="/messages" exact>MESSAGES</NavLink>
+            <NavLink to="/animals" exact>ANIMALS</NavLink>
+            <NavLink to="/tagged_animals" exact>TaggedAnimals</NavLink>
             <button onClick={handleLogout}>LOGOUT</button>
         </div>
     )
