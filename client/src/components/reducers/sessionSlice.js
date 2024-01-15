@@ -10,9 +10,12 @@ export const sessionSlice = createSlice({
     reducers: {
         logIn: (state) => {
             state.status = true
+        },
+        logOut: (state) => {
+            state.status = false
         }
     }
 })
 
-export const { logIn } = sessionSlice.actions;
+export const { logIn, logOut } = sessionSlice.actions;
 export default sessionSlice.reducer;

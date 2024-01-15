@@ -6,6 +6,7 @@ import store from "../store"
 
 import Login from "./Login";
 import Signup from "./Signup";
+import NavBar from "./NavBar";
 
 function App() {
     const dispatch = useDispatch();
@@ -26,6 +27,7 @@ function App() {
         <div>
             {user === true ? (
                 <>
+                    <NavBar />
                     <h1>Hello!</h1>
                 </>
             ) : (

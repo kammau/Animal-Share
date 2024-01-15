@@ -6,8 +6,7 @@ import { viewLogin } from "./reducers/viewSlice";
 import { logIn } from "./reducers/sessionSlice";
 
 function Signup() {
-    const [error, setError] = useState(false)
-    
+
     const dispatch = useDispatch();
 
     const formSchema = yup.object().shape({
@@ -31,11 +30,8 @@ function Signup() {
                 body: JSON.stringify(values)
             })
             .then((res) => {
-                if (res.status === 201) {
+                if (res.ok) {
                     dispatch(logIn())
-                }
-                else {
-                    setError(true)
                 }
             })
         }

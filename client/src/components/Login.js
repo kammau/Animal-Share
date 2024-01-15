@@ -3,6 +3,7 @@ import * as yup from "yup";
 import { useFormik } from "formik";
 import { useDispatch } from "react-redux";
 import { viewSignup } from "./reducers/viewSlice";
+import { logIn } from "./reducers/sessionSlice";
 
 function Login() {
     const dispatch = useDispatch();
@@ -19,7 +20,18 @@ function Login() {
         },
         validationSchema: formSchema,
         onSubmit: (values) => {
-            console.log(`Login: ${values}`)
+            fetch("/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(values)
+            })
+            .then((res) => {
+                if (res.ok) {
+                    dispatch(logIn())
+                }
+            })
         }
     })
 
