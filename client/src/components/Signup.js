@@ -19,7 +19,23 @@ function Signup() {
         },
         validationSchema: formSchema,
         onSubmit: (values) => {
-            console.log(`Signup: ${values.username} ${values.password}`)
+            // console.log(`Signup: ${values.username} ${values.password}`)
+
+            fetch("/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(values)
+            })
+            .then((res) => {
+                if (res.status === 201) {
+                    console.log("sucess!")
+                }
+                else {
+                    console.log("Uh Oh!")
+                }
+            })
         }
     })
 

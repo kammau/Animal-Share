@@ -27,5 +27,7 @@ CORS(app)
 
 bcrypt = Bcrypt(app)
 
+app.secret_key = b'\x12EP\xef\xdc\x02\x14\x85l\xeap<k2\xfa\xa9'
+
 if __name__ == "__main__":
     app.run(port=5555, debug=True)

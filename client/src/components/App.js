@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { viewLogin } from "./reducers/viewSlice";
-import { viewSignup } from "./reducers/viewSlice";
 import store from "../store"
 
 import Login from "./Login";
