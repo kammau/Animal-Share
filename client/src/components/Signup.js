@@ -6,6 +6,8 @@ import { viewLogin } from "./reducers/viewSlice";
 import { logIn } from "./reducers/sessionSlice";
 
 function Signup() {
+    const [error, setError] = useState(false)
+    
     const dispatch = useDispatch();
 
     const formSchema = yup.object().shape({
@@ -20,7 +22,6 @@ function Signup() {
         },
         validationSchema: formSchema,
         onSubmit: (values) => {
-            // console.log(`Signup: ${values.username} ${values.password}`)
 
             fetch("/signup", {
                 method: "POST",
@@ -31,11 +32,10 @@ function Signup() {
             })
             .then((res) => {
                 if (res.status === 201) {
-                    console.log("sucess!")
                     dispatch(logIn())
                 }
                 else {
-                    console.log("Uh Oh!")
+                    setError(true)
                 }
             })
         }
@@ -54,6 +54,7 @@ function Signup() {
                         value={formik.values.username}
                         onChange={formik.handleChange}
                     />
+                    <p>{formik.errors.username}</p>
                     <br />
                     <input 
                         name="password"
@@ -63,6 +64,7 @@ function Signup() {
                         value={formik.values.password}
                         onChange={formik.handleChange}
                     />
+                    <p>{formik.errors.password}</p>
                     <button type="submit" className="log_sign_btn">SIGNUP</button>
                 </form>
                 <br />
