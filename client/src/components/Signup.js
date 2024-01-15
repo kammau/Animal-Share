@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import { useDispatch } from "react-redux";
 import * as yup from "yup";
 import { viewLogin } from "./reducers/viewSlice";
+import { logIn } from "./reducers/sessionSlice";
 
 function Signup() {
     const dispatch = useDispatch();
@@ -31,6 +32,7 @@ function Signup() {
             .then((res) => {
                 if (res.status === 201) {
                     console.log("sucess!")
+                    dispatch(logIn())
                 }
                 else {
                     console.log("Uh Oh!")
