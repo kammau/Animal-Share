@@ -1,9 +1,10 @@
-import { useState } from "react";
+import React from "react";
 import * as yup from "yup";
 import { useFormik } from "formik";
 import { useDispatch } from "react-redux";
 import { viewSignup } from "./reducers/viewSlice";
 import { logIn } from "./reducers/sessionSlice";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 function Login() {
     const dispatch = useDispatch();
@@ -66,7 +67,7 @@ function Login() {
 
                 <section className="logsign_view_btns">
                     <button className="on_logsign_btn">LOGIN</button>
-                    <button className="off_logsign_btn" onClick={() => dispatch(viewSignup())}>SIGNUP</button>
+                    <NavLink to="/signup" exact><button className="off_logsign_btn" onClick={() => dispatch(viewSignup())}>SIGNUP</button></NavLink>
                 </section>
             </div>
         </div>

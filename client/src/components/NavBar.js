@@ -20,10 +20,10 @@ function NavBar() {
 
     return (
         <div>
-            <NavLink to="/posts" exact>POSTS</NavLink>
-            <NavLink to="/messages" exact>MESSAGES</NavLink>
-            <NavLink to="/animals" exact>ANIMALS</NavLink>
-            <NavLink to="/tagged_animals" exact>TaggedAnimals</NavLink>
+            <NavLink to="/posts" className="navbar_links" exact>POSTS</NavLink>
+            <NavLink to="/messages" className="navbar_links" exact>MESSAGES</NavLink>
+            <NavLink to="/animals" className="navbar_links" exact>ANIMALS</NavLink>
+            <NavLink to="/tagged_animals" className="navbar_links" exact>TaggedAnimals</NavLink>
             <button onClick={handleLogout}>LOGOUT</button>
         </div>
     )

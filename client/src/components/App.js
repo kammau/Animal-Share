@@ -50,9 +50,13 @@ function App() {
             ) : (
                 <div>
                     {view === "login" ? (
-                        <Login />
+                        <Route exact path="/login">
+                            <Login />
+                        </Route>
                     ) : (
-                        <Signup />
+                        <Route exact path="/signup">
+                            <Signup />
+                        </Route>
                     )}
                 </div>
             )}
