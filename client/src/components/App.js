@@ -7,6 +7,7 @@ import store from "../store"
 import Login from "./Login";
 import Signup from "./Signup";
 import NavBar from "./NavBar";
+import Posts from "./Posts";
 
 function App() {
     const dispatch = useDispatch();
@@ -28,7 +29,11 @@ function App() {
             {user === true ? (
                 <>
                     <NavBar />
-                    <h1>Hello!</h1>
+                    <Switch>
+                        <Route exact path="/posts">
+                            <Posts />
+                        </Route>
+                    </Switch>
                 </>
             ) : (
                 <div>

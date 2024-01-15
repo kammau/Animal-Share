@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 import { logOut } from "./reducers/sessionSlice";
 
@@ -19,6 +20,7 @@ function NavBar() {
 
     return (
         <div>
+            <NavLink to="/posts" exact>POSTS</NavLink>
             <button onClick={handleLogout}>LOGOUT</button>
         </div>
     )
