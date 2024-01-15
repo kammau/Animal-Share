@@ -2,9 +2,11 @@ import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "@reduxjs/toolkit";
 import viewReducer from "./components/reducers/viewSlice";
 
-export default configureStore({
+const store = configureStore({
     reducer: {
         view: viewReducer,
     }
 })
+
+export default store;
 

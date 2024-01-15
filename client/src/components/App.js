@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
-import { useSelector } from "react-redux";
-
+import { useSelector, useDispatch } from "react-redux";
+import { viewLogin } from "./reducers/viewSlice";
+import { viewSignup } from "./reducers/viewSlice";
+import store from "../store"
 
 import Login from "./Login";
 import Signup from "./Signup";
-import { Router } from "react-router-dom/cjs/react-router-dom.min";
 
 function App() {
-    let view = useSelector(state => state.value)
+    let view = useSelector(() => store.getState().view.value)
 
     return (
-        <div id="body">
-            {view = "login" ? (
+        <div>
+            {view === "login" ? (
                 <Login />
             ) : (
                 <Signup />

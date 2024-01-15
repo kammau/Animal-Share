@@ -1,19 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit"
 
-// const viewReducer = (state = "login", action) => {
-//     switch(action.type) {
-//         case "LOGIN":
-//             return state = "login"
-//         case "SIGNUP":
-//             return state = "signup"
-//         default:
-//             return state;
-//     }
-// }
+const initialState = {
+    value: ""
+};
 
-const initialState = { value: "" }
-
-const viewSlice = createSlice({
+export const viewSlice = createSlice({
     name: "view",
     initialState,
     reducers: {
@@ -26,5 +17,5 @@ const viewSlice = createSlice({
     }
 })
 
-export const { viewLogin, viewSignup } = viewSlice.actions
-export default viewSlice.reducer
+export const { viewLogin, viewSignup } = viewSlice.actions;
+export default viewSlice.reducer;
