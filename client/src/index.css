@@ -73,10 +73,22 @@
     position: absolute;
 }
 
+#logout_icon {
+    width: 35px;
+    height: 35px;
+}
+
 /* NAVBAR: */
 
 .navbar_links {
     padding: 10px;
+}
+
+#navbar {
+    overflow: hidden;
+    text-align: center;
+    background-color: #6b9080;
+    height: 50px;
 }
 
 

@@ -19,12 +19,12 @@ function NavBar() {
     }
 
     return (
-        <div>
+        <div id="navbar">
             <NavLink to="/posts" className="navbar_links" exact>POSTS</NavLink>
             <NavLink to="/messages" className="navbar_links" exact>MESSAGES</NavLink>
             <NavLink to="/animals" className="navbar_links" exact>ANIMALS</NavLink>
             <NavLink to="/tagged_animals" className="navbar_links" exact>TaggedAnimals</NavLink>
-            <button onClick={handleLogout}>LOGOUT</button>
+            <button onClick={handleLogout}><img src="https://www.iconpacks.net/icons/2/free-exit-logout-icon-2857-thumb.png" alt="logout icon" id="logout_icon"/></button>
         </div>
     )
 }
