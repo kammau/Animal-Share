@@ -51,6 +51,9 @@ class User(db.Model, SerializerMixin):
 class Animal(db.Model, SerializerMixin):
     __tablename__ = "animals"
 
+    # serialize_rules = ("-users.currentAnimals", "-users.taggedAnimals", "-posts.animals", "-posts.user", "-users.posts")
+    serialize_only = ("id", "name", "img", "species", "breed", "age", "location", "sex")
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
     img = db.Column(db.String)
