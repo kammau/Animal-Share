@@ -76,19 +76,53 @@
 #logout_icon {
     width: 35px;
     height: 35px;
+    background-color: #6b9080;
+}
+
+#logout_btn {
+    background-color: #6b9080;
 }
 
 /* NAVBAR: */
 
-.navbar_links {
-    padding: 10px;
+.navbar_titles {
+    margin: 20px;
+    text-decoration: none;
+    color: #bababa;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: sans-serif;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+
+    &::before {
+        content: attr(data-item);
+        transition: 0.5s;
+        color: #e1e5e2;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+            transition: all 0.5s ease-in-out;
+        }
+    }
 }
 
 #navbar {
-    overflow: hidden;
+    margin: 25px;
     text-align: center;
     background-color: #6b9080;
     height: 50px;
+    padding: 15px;
 }
 
 

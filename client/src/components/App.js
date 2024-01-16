@@ -49,6 +49,7 @@ function App() {
                 </>
             ) : (
                 <div>
+                    <Signup />
                     {view === "login" ? (
                         <Route exact path="/login">
                             <Login />
