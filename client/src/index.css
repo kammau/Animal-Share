@@ -1,3 +1,8 @@
+/* BODY: */
+body {
+    background: linear-gradient(90deg in oklab, #dff2f2, #f6fff8);
+}
+
 /* LOGIN AND SIGNUP FORMS: */
 .log_sign_body {
     background: linear-gradient(90deg, #00B4D8, #023E8A);
@@ -104,7 +109,8 @@
 .navbar_titles {
     margin: 20px;
     text-decoration: none;
-    color: #bababa;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #171717;
     font-size: 24px;
     font-weight: 400;
     font-family: sans-serif;
@@ -115,7 +121,8 @@
     &::before {
         content: attr(data-item);
         transition: 0.5s;
-        color: #e1e5e2;
+        color: #62616177;
+        text-shadow: 2px 2px 2px ;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -136,9 +143,33 @@
 #navbar {
     margin: 0;
     text-align: center;
-    background-color: #6b9080;
+    border-radius: 15px;
+    background: linear-gradient(#6b9080, #a4c3b2);
     height: 100px;
 }
+
+/* ANIMALS: */
+
+#animals_body {
+    text-align: center;
+    background-color: #f36fff50;
+}
+
+#animal_card_container {
+    text-align: center;
+    background-color: #00B4D8;
+    position: relative;
+}
+
+.animal_card {
+    background-color: #023E8A;
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
 
 
 
