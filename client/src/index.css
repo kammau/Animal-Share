@@ -76,11 +76,27 @@
 #logout_icon {
     width: 35px;
     height: 35px;
-    background-color: #6b9080;
 }
 
 #logout_btn {
+    cursor: pointer;
     background-color: #6b9080;
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+
+#logout_btn:hover {
+    background-color: #a4c3b2;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+}
+
+#logout_btn:active {
+    background-color: #3d94cf;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
 }
 
 /* NAVBAR: */
@@ -118,11 +134,10 @@
 }
 
 #navbar {
-    margin: 25px;
+    margin: 0;
     text-align: center;
     background-color: #6b9080;
-    height: 50px;
-    padding: 15px;
+    height: 100px;
 }
 
 

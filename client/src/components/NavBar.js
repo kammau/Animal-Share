@@ -24,7 +24,7 @@ function NavBar() {
             <NavLink to="/messages" className="navbar_titles" data-item="Messages" exact>MESSAGES</NavLink>
             <NavLink to="/animals" className="navbar_titles" data-item="Animals" exact>ANIMALS</NavLink>
             <NavLink to="/tagged_animals" className="navbar_titles" data-item="TaggedAnimals" exact>TaggedAnimals</NavLink>
-            <button onClick={handleLogout} id="logout_btn" className="navbar_links"><img src="https://www.iconpacks.net/icons/2/free-exit-logout-icon-2857-thumb.png" alt="logout icon" id="logout_icon"/></button>
+            <button onClick={handleLogout} id="logout_btn" className="navbar_titles"><img src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" alt="logout icon" id="logout_icon"/></button>
         </div>
     )
 }
