@@ -12,12 +12,21 @@ function Animals() {
     
     return (
         <div id="animals_body">
-            <h1>Animals!</h1>
-            <div id="animal_card_container">
+            <div id="animal_cards_container">
                 {animals ? animals.map((animal) => {
                     return (
                         <div className="animal_card" key={animal.id}>
-                            <h1>{animal.name}</h1>
+                            <div className="animal_img_container">
+                                <img src={animal.img} alt={`${animal.name}`} className="animal_img"/>
+                            </div>
+                            <div className="animal_text_container">
+                                <h3>Name: {animal.name}</h3>
+                                <p>Species: {animal.species}</p>
+                                <p>Breed: {animal.breed}</p>
+                                <p>Sex: {animal.sex}</p>
+                                <p>Age: {animal.age}</p>
+                                <p>Location: {animal.location}</p>
+                            </div>
                         </div>
                     )
                 }) : <h1>Error!</h1>}
