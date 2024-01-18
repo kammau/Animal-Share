@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import SearchAnimals from "./SearchAnimals";
 
 function Animals() {
     // Maybe in future change to hold in redux state
     const [animals, setAnimals] = useState()
     const [addBtn, setAddBtn] = useState(false)
+    const [searchValue, setSearchValue] = useState("")
 
     useEffect(() => {
         fetch("/animals")
         .then((res) => res.json())
         .then((res) => setAnimals(res))
     }, [])
+
+    const animalSearch = animals.filter((animal) => {
+        return animal.name.toLowerCase().includes(searchValue.toLowerCase())
+    })
 
     function tagAnimal(id) {
         console.log(id)
@@ -108,11 +114,14 @@ function Animals() {
             ) : (
                 <button id="add_animal_btn" onClick={() => setAddBtn(true)}>+</button>
             )}
+
+            {/* SEARCH ANIMAL'S */}
+            <SearchAnimals searchValue={searchValue} onSearchChange={setSearchValue} />
             
             {/* ANIMAL CARD'S */}
 
             <div id="animal_cards_container">
-                {animals ? animals.map((animal) => {
+                {animalSearch ? animalSearch.map((animal) => {
                     return (
                         <div className="animal_card" key={animal.id}>
                             <div className="animal_img_container">
