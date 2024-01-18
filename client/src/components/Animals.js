@@ -35,12 +35,26 @@ function Animals() {
         },
         validationSchema: formSchema,
         onSubmit: (values) => {
-            console.log(values)
+            fetch("/animals", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(values)
+            })
+            .then((res) => res.json())
+            .then((res) => {
+                const updatedAnimals = [...animals, res]
+                setAnimals(updatedAnimals)
+            })
         }
     })
     
     return (
         <div id="animals_body">
+
+            {/* ADD ANIMAL FORM: */}
+
             {addBtn === true ? (
                 <>
                     <button id="add_animal_btn" onClick={() => setAddBtn(false)}>-</button>
@@ -84,6 +98,8 @@ function Animals() {
                 <button id="add_animal_btn" onClick={() => setAddBtn(true)}>+</button>
             )}
             
+            {/* ANIMAL CARD'S */}
+
             <div id="animal_cards_container">
                 {animals ? animals.map((animal) => {
                     return (

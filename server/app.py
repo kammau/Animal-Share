@@ -66,6 +66,27 @@ class Animals(Resource):
 
         return animals, 200
     
+    def post(self):
+        data = request.get_json()
+
+        user = User.query.filter(User.id == session["user_id"]).first()
+
+        new_animal = Animal(
+            name=data["name"],
+            img=data["img"],
+            species=data["species"],
+            breed=data["breed"],
+            age=data["age"],
+            location=data["location"],
+            sex=data["sex"],
+            currentOwner=user
+        )
+
+        db.session.add(new_animal)
+        db.session.commit()
+
+        return new_animal.to_dict(), 201
+    
 
 api.add_resource(CheckSession, "/check_session", endpoint="check_session")
 api.add_resource(Signup, "/signup", endpoint="signup")
