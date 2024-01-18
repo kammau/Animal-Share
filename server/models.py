@@ -12,8 +12,8 @@ animal_post = db.Table(
 
 user_animal = db.Table(
     "user_animal",
-    db.Column("animal_id", db.Integer, db.ForeignKey("users.id")),
-    db.Column("user_id", db.Integer, db.ForeignKey("animals.id"))
+    db.Column("animal_id", db.Integer, db.ForeignKey("animals.id")),
+    db.Column("user_id", db.Integer, db.ForeignKey("users.id"))
 )
 
 class User(db.Model, SerializerMixin):

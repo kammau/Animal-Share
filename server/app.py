@@ -82,10 +82,26 @@ class Animals(Resource):
             currentOwner=user
         )
 
+        user.currentAnimals.append(new_animal)
+
         db.session.add(new_animal)
         db.session.commit()
 
         return new_animal.to_dict(), 201
+    
+    def patch(self):
+        data = request.get_json()
+
+        user = User.query.filter(User.id == session["user_id"]).first()
+        animal = Animal.query.filter(Animal.id == data).first()
+
+        user.taggedAnimals.append(animal)
+        animal.taggedBy.append(user)
+
+        db.session.add(user)
+        db.session.add(animal)
+
+        db.session.commit()
     
 
 api.add_resource(CheckSession, "/check_session", endpoint="check_session")

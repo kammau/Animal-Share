@@ -3,7 +3,7 @@ from random import randint, choice as rc
 from faker import Faker
 
 from config import app, db
-from models import User, Message, Animal, Post
+from models import User, Message, Animal, Post, user_animal
 
 if __name__ == "__main__":
     fake = Faker()
@@ -11,6 +11,7 @@ if __name__ == "__main__":
         print("Starting seed...")
 
         # db.session.query(animal_post).delete()
+        db.session.query(user_animal).delete()
         User.query.delete()
         Message.query.delete()
         Animal.query.delete()
@@ -94,6 +95,7 @@ if __name__ == "__main__":
         post1.animals.append(animal1)
 
         user1.taggedAnimals.append(animal1)
+        user1.taggedAnimals.append(animal2)
 
         db.session.commit()
 

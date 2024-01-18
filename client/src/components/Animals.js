@@ -13,6 +13,17 @@ function Animals() {
         .then((res) => setAnimals(res))
     }, [])
 
+    function tagAnimal(id) {
+        console.log(id)
+        fetch("/animals", {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(id)
+        })
+    }
+
     const formSchema = yup.object().shape({
         name: yup.string().required("Please enter your animals name"),
         age: yup.number().required("Please enter your animals name"),
@@ -115,6 +126,7 @@ function Animals() {
                                 <p>Age: {animal.age}</p>
                                 <p>Location: {animal.location}</p>
                             </div>
+                            <button onClick={() => tagAnimal(animal.id)}><img src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/></button>
                         </div>
                     )
                 }) : <h1>Error!</h1>}
