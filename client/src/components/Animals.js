@@ -5,7 +5,7 @@ import SearchAnimals from "./SearchAnimals";
 
 function Animals() {
     // Maybe in future change to hold in redux state
-    const [animals, setAnimals] = useState()
+    const [animals, setAnimals] = useState([])
     const [addBtn, setAddBtn] = useState(false)
     const [searchValue, setSearchValue] = useState("")
 
@@ -16,7 +16,7 @@ function Animals() {
     }, [])
 
     const animalSearch = animals.filter((animal) => {
-        return animal.name.toLowerCase().includes(searchValue.toLowerCase())
+        return animal.breed.toLowerCase().includes(searchValue.toLowerCase())
     })
 
     function tagAnimal(id) {
