@@ -134,8 +134,9 @@ function Animals() {
                                 <p>Sex: {animal.sex}</p>
                                 <p>Age: {animal.age}</p>
                                 <p>Location: {animal.location}</p>
+                                <p>Current Owner: {animal.currentOwner}</p>
                             </div>
-                            <button onClick={() => tagAnimal(animal.id)}><img src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/></button>
+                            <button onClick={() => tagAnimal(animal.id)} className="tag_icon_btn"><img className="tag_icon" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/></button>
                         </div>
                     )
                 }) : <h1>Error!</h1>}
