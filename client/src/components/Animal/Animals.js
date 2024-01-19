@@ -8,7 +8,7 @@ function Animals() {
     const [animals, setAnimals] = useState([])
     const [addBtn, setAddBtn] = useState(false)
     const [searchValue, setSearchValue] = useState("")
-    const [searchBy, setSearchBy] = useState("Breed")
+    const [searchBy, setSearchBy] = useState("")
 
     useEffect(() => {
         fetch("/animals")
@@ -30,7 +30,7 @@ function Animals() {
             return animal.sex.toLowerCase().includes(searchValue.toLowerCase())
         }
 
-        return <h1>Looks like we don't have what your looking for!</h1>
+        return animal
     })
 
     function tagAnimal(id) {

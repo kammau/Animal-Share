@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { logIn } from "./reducers/sessionSlice";
 import store from "../store"
 
-import Login from "./Login";
-import Signup from "./Signup";
+import Login from "./User/Login";
+import Signup from "./User/Signup";
 import NavBar from "./NavBar";
 import Posts from "./Posts";
 import Messages from "./Messages";
