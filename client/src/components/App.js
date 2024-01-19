@@ -9,7 +9,7 @@ import Signup from "./Signup";
 import NavBar from "./NavBar";
 import Posts from "./Posts";
 import Messages from "./Messages";
-import Animals from "./Animals";
+import Animals from "./Animal/Animals";
 import TaggedAnimals from "./TaggedAnimals";
 
 function App() {
