@@ -43,6 +43,7 @@ function Animals() {
             body: JSON.stringify(id)
         })
     }
+
     
     return (
         <div id="animals_body">
@@ -61,7 +62,7 @@ function Animals() {
             <div id="animal_cards_container">
                 {animalSearch ? animalSearch.map((animal) => {
                     return (
-                        <AnimalCard animal={animal} tagAnimal={tagAnimal}/>
+                        <AnimalCard animal={animal} tagAnimal={tagAnimal} />
                     )
                 }) : <h1>Error!</h1>}
             </div>

@@ -58,6 +58,14 @@ class Logout(Resource):
 
         return {"message": "204: No Content"}, 204
     
+
+class UsersTaggedAnimals(Resource):
+    def get(self):
+        user = User.query.filter(User.id == session["user_id"]).first()
+        taggedAnimals = [taggedAnimals.to_dict() for taggedAnimals in user.taggedAnimals]
+
+        return taggedAnimals, 200
+    
 # ANIMAL:
     
 class Animals(Resource):
@@ -108,6 +116,7 @@ api.add_resource(CheckSession, "/check_session", endpoint="check_session")
 api.add_resource(Signup, "/signup", endpoint="signup")
 api.add_resource(Login, "/login", endpoint="login")
 api.add_resource(Logout, "/logout", endpoint="logout")
+api.add_resource(UsersTaggedAnimals, "/tagged_animals", endpoint="tagged_animals")
 
 api.add_resource(Animals, "/animals", endpoint="animals")
 
