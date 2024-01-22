@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import MessageCard from "./MessageCard";
 
 function Messages() {
+    const [messages, setMessages] = useState()
+
+    useEffect(() => {
+        fetch("/messages")
+        .then((res) => res.json())
+        .then((res) => setMessages([res]))
+    })
+
+
     return (
-        <h1>Messages!</h1>
+        <div>
+            {messages ? messages.map((message) => {
+                return (
+                    <MessageCard message={message} />
+                )
+            }) : <h1>No messages</h1>}
+        </div>
     )
 }
 

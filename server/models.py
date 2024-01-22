@@ -78,6 +78,8 @@ class Animal(db.Model, SerializerMixin):
 class Message(db.Model, SerializerMixin):
     __tablename__ = "messages"
 
+    serialize_only = ("id", "messageBody", "sender")
+
     id = db.Column(db.Integer, primary_key=True)
     messageBody = db.Column(db.String, nullable=False)
     sender = db.Column(db.String)

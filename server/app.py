@@ -130,7 +130,6 @@ class Animals(Resource):
 
 class UsersMessages(Resource):
     def get(self):
-        user = User.query.filter(User.id == session["user_id"]).first()
         messages = Message.query.filter(Message.user_id == session["user_id"]).first()
 
         return messages.to_dict(), 200
@@ -146,6 +145,8 @@ api.add_resource(UsersTaggedAnimals, "/tagged_animals", endpoint="tagged_animals
 api.add_resource(TaggedAnimalByID, "/tagged_animals/<int:id>", endpoint="tagged_animals_by_id")
 
 api.add_resource(Animals, "/animals", endpoint="animals")
+
+api.add_resource(UsersMessages, "/messages", endpoint="users_messages")
 
 if __name__ == "__main__":
     app.run(port=5555, debug=True)
