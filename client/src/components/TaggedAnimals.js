@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import TaggedAnimalCard from "./TaggedAnimalCard";
 
 function TaggedAnimals() {
     const [taggedAnimals, setTaggedAnimals] = useState()
@@ -6,11 +7,17 @@ function TaggedAnimals() {
     useEffect(() => {
         fetch("/tagged_animals")
         .then((res) => res.json())
-        .then((res) => console.log(res))
-    })
+        .then((res) => setTaggedAnimals(res))
+    }, [])
 
     return (
-        <h1>TaggedAnimals!</h1>
+        <div>
+            {taggedAnimals ? taggedAnimals.map((animal) => {
+                return (
+                    <TaggedAnimalCard animal={animal} setTaggedAnimals={setTaggedAnimals}/>
+                )
+            }) : <h1>Looks like you have not tagged any animals!</h1>}
+        </div>
     )
 }
 

@@ -57,7 +57,9 @@ class Logout(Resource):
         session["user_id"] = None
 
         return {"message": "204: No Content"}, 204
-    
+
+
+# TAGGED ANIMALS:
 
 class UsersTaggedAnimals(Resource):
     def get(self):
@@ -65,6 +67,19 @@ class UsersTaggedAnimals(Resource):
         taggedAnimals = [taggedAnimals.to_dict() for taggedAnimals in user.taggedAnimals]
 
         return taggedAnimals, 200
+    
+class TaggedAnimalByID(Resource):
+    def delete(self, id):
+        animal = Animal.query.filter(Animal.id == id).first()
+        user = User.query.filter(User.id == session["user_id"]).first()
+
+        user.taggedAnimals.remove(animal)
+
+        db.session.add(user)
+        db.session.commit()
+
+        return {}, 204
+
     
 # ANIMAL:
     
@@ -116,7 +131,9 @@ api.add_resource(CheckSession, "/check_session", endpoint="check_session")
 api.add_resource(Signup, "/signup", endpoint="signup")
 api.add_resource(Login, "/login", endpoint="login")
 api.add_resource(Logout, "/logout", endpoint="logout")
+
 api.add_resource(UsersTaggedAnimals, "/tagged_animals", endpoint="tagged_animals")
+api.add_resource(TaggedAnimalByID, "/tagged_animals/<int:id>", endpoint="tagged_animals_by_id")
 
 api.add_resource(Animals, "/animals", endpoint="animals")
 
