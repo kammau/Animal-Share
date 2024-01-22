@@ -10,7 +10,7 @@ import NavBar from "./NavBar";
 import Posts from "./Posts";
 import Messages from "./Messages";
 import Animals from "./Animal/Animals";
-import TaggedAnimals from "./TaggedAnimals";
+import TaggedAnimals from "./TaggedAnimals/TaggedAnimals";
 
 function App() {
     const dispatch = useDispatch();

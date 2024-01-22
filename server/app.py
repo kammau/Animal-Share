@@ -125,6 +125,16 @@ class Animals(Resource):
         db.session.add(animal)
 
         db.session.commit()
+
+# MESSAGES:
+
+class UsersMessages(Resource):
+    def get(self):
+        user = User.query.filter(User.id == session["user_id"]).first()
+        messages = Message.query.filter(Message.user_id == session["user_id"]).first()
+
+        return messages.to_dict(), 200
+
     
 
 api.add_resource(CheckSession, "/check_session", endpoint="check_session")

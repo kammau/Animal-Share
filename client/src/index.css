@@ -218,6 +218,10 @@ body {
     bottom: 10px;
 }
 
+#no_tagged_animals_message {
+    font-size: 100px;
+}
+
 /* MESSAGE */
 
 .message_icon {
