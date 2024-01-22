@@ -69,7 +69,8 @@ if __name__ == "__main__":
 
         message1 = Message(
             messageBody="Hello!",
-            sender="purple85555"
+            sender="purple85555",
+            messageTitle="Greetings!"
         )
         message1.reciever = user1
 

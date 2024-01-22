@@ -57,6 +57,15 @@ class Logout(Resource):
         session["user_id"] = None
 
         return {"message": "204: No Content"}, 204
+    
+
+class Users(Resource):
+    def get(self):
+        users = User.query.all()
+
+        users_serilaized = [user.to_dict() for user in users]
+
+        return users_serilaized, 200
 
 
 # TAGGED ANIMALS:
@@ -140,6 +149,7 @@ api.add_resource(CheckSession, "/check_session", endpoint="check_session")
 api.add_resource(Signup, "/signup", endpoint="signup")
 api.add_resource(Login, "/login", endpoint="login")
 api.add_resource(Logout, "/logout", endpoint="logout")
+api.add_resource(Users, "/users", endpoint="users")
 
 api.add_resource(UsersTaggedAnimals, "/tagged_animals", endpoint="tagged_animals")
 api.add_resource(TaggedAnimalByID, "/tagged_animals/<int:id>", endpoint="tagged_animals_by_id")

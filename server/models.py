@@ -19,6 +19,8 @@ user_animal = db.Table(
 class User(db.Model, SerializerMixin):
     __tablename__ = "users"
 
+    serialize_only = ("username", "accountType")
+
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique=True, nullable=False)
     _password_hash = db.Column(db.String)
@@ -78,9 +80,10 @@ class Animal(db.Model, SerializerMixin):
 class Message(db.Model, SerializerMixin):
     __tablename__ = "messages"
 
-    serialize_only = ("id", "messageBody", "sender")
+    serialize_only = ("id", "messageBody", "sender", "messageTitle")
 
     id = db.Column(db.Integer, primary_key=True)
+    messageTitle = db.Column(db.String)
     messageBody = db.Column(db.String, nullable=False)
     sender = db.Column(db.String)
 

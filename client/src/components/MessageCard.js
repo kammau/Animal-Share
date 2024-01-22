@@ -2,7 +2,11 @@ import React from "react";
 
 function MessageCard({message}) {
     return (
-        <h1>{message.messageBody}</h1>
+        <div className="message_card">
+            <h1>{message.messageTitle}</h1>
+            <h3>{message.sender}</h3>
+            <p>{message.messageBody}</p>
+        </div>
     )
 }
 

@@ -240,6 +240,10 @@ body {
     cursor: pointer;
 }
 
+.message_card {
+    border: rgb(7, 129, 68) solid 1px;
+}
+
 
 /* ADD ANIMAL FORM */
 #add_animal_btn {
