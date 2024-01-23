@@ -142,6 +142,25 @@ class UsersMessages(Resource):
         messages = Message.query.filter(Message.user_id == session["user_id"]).first()
 
         return messages.to_dict(), 200
+    
+    def post(self):
+        data = request.get_json()
+        user = User.query.filter(User.id == session["user_id"]).first()
+
+        reciever = User.query.filter(User.username == data["reciever"]).first()
+
+        new_message = Message(
+            messageTitle=data["messageTitle"],
+            messageBody=data["messageBody"],
+            sender=user.username
+        )
+
+        new_message.reciever = reciever
+
+        db.session.add(new_message)
+        db.session.commit()
+
+        return {}, 201
 
     
 
@@ -156,7 +175,7 @@ api.add_resource(TaggedAnimalByID, "/tagged_animals/<int:id>", endpoint="tagged_
 
 api.add_resource(Animals, "/animals", endpoint="animals")
 
-api.add_resource(UsersMessages, "/messages", endpoint="users_messages")
+api.add_resource(UsersMessages, "/messages", endpoint="messages")
 
 if __name__ == "__main__":
     app.run(port=5555, debug=True)

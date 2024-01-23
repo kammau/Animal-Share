@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
 
 function NewMessage() {
     const [users, setUsers] = useState();
@@ -9,17 +11,44 @@ function NewMessage() {
         .then((res) => setUsers(res))
     }, [])
 
+    const formSchema = yup.object().shape({
+        messageTitle: yup.string().required("Please enter a title"),
+        messageBody: yup.string().required("Please enter a message body"),
+        reciever: yup.string().required("Please select someone to send the message to")
+    })
+
+    const formik = useFormik({
+        initialValues: {
+            messageTitle: "",
+            messageBody: "",
+            reciever: ""
+        },
+        validationSchema: formSchema,
+        onSubmit: (values) => {
+            fetch("/messages", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(values)
+            })
+        }
+    })
+
 
     return (
         <div>
-            <form>
-                <input type="text" />
+            <form onSubmit={formik.handleSubmit} autoComplete="off">
+                <input type="text" name="messageTitle" onChange={formik.handleChange} value={formik.values.messageTitle}/>
 
-                <select>
-                    {users ? users.map((user) => <option value={user.username}>{user.username}</option>) : null}
+                <select name="reciever" onChange={formik.handleChange} values={formik.values.reciever}>
+                    <option value="" disabled selected>To</option>
+                    {users ? users.map((user) => <option key={user.id} value={user.username}>{user.username}</option>) : null}
                 </select>
 
-                <textarea rows="5" cols="33"></textarea>
+                <textarea rows="5" cols="33" name="messageBody" onChange={formik.handleChange} value={formik.values.messageBody}></textarea>
+
+                <button type="submit">Send</button>
             </form>
         </div>
     )
