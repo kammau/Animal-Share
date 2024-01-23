@@ -139,7 +139,7 @@ class Animals(Resource):
 
 class UsersMessages(Resource):
     def get(self):
-        messages = Message.query.filter(Message.id == session["user_id"]).all()
+        messages = Message.query.filter(Message.user_id == session["user_id"]).all()
 
         if bool(messages) == False:
             return {}, 204
