@@ -7,11 +7,21 @@ function Messages() {
 
     useEffect(() => {
         fetch("/messages")
-        .then((res) => res.json())
-        .then((res) => setMessages([res]))
+        .then((res) => {
+            if (res.status === 200) {
+                return res.json().then((res) => setMessages([res]))
+            }
+            else return
+        })
     }, [])
 
-
+    function deleteMessage(message) {
+        fetch(`/messages/${message.id}`, {
+            method: "DELETE",
+        })
+        .then((res) => res.json)
+        .then((res) => console.log(res))
+    }
 
 
     return (
@@ -21,7 +31,7 @@ function Messages() {
             <div id="messages_body">
                 {messages ? messages.map((message) => {
                     return (
-                        <MessageCard message={message} />
+                        <MessageCard message={message} deleteMessage={deleteMessage}/>
                     )
                 }) : <h1>No messages</h1>}
             </div>

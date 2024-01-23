@@ -141,7 +141,10 @@ class UsersMessages(Resource):
     def get(self):
         messages = Message.query.filter(Message.user_id == session["user_id"]).first()
 
-        return messages.to_dict(), 200
+        if bool(messages) == False:
+            return {}, 204
+        else:
+            return messages.to_dict(), 200
     
     def post(self):
         data = request.get_json()
@@ -162,7 +165,16 @@ class UsersMessages(Resource):
 
         return {}, 201
 
-    
+class MessageByID(Resource):
+    def delete(self, id):
+        messageToDelete = Message.query.filter(Message.id == id).first()
+        
+        db.session.delete(messageToDelete)
+        db.session.commit()
+
+        return {}, 204
+
+
 
 api.add_resource(CheckSession, "/check_session", endpoint="check_session")
 api.add_resource(Signup, "/signup", endpoint="signup")
@@ -176,6 +188,7 @@ api.add_resource(TaggedAnimalByID, "/tagged_animals/<int:id>", endpoint="tagged_
 api.add_resource(Animals, "/animals", endpoint="animals")
 
 api.add_resource(UsersMessages, "/messages", endpoint="messages")
+api.add_resource(MessageByID, "/messages/<int:id>", endpoint="message_by_id")
 
 if __name__ == "__main__":
     app.run(port=5555, debug=True)
