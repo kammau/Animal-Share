@@ -24,7 +24,7 @@ function NewMessage() {
             reciever: ""
         },
         validationSchema: formSchema,
-        onSubmit: (values) => {
+        onSubmit: (values, {resetForm}) => {
             fetch("/messages", {
                 method: "POST",
                 headers: {
@@ -32,6 +32,8 @@ function NewMessage() {
                 },
                 body: JSON.stringify(values)
             })
+            
+            resetForm()
         }
     })
 

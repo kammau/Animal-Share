@@ -139,12 +139,13 @@ class Animals(Resource):
 
 class UsersMessages(Resource):
     def get(self):
-        messages = Message.query.filter(Message.user_id == session["user_id"]).first()
+        messages = Message.query.filter(Message.id == session["user_id"]).all()
 
         if bool(messages) == False:
             return {}, 204
         else:
-            return messages.to_dict(), 200
+            messages_serialized = [message.to_dict() for message in messages]
+            return messages_serialized, 200
     
     def post(self):
         data = request.get_json()
@@ -159,6 +160,7 @@ class UsersMessages(Resource):
         )
 
         new_message.reciever = reciever
+        new_message.user_id = reciever.id
 
         db.session.add(new_message)
         db.session.commit()
