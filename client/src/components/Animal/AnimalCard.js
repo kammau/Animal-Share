@@ -14,8 +14,7 @@ function AnimalCard({animal, tagAnimal}) {
                 <p>Sex: {animal.sex}</p>
                 <p>Age: {animal.age}</p>
                 <p>Location: {animal.location}</p>
-                <p>Current Owner: {animal.currentOwner}</p>
-                {console.log(animal)}
+                <p>Current Owner: {animal.currentOwner.username}</p>
             </div>
             <NavLink to="/messages" data-item="Messages" exact>
                 <button className="message_btn">
