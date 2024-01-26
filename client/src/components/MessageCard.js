@@ -1,8 +1,16 @@
 import React, { useState } from "react";
-import NewMessage from "./NewMessage";
+import SpecificMessage from "./SpecificMessage";
+import { useDispatch } from "react-redux";
+import { setSendTo } from "./reducers/sendToSlice";
 
 function MessageCard({message, deleteMessage}) {
     const [replyView, setReplyView] = useState(false)
+    
+    const dispatch = useDispatch();
+
+    function handleSendTo(to) {
+        dispatch(setSendTo(to))
+    }
 
 
     return (
@@ -16,10 +24,11 @@ function MessageCard({message, deleteMessage}) {
 
             <div>
                 {replyView ? (
-                    <form>
+                    <div>
+                        {handleSendTo(message.sender)}
                         <button onClick={() => setReplyView(false)}>Cancel</button>
-                        <NewMessage />
-                    </form>
+                        <SpecificMessage />
+                    </div>
                 ) : null}
             </div>
         </div>

@@ -5,6 +5,7 @@ import * as yup from "yup";
 function NewMessage() {
     const [users, setUsers] = useState();
 
+
     useEffect(() => {
         fetch("/users")
         .then((res) => res.json())
@@ -21,7 +22,7 @@ function NewMessage() {
         initialValues: {
             messageTitle: "",
             messageBody: "",
-            reciever: ""
+            reciever: "",
         },
         validationSchema: formSchema,
         onSubmit: (values, {resetForm}) => {
@@ -37,14 +38,13 @@ function NewMessage() {
         }
     })
 
-
     return (
         <div>
             <form onSubmit={formik.handleSubmit} autoComplete="off">
                 <input type="text" name="messageTitle" onChange={formik.handleChange} value={formik.values.messageTitle}/>
 
                 <select name="reciever" onChange={formik.handleChange} values={formik.values.reciever}>
-                    <option value="" disabled selected>To</option>
+                    <option default selected hidden></option>
                     {users ? users.map((user) => <option key={user.id} value={user.username}>{user.username}</option>) : null}
                 </select>
 

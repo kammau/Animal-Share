@@ -11,7 +11,6 @@ function Messages() {
         .then((res) => {
             if (res.status === 200) {
                 return res.json().then((res) => {
-                    console.log(res)
                     setMessages(res)
                 })
             }
@@ -46,7 +45,7 @@ function Messages() {
             <div id="messages_body">
                 {messages ? messages.map((message) => {
                     return (
-                        <MessageCard message={message} deleteMessage={deleteMessage}/>
+                        <MessageCard key={message.id} message={message} deleteMessage={deleteMessage}/>
                     )
                 }) : <h1>No messages</h1>}
             </div>
