@@ -177,6 +177,15 @@ class MessageByID(Resource):
         return {}, 204
 
 
+# POSTS:
+
+class Posts(Resource):
+    def get(self):
+        posts = [post.to_dict() for post in Post.query.all()]
+
+        return posts, 200
+
+
 
 api.add_resource(CheckSession, "/check_session", endpoint="check_session")
 api.add_resource(Signup, "/signup", endpoint="signup")
@@ -191,6 +200,8 @@ api.add_resource(Animals, "/animals", endpoint="animals")
 
 api.add_resource(UsersMessages, "/messages", endpoint="messages")
 api.add_resource(MessageByID, "/messages/<int:id>", endpoint="message_by_id")
+
+api.add_resource(Posts, "/posts", endpoint="posts")
 
 if __name__ == "__main__":
     app.run(port=5555, debug=True)

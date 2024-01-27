@@ -263,7 +263,7 @@ body {
     transform: scale(1.1);
 }
 
-/* SEARCH */
+/* ANIMAL SEARCH */
 
 .search_bar_container {
     display: block;
@@ -282,5 +282,30 @@ body {
 #search_by {
     height: 30px;
 }
+
+/* POSTS */
+.post_card {
+    border: rgb(7, 129, 68) solid 1px;
+    width: fit-content;
+    height: fit-content;
+    overflow: auto;
+}
+
+.post_title {
+    margin: 20px;
+    text-decoration: underline;
+}
+
+.post_img {
+    float: left;
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+}
+
+.post_body {
+    float: right;
+}
+
 
 

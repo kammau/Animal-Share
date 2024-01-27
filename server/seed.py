@@ -84,7 +84,8 @@ if __name__ == "__main__":
 
         post1 = Post(
             title="Looking for new home",
-            postBody="Looking for a new home for this sweet pup!"
+            postBody="Looking for a new home for this sweet pup!",
+            img="https://lh3.googleusercontent.com/pw/ABLVV87qrB4D308G5Lz81MZ9aM9BsMpMBcvcpf0dJ-RLlCv2UxkV5yuXjfKQkMl218KzXUGV_VrhOW3n3w5gABU2hKE-17Ra7Ew2ILJhdEANT4JpV9L5tdS-Q7YJeml2jLyzLHrbqaFPuhJqHQfx3KQfsYDkLw=w1008-h756-s-no-gm?authuser=0"
         )
         post1.user = user1
 

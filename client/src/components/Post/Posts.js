@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import PostCard from "./PostCard";
 
 function Posts() {
+    const [posts, setPosts] = useState()
+
+    useEffect(() => {
+        fetch("/posts")
+        .then((res) => res.json())
+        .then((res) => setPosts(res))
+    }, [])
+
     return (
-        <h1>Posts!</h1>
+        <div>
+            <h1>{console.log(posts)}</h1>
+            {posts ? posts.map((post) => <PostCard post={post} />) : null}
+        </div>
     )
 }
 
