@@ -8,7 +8,7 @@ function AnimalCard({animal, tagAnimal}) {
                 <img src={animal.img} alt={`${animal.name}`} className="animal_img"/>
             </div>
             <div className="animal_text_container">
-                <h3>Name: {animal.name}</h3>
+                <h3 className="animal_name">{animal.name}</h3>
                 <p>Species: {animal.species}</p>
                 <p>Breed: {animal.breed}</p>
                 <p>Sex: {animal.sex}</p>

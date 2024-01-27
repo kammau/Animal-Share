@@ -8,7 +8,7 @@ function SearchAnimals({searchValue, onSearchChange, setSearchBy}) {
     return (
         <div className="search_bar_container">
             <select placeholder="Search By" onChange={(e) => setSearchBy(e.target.value)} id="search_by">
-                <option value="" disabled selected>Search By</option>
+                <option disabled>Search By</option>
 
                 <option value="Age">Age</option>
                 <option value="Breed">Breed</option>

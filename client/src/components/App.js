@@ -7,8 +7,8 @@ import store from "../store"
 import Login from "./User/Login";
 import Signup from "./User/Signup";
 import NavBar from "./NavBar";
-import Posts from "./Posts";
-import Messages from "./Messages";
+import Posts from "./Post/Posts";
+import Messages from "./Message/Messages";
 import Animals from "./Animal/Animals";
 import TaggedAnimals from "./TaggedAnimals/TaggedAnimals";
 
