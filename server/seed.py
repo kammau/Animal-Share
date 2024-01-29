@@ -3,14 +3,14 @@ from random import randint, choice as rc
 from faker import Faker
 
 from config import app, db
-from models import User, Message, Animal, Post, user_animal
+from models import User, Message, Animal, Post, user_animal, animal_post
 
 if __name__ == "__main__":
     fake = Faker()
     with app.app_context():
         print("Starting seed...")
 
-        # db.session.query(animal_post).delete()
+        db.session.query(animal_post).delete()
         db.session.query(user_animal).delete()
         User.query.delete()
         Message.query.delete()

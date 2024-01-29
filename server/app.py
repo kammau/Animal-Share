@@ -114,9 +114,9 @@ class Animals(Resource):
             age=data["age"],
             location=data["location"],
             sex=data["sex"],
-            currentOwner=user
+            currentOwner = user
         )
-
+        
         user.currentAnimals.append(new_animal)
 
         db.session.add(new_animal)

@@ -5,7 +5,7 @@ import * as yup from "yup";
 function AddAnimalForm({animals, setAnimals, setAddBtn}) {
     const formSchema = yup.object().shape({
         name: yup.string().required("Please enter your animals name"),
-        age: yup.number().required("Please enter your animals name"),
+        age: yup.number().required("Please enter your animals age"),
         breed: yup.string().required("Please enter your animals breed"), // Maybe add if unknown breed message
         species: yup.string().required("Please enter your animals species"),
         location: yup.string(),
@@ -24,7 +24,7 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
             img: ""
         },
         validationSchema: formSchema,
-        onSubmit: (values) => {
+        onSubmit: (values, {resetForm}) => {
             fetch("/animals", {
                 method: "POST",
                 headers: {
@@ -37,34 +37,35 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
                 const updatedAnimals = [...animals, res]
                 setAnimals(updatedAnimals)
             })
+
+            resetForm()
         }
     })
 
 
     return (
-        <div>
+        <>
             <button id="add_animal_btn" onClick={() => setAddBtn(false)}>-</button>
+            <div id="animal_form_container">
+                <h2 id="animal_form_header">ADD AN ANIMAL</h2>
                 <form onSubmit={formik.handleSubmit} autoComplete="off">
-                    <label htmlFor="name">Name</label>
-                    <input name="name" type="text" value={formik.values.name} onChange={formik.handleChange}/>
+                    <input name="name" type="text" value={formik.values.name} onChange={formik.handleChange} className="animal_form_inputs" placeholder="NAME"/>
                     <p>{formik.errors.name}</p>
 
-                    <label htmlFor="age">Age</label>
-                    <input name="age" type="number" value={formik.values.age} onChange={formik.handleChange}/>
+                    <label htmlFor="age">AGE</label>
+                    <input name="age" type="number" value={formik.values.age} onChange={formik.handleChange} className="animal_form_inputs" placeholder="AGE"/>
                     <p>{formik.errors.age}</p>
 
-                    <label htmlFor="breed">Breed</label>
-                    <input name="breed" type="text" value={formik.values.breed} onChange={formik.handleChange}/>
+                    <input name="breed" type="text" value={formik.values.breed} onChange={formik.handleChange} className="animal_form_inputs" placeholder="BREED"/>
                     <p>{formik.errors.breed}</p>
 
-                    <label htmlFor="species">Species</label>
-                    <input name="species" type="text" value={formik.values.species} onChange={formik.handleChange}/>
+                    <input name="species" type="text" value={formik.values.species} onChange={formik.handleChange} className="animal_form_inputs" placeholder="SPECIES"/>
                     <p>{formik.errors.species}</p>
 
-                    <label htmlFor="location">Location (Optional)</label>
-                    <input name="location" type="text" value={formik.values.location} onChange={formik.handleChange}/>
+                    <input name="location" type="text" value={formik.values.location} onChange={formik.handleChange} className="animal_form_inputs" placeholder="LOCATION (OPTIONAL)"/>
 
                     <div value={formik.values.sex} onChange={formik.handleChange}>
+                        <p>SEX</p>
                         <label htmlFor="sex_m">Male</label>
                         <input type="radio" id="sex_m" name="sex" value={"Male"}/>
 
@@ -73,13 +74,13 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
                         <p>{formik.errors.sex}</p>
                     </div>
 
-                    <label htmlFor="img">Picture</label>
-                    <input type="text" name="img" value={formik.values.img} onChange={formik.handleChange}/>
+                    <input type="text" name="img" value={formik.values.img} onChange={formik.handleChange} className="animal_form_inputs" placeholder="IMAGE URL"/>
                     <p>{formik.errors.img}</p>
 
                     <button type="submit">Add Animal</button>
                 </form>
-        </div>
+            </div>
+        </>
     )
 }
 

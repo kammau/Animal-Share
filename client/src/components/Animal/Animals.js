@@ -8,12 +8,15 @@ function Animals() {
     const [animals, setAnimals] = useState([])
     const [addBtn, setAddBtn] = useState(false)
     const [searchValue, setSearchValue] = useState("")
-    const [searchBy, setSearchBy] = useState("Breed")
+    const [searchBy, setSearchBy] = useState("")
 
     useEffect(() => {
         fetch("/animals")
         .then((res) => res.json())
-        .then((res) => setAnimals(res))
+        .then((res) => {
+            setAnimals(res)
+            console.log(res)
+        })
     }, [])
 
     function animalSearch(animals) {
@@ -59,13 +62,11 @@ function Animals() {
             <SearchAnimals searchValue={searchValue} onSearchChange={setSearchValue} setSearchBy={setSearchBy}/>
 
             {/* ADD ANIMAL FORM: */}
-            <div id="animal_form_container">
-                {addBtn === true ? (
+            {addBtn === true ? (
                     <AddAnimalForm animals={animals} setAnimals={setAnimals} setAddBtn={setAddBtn}/>
                 ) : (
                     <button id="add_animal_btn" onClick={() => setAddBtn(true)}>+</button>
-                )}
-            </div>
+            )}
             
             {/* ANIMAL CARD'S */}
             <div className="animal_cards_container">

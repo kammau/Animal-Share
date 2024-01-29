@@ -272,7 +272,35 @@ body {
 }
 
 #animal_form_container {
+    background-color: #1f3b4d;
     text-align: center;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    color: white;
+}
+
+#animal_form_header {
+    font-family: sans-serif;
+    text-decoration: underline;
+    position: absolute;
+    top: 5px;
+    left: 25px;
+}
+
+.animal_form_inputs {
+    border: 0;
+    border-bottom: 2px solid white;
+    outline: 0;
+    background: transparent;
+    color: white;
+    transition: border-color 0.7s;
+}
+
+.animal_form_inputs:focus {
+    border-bottom: 3px solid #c3a456;
 }
 
 /* ANIMAL SEARCH */
