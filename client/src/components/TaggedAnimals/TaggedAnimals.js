@@ -6,20 +6,23 @@ function TaggedAnimals() {
     
     useEffect(() => {
         fetch("/tagged_animals")
-        .then((res) => res.json())
+        .then((res) => {
+            if (res.status === 200) {
+                return res.json()
+            }
+        })
         .then((res) => {
             setTaggedAnimals(res)
-            console.log(res)
         })
     }, [])
 
     return (
-        <div>
+        <div className="animal_cards_container">
             {taggedAnimals ? taggedAnimals.map((animal) => {
                 return (
                     <TaggedAnimalCard key={animal.id} animal={animal} setTaggedAnimals={setTaggedAnimals}/>
                 )
-            }) : <h1>Looks like you don't have any tagged animals!</h1>}
+            }) : <h1 id="no_tagged_animals_header">Looks like you don't have any tagged animals!</h1>}
         </div>
     )
 }

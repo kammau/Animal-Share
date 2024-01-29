@@ -59,14 +59,16 @@ function Animals() {
             <SearchAnimals searchValue={searchValue} onSearchChange={setSearchValue} setSearchBy={setSearchBy}/>
 
             {/* ADD ANIMAL FORM: */}
-            {addBtn === true ? (
-                <AddAnimalForm animals={animals} setAnimals={setAnimals} setAddBtn={setAddBtn}/>
-            ) : (
-                <button id="add_animal_btn" onClick={() => setAddBtn(true)}>+</button>
-            )}
+            <div id="animal_form_container">
+                {addBtn === true ? (
+                    <AddAnimalForm animals={animals} setAnimals={setAnimals} setAddBtn={setAddBtn}/>
+                ) : (
+                    <button id="add_animal_btn" onClick={() => setAddBtn(true)}>+</button>
+                )}
+            </div>
             
             {/* ANIMAL CARD'S */}
-            <div id="animal_cards_container">
+            <div className="animal_cards_container">
                 {animals ? animalSearch(animals) : <h1>Error!</h1>}
             </div>
         </div>

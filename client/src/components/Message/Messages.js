@@ -36,7 +36,7 @@ function Messages() {
     return (
         <div>
             {showNew ? (
-                    <div>
+                <div id="new_message_container">
                     <NewMessage />
                     <button onClick={() => setShowNew(false)}>-</button>
                 </div>

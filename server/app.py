@@ -74,8 +74,11 @@ class UsersTaggedAnimals(Resource):
     def get(self):
         user = User.query.filter(User.id == session["user_id"]).first()
         taggedAnimals = [taggedAnimals.to_dict() for taggedAnimals in user.taggedAnimals]
-
-        return taggedAnimals, 200
+        
+        if bool(taggedAnimals) == False:
+            return {}, 204
+        else:
+            return taggedAnimals, 200
     
 class TaggedAnimalByID(Resource):
     def delete(self, id):

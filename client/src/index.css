@@ -133,13 +133,18 @@ body {
 
 /* ANIMAL CARDS */
 
-#animal_cards_container {
-    position: absolute;
+.animal_cards_container {
+    /* position: absolute;
     display: table;
-    top: 100%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 50%; */
     width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
 }
 
 .animal_card {
@@ -216,9 +221,12 @@ body {
     bottom: 10px;
 }
 
-#no_tagged_animals_message {
-    font-size: 100px;
+#no_tagged_animals_header {
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration: underline;
 }
+
 
 /* MESSAGE */
 
@@ -261,6 +269,10 @@ body {
     background-color: #ebf2fa;
     color: black;
     transform: scale(1.1);
+}
+
+#animal_form_container {
+    text-align: center;
 }
 
 /* ANIMAL SEARCH */
@@ -313,6 +325,12 @@ body {
     height: fit-content;
     float: right;
     margin-right: 220px;
+}
+
+/* NEW MESSAGE FORM */
+
+#new_message_container {
+    text-align: center;
 }
 
 

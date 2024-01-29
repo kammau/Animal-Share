@@ -7,11 +7,9 @@ function TaggedAnimalCard({animal, setTaggedAnimals}) {
         fetch(`/tagged_animals/${animal.id}`, {
             method: "DELETE",
         })
-        .then(() => {
-            fetch("/tagged_animals")
-            .then((res) => res.json())
-            .then((res) => setTaggedAnimals(res))
-        })
+        fetch("/tagged_animals")
+        .then((res) => res.json())
+        .then((res) => setTaggedAnimals(res))
     }
 
     return (
@@ -26,7 +24,7 @@ function TaggedAnimalCard({animal, setTaggedAnimals}) {
                 <p>Sex: {animal.sex}</p>
                 <p>Age: {animal.age}</p>
                 <p>Location: {animal.location}</p>
-                <p>Current Owner: {animal.currentOwner}</p>
+                <p>Current Owner: {animal.currentOwner.username}</p>
             </div>
             <NavLink to="/messages" data-item="Messages" exact>
                 <button className="message_btn">
