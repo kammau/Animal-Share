@@ -307,5 +307,13 @@ body {
     float: right;
 }
 
+.animal_in_post {
+    border: rgb(7, 129, 68) solid 1px;
+    width: fit-content;
+    height: fit-content;
+    float: right;
+    margin-right: 220px;
+}
+
 
 

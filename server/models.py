@@ -19,7 +19,7 @@ user_animal = db.Table(
 class User(db.Model, SerializerMixin):
     __tablename__ = "users"
 
-    serialize_only = ("username", "accountType")
+    serialize_rules = ("-currentAnimals.currentOwner", "-currentAnimals.posts", "-currentAnimals.taggedBy", "-messages.reciever", "-posts.user", "-posts.animals")
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique=True, nullable=False)
@@ -53,7 +53,7 @@ class User(db.Model, SerializerMixin):
 class Animal(db.Model, SerializerMixin):
     __tablename__ = "animals"
 
-    serialize_rules = ("-users.currentAnimals", "-users.taggedAnimals", "-posts.animals", "-posts.user", "-users.posts", )
+    serialize_rules = ("-currentOwner.currentAnimals", "-currentOwner.taggedAnimals", "-currentOwner.messages", "-posts.animals", "-posts.user", "-currentOwner.posts", "-taggedBy")
     # serialize_only = ("id", "name", "img", "species", "breed", "age", "location", "sex")
 
     id = db.Column(db.Integer, primary_key=True)
@@ -80,7 +80,7 @@ class Animal(db.Model, SerializerMixin):
 class Message(db.Model, SerializerMixin):
     __tablename__ = "messages"
 
-    serialize_only = ("id", "messageBody", "sender", "messageTitle")
+    serialize_rules = ("-reciever.messages", "-reciever.currentAnimals", "-reciever.posts", "-reciever.taggedAnimals")
 
     id = db.Column(db.Integer, primary_key=True)
     messageTitle = db.Column(db.String)
@@ -96,6 +96,8 @@ class Message(db.Model, SerializerMixin):
 
 class Post(db.Model, SerializerMixin):
     __tablename__ = "posts"
+
+    serialize_rules = ("-user.currentAnimals", "-user.posts", "-user.messages", "-user.taggedAnimals", "-animals.currentOwner", "-animals.posts", "-animals.taggedBy")
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, nullable=False)

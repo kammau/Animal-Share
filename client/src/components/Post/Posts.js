@@ -10,10 +10,19 @@ function Posts() {
         .then((res) => setPosts(res))
     }, [])
 
+    function tagAnimal(id) {
+        fetch(`/animals/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(id)
+        })
+    }
+
     return (
         <div>
-            <h1>{console.log(posts)}</h1>
-            {posts ? posts.map((post) => <PostCard post={post} />) : null}
+            {posts ? posts.map((post) => <PostCard post={post} tagAnimal={tagAnimal}/>) : null}
         </div>
     )
 }

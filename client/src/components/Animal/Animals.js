@@ -42,7 +42,7 @@ function Animals() {
 
     function tagAnimal(id) {
         console.log(id)
-        fetch("/animals", {
+        fetch(`/animals/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

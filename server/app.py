@@ -94,7 +94,7 @@ class TaggedAnimalByID(Resource):
     
 class Animals(Resource):
     def get(self):
-        animals = [animals.to_dict() for animals in Animal.query.all()]
+        animals = [animal.to_dict() for animal in Animal.query.all()]
 
         return animals, 200
     
@@ -121,11 +121,12 @@ class Animals(Resource):
 
         return new_animal.to_dict(), 201
     
-    def patch(self):
-        data = request.get_json()
 
+
+class AnimalById(Resource) :
+    def patch(self, id):
+        animal = Animal.query.filter(Animal.id == id).first()
         user = User.query.filter(User.id == session["user_id"]).first()
-        animal = Animal.query.filter(Animal.id == data).first()
 
         user.taggedAnimals.append(animal)
         animal.taggedBy.append(user)
@@ -134,6 +135,9 @@ class Animals(Resource):
         db.session.add(animal)
 
         db.session.commit()
+
+        return {}, 202
+        
 
 # MESSAGES:
 
@@ -197,6 +201,7 @@ api.add_resource(UsersTaggedAnimals, "/tagged_animals", endpoint="tagged_animals
 api.add_resource(TaggedAnimalByID, "/tagged_animals/<int:id>", endpoint="tagged_animals_by_id")
 
 api.add_resource(Animals, "/animals", endpoint="animals")
+api.add_resource(AnimalById, "/animals/<int:id>", endpoint="animals_by_id")
 
 api.add_resource(UsersMessages, "/messages", endpoint="messages")
 api.add_resource(MessageByID, "/messages/<int:id>", endpoint="message_by_id")
