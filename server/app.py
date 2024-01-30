@@ -66,6 +66,13 @@ class Users(Resource):
         users_serilaized = [user.to_dict() for user in users]
 
         return users_serilaized, 200
+    
+
+class UserAccount(Resource):
+    def get(self):
+        user = User.query.filter(User.id == session["user_id"]).first()
+
+        return user.to_dict(), 200
 
 
 # TAGGED ANIMALS:
@@ -126,7 +133,7 @@ class Animals(Resource):
     
 
 
-class AnimalById(Resource) :
+class AnimalById(Resource):
     def patch(self, id):
         animal = Animal.query.filter(Animal.id == id).first()
         user = User.query.filter(User.id == session["user_id"]).first()
@@ -199,6 +206,7 @@ api.add_resource(Signup, "/signup", endpoint="signup")
 api.add_resource(Login, "/login", endpoint="login")
 api.add_resource(Logout, "/logout", endpoint="logout")
 api.add_resource(Users, "/users", endpoint="users")
+api.add_resource(UserAccount, "/my_account", endpoint="my_account")
 
 api.add_resource(UsersTaggedAnimals, "/tagged_animals", endpoint="tagged_animals")
 api.add_resource(TaggedAnimalByID, "/tagged_animals/<int:id>", endpoint="tagged_animals_by_id")

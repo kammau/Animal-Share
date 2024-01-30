@@ -4,6 +4,7 @@ import AddAnimalForm from "./AddAnimalForm";
 import AnimalCard from "./AnimalCard";
 
 function Animals() {
+
     // Maybe in future change to hold in redux state
     const [animals, setAnimals] = useState([])
     const [addBtn, setAddBtn] = useState(false)
