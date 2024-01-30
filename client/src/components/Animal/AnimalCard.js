@@ -1,7 +1,17 @@
-import React from "react";
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setSendTo } from "../reducers/sendToSlice";
+import SpecificMessage from "../Message/SpecificMessage";
 
 function AnimalCard({animal, tagAnimal}) {
+    const [messageView, setMessageView] = useState(false)
+
+    const dispatch = useDispatch();
+
+    function handleSendTo(to) {
+        dispatch(setSendTo(to))
+    }
+
     return (
         <div className="animal_card" key={animal.id}>
             <div className="animal_img_container">
@@ -16,11 +26,17 @@ function AnimalCard({animal, tagAnimal}) {
                 <p>Location: {animal.location}</p>
                 <p>Current Owner: {animal.currentOwner.username}</p>
             </div>
-            <NavLink to="/messages" data-item="Messages" exact>
-                <button className="message_btn">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-message-2367724-1976874.png" alt="message icon" className="message_icon"/>
-                </button>
-            </NavLink>
+            <button className="message_btn" onClick={() => setMessageView(true)}>
+                <img src="https://cdn.iconscout.com/icon/free/png-256/free-message-2367724-1976874.png" alt="message icon" className="message_icon"/>
+            </button>
+            {messageView ? (
+                <div>
+                    {handleSendTo(animal.currentOwner.username)}
+                    <button onClick={() => setMessageView(false)}>Cancel</button>
+                    <SpecificMessage />
+                </div>
+            ) : null}
+
             <button onClick={() => tagAnimal(animal.id)} className="tag_icon_btn"><img className="tag_icon" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/></button>
         </div>
     )

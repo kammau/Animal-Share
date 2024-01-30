@@ -8,7 +8,7 @@ function Animals() {
     const [animals, setAnimals] = useState([])
     const [addBtn, setAddBtn] = useState(false)
     const [searchValue, setSearchValue] = useState("")
-    const [searchBy, setSearchBy] = useState("")
+    const [searchBy, setSearchBy] = useState("Breed")
 
     useEffect(() => {
         fetch("/animals")

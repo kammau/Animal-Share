@@ -10,8 +10,8 @@ function SearchAnimals({searchValue, onSearchChange, setSearchBy}) {
             <select placeholder="Search By" onChange={(e) => setSearchBy(e.target.value)} id="search_by">
                 <option disabled>Search By</option>
 
-                <option value="Age">Age</option>
                 <option value="Breed">Breed</option>
+                <option value="Age">Age</option>
                 <option value="Species">Species</option>
                 <option value="Sex">Sex</option>
             </select>

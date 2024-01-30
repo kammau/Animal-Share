@@ -48,11 +48,12 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
             <button id="add_animal_btn" onClick={() => setAddBtn(false)}>-</button>
             <div id="animal_form_container">
                 <h2 id="animal_form_header">ADD AN ANIMAL</h2>
+                <br />
+                <br />
                 <form onSubmit={formik.handleSubmit} autoComplete="off">
                     <input name="name" type="text" value={formik.values.name} onChange={formik.handleChange} className="animal_form_inputs" placeholder="NAME"/>
                     <p>{formik.errors.name}</p>
 
-                    <label htmlFor="age">AGE</label>
                     <input name="age" type="number" value={formik.values.age} onChange={formik.handleChange} className="animal_form_inputs" placeholder="AGE"/>
                     <p>{formik.errors.age}</p>
 
@@ -64,8 +65,7 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
 
                     <input name="location" type="text" value={formik.values.location} onChange={formik.handleChange} className="animal_form_inputs" placeholder="LOCATION (OPTIONAL)"/>
 
-                    <div value={formik.values.sex} onChange={formik.handleChange}>
-                        <p>SEX</p>
+                    <div value={formik.values.sex} onChange={formik.handleChange} className="animal_form_inputs">
                         <label htmlFor="sex_m">Male</label>
                         <input type="radio" id="sex_m" name="sex" value={"Male"}/>
 
@@ -77,7 +77,7 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
                     <input type="text" name="img" value={formik.values.img} onChange={formik.handleChange} className="animal_form_inputs" placeholder="IMAGE URL"/>
                     <p>{formik.errors.img}</p>
 
-                    <button type="submit">Add Animal</button>
+                    <button type="submit" id="animal_form_sub_btn">Add Animal</button>
                 </form>
             </div>
         </>
