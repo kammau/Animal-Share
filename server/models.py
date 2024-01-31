@@ -102,7 +102,11 @@ class Post(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, nullable=False)
     postBody = db.Column(db.String, nullable=False)
-    img = db.Column(db.String)
+    imgOne = db.Column(db.String)
+    imgTwo = db.Column(db.String)
+    imgThree = db.Column(db.String)
+    numOfAnimals = db.Column(db.Integer)
+
 
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
