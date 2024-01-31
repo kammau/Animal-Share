@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 
 function NewPostForm({setAddBtn}) {
+    const [animals, setAnimals] = useState()
+
+    useEffect(() => {
+        fetch("/my_account")
+        .then((res) => res.json())
+        .then((res) => setAnimals(res.currentAnimals))
+    }, [])
 
     const formSchema = yup.object().shape({
         title: yup.string().required("Please give your post a title"),
@@ -10,7 +17,8 @@ function NewPostForm({setAddBtn}) {
         numOfAnimals: yup.number().required("Please enter number of animals in post"),
         imgOne: yup.string().required("Must have at least one Animals image"),
         imgTwo: yup.string().notRequired(),
-        imgThree: yup.string().notRequired()
+        imgThree: yup.string().notRequired(),
+        animals: yup.array().required("Please Select at least one animal").max(3, "Please Select Only Three Animals")
     })
 
     const formik = useFormik({
@@ -20,7 +28,8 @@ function NewPostForm({setAddBtn}) {
             numOfAnimals: 1,
             imgOne: "",
             imgTwo: "",
-            imgThree: ""
+            imgThree: "",
+            animals: [],
         },
         validationSchema: formSchema,
         onSubmit: (values) => {
@@ -51,6 +60,19 @@ function NewPostForm({setAddBtn}) {
                         <option name="three" value={3}>3</option>
                     </select>
                     <p>{formik.errors.numOfAnimals}</p>
+
+                    <div>
+                        <h2>Please Select 1-3 Animals</h2>
+                        {animals ? animals.map((animal) => {
+                            return (
+                                <>
+                                    <input type="checkbox" onChange={formik.handleChange} name={`${animal.name}`} value={formik.values.animals}/>
+                                    <label htmlFor={`${animal.name}`}>{animal.name}</label>
+                                </>
+                            )
+                        }) : <p>Looks like you don't have any animals to choose from!</p>}
+                        <p>{formik.errors.animals}</p>
+                    </div>
 
                     <input name="imgOne" type="text" placeholder="First Animal Image" value={formik.values.imgOne} onChange={formik.handleChange}/>
                     <p>{formik.errors.imgOne}</p>

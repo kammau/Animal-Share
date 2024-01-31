@@ -198,6 +198,12 @@ class Posts(Resource):
         posts = [post.to_dict() for post in Post.query.all()]
 
         return posts, 200
+    
+    # def post(self):
+    #     data = request.get_json()
+    #     user = User.query.filter(User.id == session["user_id"]).first()
+
+
 
 
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 
-function NewMessage() {
+function NewMessage({setShowNew}) {
     const [users, setUsers] = useState();
 
 
@@ -39,20 +39,23 @@ function NewMessage() {
     })
 
     return (
-        <div>
-            <form onSubmit={formik.handleSubmit} autoComplete="off">
-                <input type="text" name="messageTitle" onChange={formik.handleChange} value={formik.values.messageTitle}/>
+        <>
+            <button className="new_msg_btn" onClick={() => setShowNew(false)}>-</button>
+            <div id="new_message_container">
+                <form onSubmit={formik.handleSubmit} autoComplete="off">
+                    <input type="text" name="messageTitle" onChange={formik.handleChange} value={formik.values.messageTitle}/>
 
-                <select name="reciever" onChange={formik.handleChange} values={formik.values.reciever}>
-                    <option hidden disabled>Select To</option>
-                    {users ? users.map((user) => <option key={user.id} value={user.username}>{user.username}</option>) : null}
-                </select>
+                    <select name="reciever" onChange={formik.handleChange} values={formik.values.reciever}>
+                        <option hidden disabled>Select To</option>
+                        {users ? users.map((user) => <option key={user.id} value={user.username}>{user.username}</option>) : null}
+                    </select>
 
-                <textarea rows="5" cols="33" name="messageBody" onChange={formik.handleChange} value={formik.values.messageBody}></textarea>
+                    <textarea rows="5" cols="33" name="messageBody" onChange={formik.handleChange} value={formik.values.messageBody}></textarea>
 
-                <button type="submit">Send</button>
-            </form>
-        </div>
+                    <button type="submit" id="send_msg_btn">Send</button>
+                </form>
+            </div>
+        </>
     )
 }
 

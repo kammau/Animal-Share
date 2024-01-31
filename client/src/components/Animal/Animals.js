@@ -16,7 +16,6 @@ function Animals() {
         .then((res) => res.json())
         .then((res) => {
             setAnimals(res)
-            console.log(res)
         })
     }, [])
 
@@ -39,7 +38,7 @@ function Animals() {
 
         return (
             animalsFiltered.map((animal) => {
-                return <AnimalCard animal={animal} tagAnimal={tagAnimal} />
+                return <AnimalCard key={animal.id} animal={animal} tagAnimal={tagAnimal} />
             })
         )
     }
