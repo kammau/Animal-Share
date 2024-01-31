@@ -40,14 +40,14 @@ function Messages() {
                     <NewMessage />
                     <button onClick={() => setShowNew(false)}>-</button>
                 </div>
-            ) : <button onClick={() => setShowNew(true)}>+</button>}
+            ) : <button id="new_msg_btn" onClick={() => setShowNew(true)}>+</button>}
 
             <div id="messages_body">
                 {messages ? messages.map((message) => {
                     return (
                         <MessageCard key={message.id} message={message} deleteMessage={deleteMessage}/>
                     )
-                }) : <h1>No messages</h1>}
+                }) : <h1 id="no_msg_header">No messages</h1>}
             </div>
         </div>
     )
