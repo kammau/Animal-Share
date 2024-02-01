@@ -33,7 +33,15 @@ function NewPostForm({setAddBtn}) {
         },
         validationSchema: formSchema,
         onSubmit: (values) => {
-            console.log(values)
+            fetch("/posts", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(values)
+            })
+            .then((res) => res.json())
+            .then((res) => console.log(res))
         }
     })
 
@@ -66,7 +74,7 @@ function NewPostForm({setAddBtn}) {
                         {animals ? animals.map((animal) => {
                             return (
                                 <>
-                                    <input type="checkbox" onChange={formik.handleChange} name={`${animal.name}`} value={formik.values.animals}/>
+                                    <input type="checkbox" onChange={() => formik.values.animals.push(animal)} name={`${animal.name}`} value={formik.values.animals}/>
                                     <label htmlFor={`${animal.name}`}>{animal.name}</label>
                                 </>
                             )

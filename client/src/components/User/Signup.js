@@ -46,8 +46,8 @@ function Signup() {
                     <input
                         name="username"
                         className="username_input"
+                        placeholder="Username"
                         type="text"
-                        placeholder="Your Username"
                         value={formik.values.username}
                         onChange={formik.handleChange}
                     />
@@ -57,7 +57,7 @@ function Signup() {
                         name="password"
                         className="password_input"
                         type="password"
-                        placeholder="Your Password"
+                        placeholder="Password"
                         value={formik.values.password}
                         onChange={formik.handleChange}
                     />

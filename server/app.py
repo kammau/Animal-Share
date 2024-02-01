@@ -199,11 +199,57 @@ class Posts(Resource):
 
         return posts, 200
     
-    # def post(self):
-    #     data = request.get_json()
-    #     user = User.query.filter(User.id == session["user_id"]).first()
+    def post(self):
+        data = request.get_json()
+        user = User.query.filter(User.id == session["user_id"]).first()
+        animals = data["animals"]
+
+        new_post = Post(
+            title=data["title"],
+            postBody=data["postBody"],
+            imgOne=data["imgOne"],
+            imgTwo=data["imgTwo"],
+            imgThree=data["imgThree"],
+            numOfAnimals=data["numOfAnimals"],
+            user_id=session["user_id"]
+        )
+
+        new_post.user = user
 
 
+        db.session.add(new_post)
+        db.session.commit()
+
+        new_post.animals.append(animals)
+
+        db.session.add(new_post)
+        db.session.commit()
+
+        return new_post.to_dict(), 201
+    
+class UserPosts(Resource):
+    def get(self):
+        user = User.query.filter(User.id == session["user_id"]).first()
+        posts = Post.query.filter(Post.user == user).all()
+
+        posts_serialized = [post.to_dict() for post in posts]
+
+        if bool(posts_serialized) == False:
+            return {}, 204
+        else:
+            return posts_serialized, 200
+    
+class UserAnimals(Resource):
+    def get(self):
+        user = User.query.filter(User.id == session["user_id"]).first()
+        animals = Animal.query.filter(Animal.currentOwner == user).all()
+
+        animals_serialized = [animal.to_dict() for animal in animals]
+
+        if bool(animals_serialized) == False:
+            return {}, 204
+        else:
+            return animals_serialized, 200
 
 
 
@@ -212,7 +258,10 @@ api.add_resource(Signup, "/signup", endpoint="signup")
 api.add_resource(Login, "/login", endpoint="login")
 api.add_resource(Logout, "/logout", endpoint="logout")
 api.add_resource(Users, "/users", endpoint="users")
+
 api.add_resource(UserAccount, "/my_account", endpoint="my_account")
+api.add_resource(UserPosts, "/my_account/posts", endpoint="my_account_posts")
+api.add_resource(UserAnimals, "/my_account/animals", endpoint="my_account_animals")
 
 api.add_resource(UsersTaggedAnimals, "/tagged_animals", endpoint="tagged_animals")
 api.add_resource(TaggedAnimalByID, "/tagged_animals/<int:id>", endpoint="tagged_animals_by_id")

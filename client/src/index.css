@@ -25,13 +25,12 @@ body {
     height: 550px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 3px #0c4da2;
+    transform: translate(-50%,-50%);
 }
 
 .username_input {
-    margin-bottom: 30px;
     width: 350px;
     height: 35px;
-
 }
 
 .password_input {
@@ -41,6 +40,7 @@ body {
 
 .log_sign_header {
     font-family: sans-serif;
+    color: white;
 }
 
 .log_sign_btn {
@@ -63,9 +63,15 @@ body {
     background-color: rgb(130, 174, 189);
     border: none;
     outline: none;
+    transition: all 0.5s;
 
     width: 80px;
     height: 40px;
+}
+
+.off_logsign_btn:hover {
+    box-shadow: 3px 3px 7px #6fc5ff50;
+    transform: scale(1.1);
 }
 
 .logsign_view_btns {
