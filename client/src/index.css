@@ -31,11 +31,38 @@ body {
 .username_input {
     width: 350px;
     height: 35px;
+    color: white;
+    background-color: #00b4d867;
+    transition: all 0.5s;
+}
+
+.username_input:focus {
+    border-color: lavender;
+}
+
+.username_input::placeholder {
+    color: white;
 }
 
 .password_input {
     width: 350px;
     height: 35px;
+    color: white;
+    background-color: #00b4d867;
+    transition: all 0.5s;
+}
+
+.password_input:focus {
+    border-color: lavender;
+}
+
+.password_input::placeholder {
+    color: white;
+}
+
+.logsig_errors {
+    font-family: sans-serif;
+    color: #fa8072;
 }
 
 .log_sign_header {
@@ -47,6 +74,12 @@ body {
     margin-top: 25px;
     width: 200px;
     height: 35px;
+    transition: all 0.5s;
+}
+
+.log_sign_btn:hover {
+    box-shadow: 3px 3px #6fc5ff50;
+    transform: scale(1.1);
 }
 
 .on_logsign_btn {
@@ -70,7 +103,7 @@ body {
 }
 
 .off_logsign_btn:hover {
-    box-shadow: 3px 3px 7px #6fc5ff50;
+    box-shadow: 3px 3px #6fc5ff50;
     transform: scale(1.1);
 }
 

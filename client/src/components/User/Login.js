@@ -49,7 +49,7 @@ function Login() {
                         value={formik.values.username}
                         onChange={formik.handleChange}
                     />
-                    <p>{formik.errors.username}</p>
+                    <p className="logsig_errors">{formik.errors.username}</p>
                     <br />
                     <input 
                         name="password"
@@ -59,7 +59,7 @@ function Login() {
                         value={formik.values.password}
                         onChange={formik.handleChange}
                     />
-                    <p>{formik.errors.password}</p>
+                    <p className="logsig_errors">{formik.errors.password}</p>
 
                     <button type="submit" className="log_sign_btn">LOGIN</button>
                 </form>
