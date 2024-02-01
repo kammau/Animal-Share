@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import AnimalCard from "../Animal/AnimalCard"
+import UserAnimalCard from "./UserAnimalCard";
+
 
 function UserAnimals({user}) {
     const [animals, setAnimals] = useState()
@@ -13,6 +14,7 @@ function UserAnimals({user}) {
     return (
         <>
             <h1>{user.username} Animals</h1>
+            {animals ? animals.map((animal) => <UserAnimalCard key={animal.id} animal={animal} />): <h2>Looks like you don't have any animals!</h2>}
         </>
     )
 }

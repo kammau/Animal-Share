@@ -1,6 +1,6 @@
 /* BODY: */
 body {
-    background-image: url(https://img.freepik.com/free-vector/flat-geometric-background_23-2148957209.jpg);
+    background: linear-gradient(90deg, #d4d4d4, #c1e3ed);
     margin: 0px;
 }
 
@@ -118,11 +118,6 @@ body {
     position: absolute;
 }
 
-#logout_icon {
-    width: 35px;
-    height: 35px;
-}
-
 #logout_btn {
     cursor: pointer;
     background-color: #8ca0b1;
@@ -233,22 +228,6 @@ body {
 
 /* TAG ANIMAL */
 
-.tag_icon {
-    width: 50px;
-    height: 50px;
-}
-
-.tag_icon_btn {
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 50px;
-    text-align: center;
-    cursor: pointer;
-}
-
 .remove_btn {
     font-size: 25px;
     width: 50px;
@@ -263,7 +242,6 @@ body {
 #no_tagged_animals_header {
     text-align: center;
     font-family: sans-serif;
-    background-color: white;
     color: #536e73;
     text-shadow: 1px 1px 1px #8ca0b1,
              1px 2px 1px #8ca0b1,
@@ -280,11 +258,6 @@ body {
 
 /* MESSAGE */
 
-.message_icon {
-    width: 50px;
-    height: 50px;
-}
-
 .message_btn {
     width: 70px;
     height: 70px;
@@ -294,6 +267,12 @@ body {
     border-radius: 50px;
     text-align: center;
     cursor: pointer;
+    transition: all 0.5s;
+}
+
+.message_btn:hover {
+    box-shadow: 3px 3px #6fc5ff50;
+    transform: scale(1.1);
 }
 
 .message_card {
@@ -303,7 +282,6 @@ body {
 #no_msg_header {
     text-align: center;
     font-family: sans-serif;
-    background-color: white;
     color: #536e73;
     text-shadow: 1px 1px 1px #8ca0b1,
             1px 2px 1px #8ca0b1,
@@ -381,19 +359,26 @@ body {
 .search_bar_container {
     display: block;
     text-align: center;
+    margin: 25px;
 }
 
 #search_bar {
     width: 500px;
     height: 25px;
+    background: transparent;
     background-image: url(https://cdn3.iconfinder.com/data/icons/feather-5/24/search-512.png);
     background-size: 25px 25px;
     background-repeat: no-repeat;
     text-indent: 25px;
+    margin-left: 5px;
 }
 
 #search_by {
+    width: 100px;
     height: 30px;
+    background-color: #1c3144;
+    color: white;
+    cursor: pointer;
 }
 
 /* POSTS */
@@ -463,4 +448,83 @@ body {
 }
 
 
+/* ICON'S */
+.edit_icon {
+    height: 35px;
+    width: 35px;
+}
 
+.trash_icon {
+    height: 35px;
+    width: 35px;
+}
+
+.tag_icon {
+    width: 50px;
+    height: 50px;
+}
+
+.tag_icon_btn {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.tag_icon_btn:hover {
+    box-shadow: 3px 3px #6fc5ff50;
+    transform: scale(1.1);
+}
+
+#logout_icon {
+    width: 35px;
+    height: 35px;
+}
+
+.message_icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* MY ACCOUNT */
+
+#account_header {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 50px;
+    color: #536e73;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 1px #8ca0b1,
+            1px 2px 1px #8ca0b1,
+            1px 3px 1px #8ca0b1,
+            1px 4px 1px #8ca0b1,
+            1px 5px 1px #8ca0b1,
+            1px 6px 1px #8ca0b1,
+            1px 10px 5px rgba(16, 16, 16, 0.5),
+            1px 15px 10px rgba(16, 16, 16, 0.4),
+            1px 20px 30px rgba(16, 16, 16, 0.3),
+            1px 25px 50px rgba(16, 16, 16, 0.2);
+}
+
+#account_btns_container {
+    text-align: center;
+}
+
+.account_btns {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    color: white;
+    background-color: #064789;
+    transition: all 0.5s;
+}
+
+.account_btns:hover {
+    box-shadow: 3px 3px #6fc5ff50;
+    transform: scale(1.1);
+}

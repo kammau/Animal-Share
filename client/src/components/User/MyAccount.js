@@ -29,12 +29,12 @@ function MyAccount() {
 
     return (
         <div>
-            <h1>Hello {user.username}!</h1>
+            <h1 id="account_header">Hello {user.username}!</h1>
 
-            <div>
-                <button onClick={() => setView("posts")}>POSTS</button>
-                <button onClick={() => setView("animals")}>ANIMALS</button>
-                <button onClick={() => setView("settings")}>ACCOUNT SETTINGS</button>
+            <div id="account_btns_container">
+                <button onClick={() => setView("posts")} className="account_btns">POSTS</button>
+                <button onClick={() => setView("animals")} className="account_btns">ANIMALS</button>
+                <button onClick={() => setView("settings")} className="account_btns">SETTINGS</button>
             </div>
 
             {viewFunc()}
