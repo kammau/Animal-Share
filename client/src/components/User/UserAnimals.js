@@ -4,6 +4,11 @@ import UserAnimalCard from "./UserAnimalCard";
 
 function UserAnimals({user}) {
     const [animals, setAnimals] = useState()
+
+    function handleUpdate(updatedAnimal) {
+        let filteredAnimals = animals.filter((animal) => animal.id !== updatedAnimal.id)
+        setAnimals([updatedAnimal, ...filteredAnimals])
+    }
     
     useEffect(() => {
         fetch("/my_account/animals")
@@ -14,7 +19,7 @@ function UserAnimals({user}) {
     return (
         <>
             <h1>{user.username} Animals</h1>
-            {animals ? animals.map((animal) => <UserAnimalCard key={animal.id} animal={animal} />): <h2>Looks like you don't have any animals!</h2>}
+            {animals ? animals.map((animal) => <UserAnimalCard key={animal.id} animal={animal} handleUpdate={handleUpdate}/>): <h2>Looks like you don't have any animals!</h2>}
         </>
     )
 }

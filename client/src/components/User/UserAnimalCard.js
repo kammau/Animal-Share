@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 
 
-function UserAnimalCard({animal}) {
+function UserAnimalCard({animal, handleUpdate}) {
     const [mode, setMode] = useState("view")
 
     const formik = useFormik({
@@ -15,7 +15,7 @@ function UserAnimalCard({animal}) {
             location: animal.location
         },
         onSubmit: (values) => {
-            fetch(`/my_account/posts/${animal.id}`, {
+            fetch(`/my_account/animals/${animal.id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"
@@ -23,7 +23,9 @@ function UserAnimalCard({animal}) {
                 body: JSON.stringify(values)
             })
             .then((res) => res.json())
-            .then((res) => console.log(res))
+            .then((res) => handleUpdate(res))
+
+            setMode("view")
         }
     })
 
@@ -49,14 +51,29 @@ function UserAnimalCard({animal}) {
                 </>
             ) : (
                 <>
-                    <form>
-                        <input type="text" value={formik.values.name} onChange={formik.handleChange} />
-                        
-                        <input type="text" value={formik.values.species} onChange={formik.handleChange} />
+                    <form onSubmit={formik.handleSubmit}>
+                        <label htmlFor="name">Name:</label>
+                        <input type="text" value={formik.values.name} onChange={formik.handleChange} name="name"/>
 
-                        <div>
-                            <input type="radio" name="sex" value="Male" />
+                        <label htmlFor="species">Species:</label>
+                        <input type="text" value={formik.values.species} onChange={formik.handleChange} name="species"/>
+
+
+                        <div value={formik.values.sex} onChange={formik.handleChange}>
+                            <label htmlFor="sex_m_">Male</label>
+                            <input type="radio" id="sex_m_" name="sex" value="Male" />
+
+                            <label htmlFor="sex_f_">Female</label>
+                            <input type="radio" id="sex_f_" name="sex" value="Female" />
                         </div>
+
+                        <label htmlFor="age">Age:</label>
+                        <input type="number" value={formik.values.age} onChange={formik.handleChange} name="age"/>
+
+                        <label htmlFor="location">Location:</label>
+                        <input type="text" value={formik.values.location} onChange={formik.handleChange} name="location"/>
+
+                        <button type="subk">Update</button>
                     </form>
                     <button onClick={() => setMode("view")}>Cancel</button>
                 </>

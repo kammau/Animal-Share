@@ -204,8 +204,6 @@ class Posts(Resource):
         user = User.query.filter(User.id == session["user_id"]).first()
         animals_list = data["animals"]
         
-        for animal in animals_list:
-            print(animal["name"])
 
         new_post = Post(
             title=data["title"],
@@ -231,6 +229,9 @@ class Posts(Resource):
 
         return new_post.to_dict(), 201
     
+
+# MY ACCOUNT:
+    
 class UserPosts(Resource):
     def get(self):
         user = User.query.filter(User.id == session["user_id"]).first()
@@ -242,6 +243,21 @@ class UserPosts(Resource):
             return {}, 204
         else:
             return posts_serialized, 200
+        
+class UpdateAnimal(Resource):
+    def patch(self, id):
+        data = request.get_json()
+
+        animal = Animal.query.filter(Animal.id == id).first()
+
+        for attr in data:
+            setattr(animal, attr, data[attr])
+
+        db.session.add(animal)
+        db.session.commit()
+
+        return animal.to_dict(), 202
+
     
 class UserAnimals(Resource):
     def get(self):
@@ -266,6 +282,8 @@ api.add_resource(Users, "/users", endpoint="users")
 api.add_resource(UserAccount, "/my_account", endpoint="my_account")
 api.add_resource(UserPosts, "/my_account/posts", endpoint="my_account_posts")
 api.add_resource(UserAnimals, "/my_account/animals", endpoint="my_account_animals")
+
+api.add_resource(UpdateAnimal, "/my_account/animals/<int:id>", endpoint="my_account_animal_update")
 
 api.add_resource(UsersTaggedAnimals, "/tagged_animals", endpoint="tagged_animals")
 api.add_resource(TaggedAnimalByID, "/tagged_animals/<int:id>", endpoint="tagged_animals_by_id")
