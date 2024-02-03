@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 
-function NewPostForm({setAddBtn}) {
+function NewPostForm({setAddBtn, setPosts, posts}) {
     const [animals, setAnimals] = useState()
 
     useEffect(() => {
@@ -41,7 +41,7 @@ function NewPostForm({setAddBtn}) {
                 body: JSON.stringify(values)
             })
             .then((res) => res.json())
-            .then((res) => console.log(res))
+            .then((res) => setPosts([...posts, res]))
         }
     })
 

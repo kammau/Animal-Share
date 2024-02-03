@@ -25,7 +25,7 @@ function Posts() {
     return (
         <div>
             {addBtn ? (
-                <NewPostForm setAddBtn={setAddBtn}/>
+                <NewPostForm setAddBtn={setAddBtn} posts={posts} setPosts={setPosts}/>
             ) : (
                 <button onClick={() => setAddBtn(true)}>+</button>
             )}

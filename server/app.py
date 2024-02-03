@@ -202,7 +202,10 @@ class Posts(Resource):
     def post(self):
         data = request.get_json()
         user = User.query.filter(User.id == session["user_id"]).first()
-        animals = data["animals"]
+        animals_list = data["animals"]
+        
+        for animal in animals_list:
+            print(animal["name"])
 
         new_post = Post(
             title=data["title"],
@@ -211,16 +214,17 @@ class Posts(Resource):
             imgTwo=data["imgTwo"],
             imgThree=data["imgThree"],
             numOfAnimals=data["numOfAnimals"],
-            user_id=session["user_id"]
+            user_id=session["user_id"],
         )
 
         new_post.user = user
 
-
         db.session.add(new_post)
         db.session.commit()
 
-        new_post.animals.append(animals)
+        for animal in animals_list:
+            a = Animal.query.filter(Animal.name == animal["name"]).first()
+            new_post.animals.append(a)
 
         db.session.add(new_post)
         db.session.commit()
