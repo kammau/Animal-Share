@@ -75,6 +75,7 @@ body {
     width: 200px;
     height: 35px;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 .log_sign_btn:hover {
@@ -97,6 +98,7 @@ body {
     border: none;
     outline: none;
     transition: all 0.5s;
+    cursor: pointer;
 
     width: 80px;
     height: 40px;
@@ -276,7 +278,25 @@ body {
 }
 
 .message_card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 5px;
+    align-items: center;
     border: rgb(7, 129, 68) solid 1px;
+    padding: 1rem;
+    border-radius: 0.75em;
+    font-family: sans-serif;
+    width: 100%;
+    margin-bottom: 50px;
+    background-color: #6b9080;
+    transition: all 0.5s;
+}
+
+.message_card:hover {
+    background-color: #07475495;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 2px #074754;
 }
 
 #no_msg_header {
@@ -293,6 +313,25 @@ body {
             1px 15px 10px rgba(16, 16, 16, 0.4),
             1px 20px 30px rgba(16, 16, 16, 0.3),
             1px 25px 50px rgba(16, 16, 16, 0.2);
+}
+
+#messages_body {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+.reply_btn {
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    bottom: 65px;
 }
 
 
@@ -436,16 +475,42 @@ body {
     border-radius: 10px;
     cursor: pointer;
     position: absolute;
-    right: 10px;
+    right: 8px;
     background-color: #427AA1;
     transition: all 0.5s;
 }
 
 #send_msg_btn {
     position: absolute;
+    font-family: sans-serif;
     bottom: 5px;
     right: 5px;
+    width: 95px;
+    height: 45px;
+    font-size: 20px;
+    transition: all 0.5s;
 }
+
+#send_msg_btn:hover {
+    transform: scale(1.1);
+}
+
+#new_message_form {
+    display: grid;
+}
+
+#new_msg_title {
+    width: 300px;
+    height: 30px;
+    color: white;
+    background-color: #00b4d867;
+    text-indent: 10px;
+
+    &::placeholder {
+        color: white;
+    }
+}
+
 
 
 /* ICON'S */
@@ -490,6 +555,9 @@ body {
     width: 50px;
     height: 50px;
 }
+
+/* COMMON BUTTONS */
+
 
 /* MY ACCOUNT */
 

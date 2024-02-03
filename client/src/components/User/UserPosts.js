@@ -6,7 +6,11 @@ function UserPosts({user}) {
 
     useEffect(() => {
         fetch("/my_account/posts")
-        .then((res) => res.json())
+        .then((res) => {
+            if (res.status === 200) {
+                return res.json()
+            }
+        })
         .then((res) => setPosts(res))
     }, [])
     return (
