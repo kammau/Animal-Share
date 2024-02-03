@@ -280,9 +280,6 @@ body {
 .message_card {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    column-gap: 5px;
-    align-items: center;
     border: rgb(7, 129, 68) solid 1px;
     padding: 1rem;
     border-radius: 0.75em;
@@ -297,6 +294,30 @@ body {
     background-color: #07475495;
     transform: scale(1.1);
     box-shadow: 5px 5px 2px #074754;
+}
+
+.message_btn_reply {
+    position: absolute;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    bottom: 55px;
+    right: 0;
+    margin: 5px;
+}
+
+.message_btn_trash {
+    position: absolute;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    bottom: 0;
+    right: 0;
+    margin: 5px;
 }
 
 #no_msg_header {
@@ -321,17 +342,6 @@ body {
     margin: 0 auto;
     padding: 10px;
     position: relative;
-}
-
-.reply_btn {
-    font-size: 25px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    cursor: pointer;
-    position: absolute;
-    right: 25px;
-    bottom: 65px;
 }
 
 
@@ -497,6 +507,7 @@ body {
 
 #new_message_form {
     display: grid;
+    font-family: sans-serif;
 }
 
 #new_msg_title {
@@ -510,6 +521,29 @@ body {
         color: white;
     }
 }
+
+#new_msg_to_div {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    display: inline;
+}
+
+#new_msg_to {
+    margin-left: 10px;
+}
+
+#new_msg_body {
+    background-color: #00b4d867;
+    margin-top: 10px;
+    color: white;
+    text-indent: 10px;
+
+    &::placeholder {
+        color: white;
+    }
+}
+
 
 
 

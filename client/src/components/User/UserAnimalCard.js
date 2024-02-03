@@ -73,7 +73,7 @@ function UserAnimalCard({animal, handleUpdate, handleDelete}) {
                         <label htmlFor="location">Location:</label>
                         <input type="text" value={formik.values.location} onChange={formik.handleChange} name="location"/>
 
-                        <button type="subk">Update</button>
+                        <button type="submit">Update</button>
                     </form>
                     <button onClick={() => setMode("view")}>Cancel</button>
                 </>

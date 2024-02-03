@@ -45,13 +45,15 @@ function NewMessage({setShowNew}) {
                 <form onSubmit={formik.handleSubmit} autoComplete="off" id="new_message_form">
                     <input type="text" name="messageTitle" onChange={formik.handleChange} value={formik.values.messageTitle} placeholder="Title" id="new_msg_title"/>
 
-                    <label htmlFor="reciever">Send To</label>
-                    <select name="reciever" onChange={formik.handleChange} values={formik.values.reciever}>
-                        <option hidden disabled>Select To</option>
-                        {users ? users.map((user) => <option key={user.id} value={user.username}>{user.username}</option>) : null}
-                    </select>
+                    <div id="new_msg_to_div">
+                        <label htmlFor="reciever">Send To</label>
+                        <select name="reciever" onChange={formik.handleChange} values={formik.values.reciever} id="new_msg_to">
+                            <option hidden disabled>Select To</option>
+                            {users ? users.map((user) => <option key={user.id} value={user.username}>{user.username}</option>) : null}
+                        </select>
+                    </div>
 
-                    <textarea rows="5" cols="33" name="messageBody" onChange={formik.handleChange} value={formik.values.messageBody} placeholder="Message Body" className="new_msg_inputs"></textarea>
+                    <textarea rows="5" cols="33" name="messageBody" onChange={formik.handleChange} value={formik.values.messageBody} placeholder="Message Body" id="new_msg_body"></textarea>
 
                     <button type="submit" id="send_msg_btn">Send</button>
                 </form>

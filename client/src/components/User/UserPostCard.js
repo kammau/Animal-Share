@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 
-function UserPostCard({post}) {
+function UserPostCard({post, handleUpdate}) {
     const [mode, setMode] = useState("view")
+
+    console.log(post.animals)
 
     const formik = useFormik({
         initialValues: {
@@ -12,7 +14,20 @@ function UserPostCard({post}) {
             imgTwo: post.imgTwo,
             imgThree: post.imgThree,
             numOfAnimals: post.numOfAnimals,
-            
+            animals: post.animals
+        },
+        onSubmit: (values) => {
+            fetch(`/my_account/posts/${post.id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(values)
+            })
+            .then((res) => res.json())
+            .then((res) => handleUpdate(res))
+
+            setMode("view")
         }
     })
 
@@ -38,7 +53,42 @@ function UserPostCard({post}) {
                 </div>
             ) : (
                 <div className="post_card">
-                    <h1>edit</h1>
+                    <form onSubmit={formik.handleSubmit}>
+                        <label htmlFor="title">Title:</label>
+                        <input type="text" name="title" value={formik.values.title} onChange={formik.handleChange} />
+
+                        <label htmlFor="postBody">Post Body:</label>
+                        <input type="text" name="postBody" value={formik.values.postBody} onChange={formik.handleChange}/>
+
+                        <label htmlFor="imgOne">First Image:</label>
+                        <input type="text" name="imgOne" value={formik.values.imgOne} onChange={formik.handleChange}/>
+
+                        <label htmlFor="imgTwo">Second Image:</label>
+                        <input type="text" name="imgTwo" value={formik.values.imgTwo} onChange={formik.handleChange}/>
+
+                        <label htmlFor="imgThree">Third Image:</label>
+                        <input type="text" name="imgThree" value={formik.values.imgThree} onChange={formik.handleChange} />
+
+                        <select name="numOfAnimals" onChange={formik.handleChange} values={formik.values.numOfAnimals}>
+                            <option disabled>Select Number of Animals</option>
+                            <option name="one" value={1}>1</option>
+                            <option name="two" value={2}>2</option>
+                            <option name="three" value={3}>3</option>
+                        </select>
+
+                        <div>
+                            {post.animals ? post.animals.map((animal) => {
+                                return (
+                                    <>
+                                        <input type="checkbox" onChange={() => formik.values.animals.push(animal)} name={`${animal.name}`} value={formik.values.animals}/>
+                                        <label htmlFor={`${animal.name}`}>{animal.name}</label>
+                                    </>
+                                )
+                            }) : <p>Looks like you don't have any animals to choose from!</p>}
+                        </div>
+
+                        <button type="submit">Update</button>
+                    </form>
                     <button onClick={() => setMode("view")}>Cancel</button>
                 </div>
             )}
