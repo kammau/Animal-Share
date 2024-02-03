@@ -244,7 +244,7 @@ class UserPosts(Resource):
         else:
             return posts_serialized, 200
         
-class UpdateAnimal(Resource):
+class AnimalById(Resource):
     def patch(self, id):
         data = request.get_json()
 
@@ -257,6 +257,14 @@ class UpdateAnimal(Resource):
         db.session.commit()
 
         return animal.to_dict(), 202
+    
+    def delete(self, id):
+        animal = Animal.query.filter(Animal.id == id).first()
+
+        db.session.delete(animal)
+        db.session.commit()
+
+        return {}, 202
 
     
 class UserAnimals(Resource):
@@ -283,7 +291,7 @@ api.add_resource(UserAccount, "/my_account", endpoint="my_account")
 api.add_resource(UserPosts, "/my_account/posts", endpoint="my_account_posts")
 api.add_resource(UserAnimals, "/my_account/animals", endpoint="my_account_animals")
 
-api.add_resource(UpdateAnimal, "/my_account/animals/<int:id>", endpoint="my_account_animal_update")
+api.add_resource(AnimalById, "/my_account/animals/<int:id>", endpoint="my_account_animal_update")
 
 api.add_resource(UsersTaggedAnimals, "/tagged_animals", endpoint="tagged_animals")
 api.add_resource(TaggedAnimalByID, "/tagged_animals/<int:id>", endpoint="tagged_animals_by_id")

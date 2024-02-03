@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 
 
-function UserAnimalCard({animal, handleUpdate}) {
+function UserAnimalCard({animal, handleUpdate, handleDelete}) {
     const [mode, setMode] = useState("view")
 
     const formik = useFormik({
@@ -47,7 +47,7 @@ function UserAnimalCard({animal, handleUpdate}) {
                         <p>Current Owner: {animal.currentOwner.username}</p>
                     </div>
                     <button onClick={() => setMode("edit")}><img className="edit_icon" src="https://cdn3.iconfinder.com/data/icons/feather-5/24/edit-512.png" alt="edit icon"/></button>
-                    <button><img className="trash_icon" src="https://cdn-icons-png.flaticon.com/512/1843/1843344.png" alt="trash icon"/></button>
+                    <button onClick={() => handleDelete(animal.id)}><img className="trash_icon" src="https://cdn-icons-png.flaticon.com/512/1843/1843344.png" alt="trash icon"/></button>
                 </>
             ) : (
                 <>
