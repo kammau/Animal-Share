@@ -15,8 +15,6 @@ function UserPostCard({post, handleUpdate}) {
         .then((res) => setUserAnimals(res))
     }, [])
 
-    console.log(post.animals)
-
     const formik = useFormik({
         initialValues: {
             title: post.title,
@@ -91,7 +89,7 @@ function UserPostCard({post, handleUpdate}) {
                             {userAnimals ? userAnimals.map((animal) => {
                                 return (
                                     <>
-                                        <input type="checkbox" onChange={() => formik.values.animals.push(animal)} name={`${animal.name}`} value={formik.values.animals}/>
+                                        <input id={animal.name} type="checkbox" onChange={() => formik.values.animals.push(animal)} name="animals" value={animal}/>
                                         <label htmlFor={`${animal.name}`}>{animal.name}</label>
                                     </>
                                 )

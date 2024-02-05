@@ -11,7 +11,10 @@ function UserPosts({user}) {
                 return res.json()
             }
         })
-        .then((res) => setPosts(res))
+        .then((res) => {
+            setPosts(res)
+            console.log(res)
+        })
     }, [])
 
     function handleUpdate(updatedPost) {
@@ -19,7 +22,7 @@ function UserPosts({user}) {
             let filteredPosts = posts.filter((post) => post.id !== updatedPost.id)
             setPosts([filteredPosts, {...updatedPost}])
         } else {
-            setPosts([updatedPost])
+            setPosts(updatedPost)
         }
     }
 

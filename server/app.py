@@ -250,6 +250,8 @@ class PostById(Resource):
         post = Post.query.filter(Post.id == id).first()
         animals_list = data["animals"]
 
+        print(animals_list)
+
         # for attr in data:
         #     setattr(post, attr, data[attr])
 
@@ -259,6 +261,7 @@ class PostById(Resource):
         post.imgTwo=data["imgTwo"]
         post.imgThree=data["imgThree"]
         post.numOfAnimals=data["numOfAnimals"]
+        post.animals = []
 
         db.session.add(post)
         db.session.commit()
@@ -266,6 +269,9 @@ class PostById(Resource):
         for animal in animals_list:
             a = Animal.query.filter(Animal.id == animal["id"]).first()
             post.animals.append(a)
+
+        db.session.add(post)
+        db.session.commit()
 
         return post.to_dict(), 202
         
