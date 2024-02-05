@@ -16,7 +16,7 @@ function PostCard({post, tagAnimal}) {
                             <p>Species: {animal.species}</p>
                             <p>Breed: {animal.breed}</p>
                             <p>Age: {animal.age}</p>
-                            <button onClick={() => tagAnimal(animal.id)}>
+                            <button onClick={() => tagAnimal(animal.id)} className="animal_post_tag">
                                 <img className="tag_icon" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/>
                             </button>
                         </div>

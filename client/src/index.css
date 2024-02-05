@@ -491,11 +491,27 @@ body {
 }
 
 .animal_in_post {
-    border: rgb(7, 129, 68) solid 1px;
-    width: fit-content;
+    border: rgb(40, 73, 164) solid 1px;
+    border-radius: 10px;
+    width: 200px;
     height: fit-content;
     float: right;
     margin-right: 220px;
+    background-color: #427AA1;
+    display: grid;
+}
+
+.animal_post_tag {
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.animal_post_tag:hover {
+    box-shadow: 3px 3px #6fc5ff50;
+    transform: scale(1.1);   
 }
 
 /* NEW MESSAGE FORM */
