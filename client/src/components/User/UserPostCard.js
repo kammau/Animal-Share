@@ -1,8 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 
 function UserPostCard({post, handleUpdate}) {
     const [mode, setMode] = useState("view")
+    const [userAnimals, setUserAnimals] = useState()
+
+    useEffect(() => {
+        fetch("/my_account/animals")
+        .then((res) => {
+            if (res.status === 200) {
+                return res.json()
+            }
+        })
+        .then((res) => setUserAnimals(res))
+    }, [])
 
     console.log(post.animals)
 
@@ -14,7 +25,7 @@ function UserPostCard({post, handleUpdate}) {
             imgTwo: post.imgTwo,
             imgThree: post.imgThree,
             numOfAnimals: post.numOfAnimals,
-            animals: post.animals
+            animals: []
         },
         onSubmit: (values) => {
             fetch(`/my_account/posts/${post.id}`, {
@@ -77,7 +88,7 @@ function UserPostCard({post, handleUpdate}) {
                         </select>
 
                         <div>
-                            {post.animals ? post.animals.map((animal) => {
+                            {userAnimals ? userAnimals.map((animal) => {
                                 return (
                                     <>
                                         <input type="checkbox" onChange={() => formik.values.animals.push(animal)} name={`${animal.name}`} value={formik.values.animals}/>

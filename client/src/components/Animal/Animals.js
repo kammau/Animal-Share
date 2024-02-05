@@ -65,7 +65,7 @@ function Animals() {
             {addBtn === true ? (
                     <AddAnimalForm animals={animals} setAnimals={setAnimals} setAddBtn={setAddBtn}/>
                 ) : (
-                    <button id="add_animal_btn" onClick={() => setAddBtn(true)}>+</button>
+                    <button className="add_btn" onClick={() => setAddBtn(true)}>+</button>
             )}
             
             {/* ANIMAL CARD'S */}

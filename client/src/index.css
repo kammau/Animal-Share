@@ -170,12 +170,6 @@ body {
 /* ANIMAL CARDS */
 
 .animal_cards_container {
-    /* position: absolute;
-    display: table;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%; */
     width: 50%;
     height: auto;
     margin: 0 auto;
@@ -306,6 +300,12 @@ body {
     bottom: 55px;
     right: 0;
     margin: 5px;
+    transition: all 0.5s;
+}
+
+.message_btn_reply:hover {
+    box-shadow: 3px 3px #6fc5ff50;
+    transform: scale(1.1);
 }
 
 .message_btn_trash {
@@ -318,6 +318,12 @@ body {
     bottom: 0;
     right: 0;
     margin: 5px;
+    transition: all 0.5s;
+}
+
+.message_btn_trash:hover {
+    box-shadow: 3px 3px #6fc5ff50;
+    transform: scale(1.1);
 }
 
 #no_msg_header {
@@ -346,7 +352,7 @@ body {
 
 
 /* ADD ANIMAL FORM */
-#add_animal_btn {
+.add_btn {
     width: 50px;
     height: 50px;
     font-size: medium;
@@ -359,7 +365,7 @@ body {
     transition: all 0.5s;
 }
 
-#add_animal_btn:hover {
+.add_btn:hover {
     background-color: #ebf2fa;
     color: black;
     transform: scale(1.1);
@@ -431,27 +437,57 @@ body {
 }
 
 /* POSTS */
+#posts_body {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
 .post_card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 5px;
+    align-items: center;
     border: rgb(7, 129, 68) solid 1px;
-    width: fit-content;
-    height: fit-content;
-    overflow: auto;
+    padding: 1rem;
+    border-radius: 0.75em;
+    font-family: sans-serif;
+    width: 100%;
+    margin-bottom: 50px;
+    background-color: #E34234;
+    transition: all 0.5s;
+}
+
+.post_card:hover {
+    background-color: #ee786d;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 2px #b4352a;
 }
 
 .post_title {
-    margin: 20px;
     text-decoration: underline;
-}
-
-.post_img {
-    float: left;
-    width: 350px;
-    height: 350px;
-    margin: 20px;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 30px;
 }
 
 .post_body {
-    float: right;
+    font-size: 25px;
+}
+
+.post_img_container {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.post_img {
+    height: 350px;
+    width: 350px;
+    border-radius: 20px;
 }
 
 .animal_in_post {
@@ -475,19 +511,6 @@ body {
     color: white;
     border-radius: 5px;
     box-shadow: #3e567c 0px 1px 2px 0px, #3e567cb1 0px 2px 6px 2px;
-}
-
-.new_msg_btn {
-    width: 50px;
-    height: 50px;
-    font-size: medium;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    position: absolute;
-    right: 8px;
-    background-color: #427AA1;
-    transition: all 0.5s;
 }
 
 #send_msg_btn {

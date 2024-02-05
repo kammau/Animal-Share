@@ -37,7 +37,7 @@ function Messages() {
         <div>
             {showNew ? (
                     <NewMessage setShowNew={setShowNew}/>
-            ) : <button className="new_msg_btn" onClick={() => setShowNew(true)}>+</button>}
+            ) : <button className="add_btn" onClick={() => setShowNew(true)}>+</button>}
 
             <div id="messages_body">
                 {messages ? messages.map((message) => {

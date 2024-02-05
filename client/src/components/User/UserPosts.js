@@ -15,8 +15,12 @@ function UserPosts({user}) {
     }, [])
 
     function handleUpdate(updatedPost) {
-        let filteredPosts = posts.filter((post) => post.id !== updatedPost.id)
-        setPosts([...updatedPost, filteredPosts])
+        if (posts.length > 0) {
+            let filteredPosts = posts.filter((post) => post.id !== updatedPost.id)
+            setPosts([filteredPosts, {...updatedPost}])
+        } else {
+            setPosts([updatedPost])
+        }
     }
 
     return (

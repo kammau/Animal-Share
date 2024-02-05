@@ -247,16 +247,27 @@ class UserPosts(Resource):
 class PostById(Resource):
     def patch(self, id):
         data = request.get_json()
-
         post = Post.query.filter(Post.id == id).first()
+        animals_list = data["animals"]
 
-        for attr in data:
-            setattr(post, attr, data[attr])
+        # for attr in data:
+        #     setattr(post, attr, data[attr])
+
+        post.title=data["title"]
+        post.postBody=data["postBody"]
+        post.imgOne=data["imgOne"]
+        post.imgTwo=data["imgTwo"]
+        post.imgThree=data["imgThree"]
+        post.numOfAnimals=data["numOfAnimals"]
 
         db.session.add(post)
         db.session.commit()
 
-        return post, 202
+        for animal in animals_list:
+            a = Animal.query.filter(Animal.id == animal["id"]).first()
+            post.animals.append(a)
+
+        return post.to_dict(), 202
         
 class AnimalById(Resource):
     def patch(self, id):

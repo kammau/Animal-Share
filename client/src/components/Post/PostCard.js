@@ -3,8 +3,10 @@ import React from "react";
 function PostCard({post, tagAnimal}) {
     return (
         <div className="post_card">
+            <div className="post_img_container">
+                <img src={post.img} alt={post.title} className="post_img"/>
+            </div>
             <h1 className="post_title">{post.title}</h1>
-            <img src={post.img} alt={post.title} className="post_img"/>
             <h3 className="post_body">{post.postBody}</h3>
             <br />
             {post.animals ? post.animals.map((animal) => {

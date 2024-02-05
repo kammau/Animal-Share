@@ -23,11 +23,11 @@ function Posts() {
     }
 
     return (
-        <div>
+        <div id="posts_body">
             {addBtn ? (
                 <NewPostForm setAddBtn={setAddBtn} posts={posts} setPosts={setPosts}/>
             ) : (
-                <button onClick={() => setAddBtn(true)}>+</button>
+                <button onClick={() => setAddBtn(true)} className="add_btn">+</button>
             )}
 
             {posts ? posts.map((post) => <PostCard post={post} tagAnimal={tagAnimal}/>) : null}
