@@ -277,17 +277,13 @@ class PostById(Resource):
         
 class AnimalById(Resource):
     def patch(self, id):
-        data = request.get_json()
-
         animal = Animal.query.filter(Animal.id == id).first()
+        user = User.query.filter(User.id == session["user_id"]).first()
 
-        for attr in data:
-            setattr(animal, attr, data[attr])
+        animal.taggedBy.append(user)
 
         db.session.add(animal)
         db.session.commit()
-
-        return animal.to_dict(), 202
     
     def delete(self, id):
         animal = Animal.query.filter(Animal.id == id).first()

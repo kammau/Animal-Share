@@ -38,7 +38,7 @@ function AnimalCard({animal, tagAnimal}) {
                 </div>
             ) : null}
 
-            <button onClick={() => tagAnimal(animal.id)} className="tag_icon_btn"><img className="tag_icon" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/></button>
+            <button onClick={() => tagAnimal(animal)} className="tag_icon_btn"><img className="tag_icon" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/></button>
             <NavLink to={`/animals/${animal.id}`} data-item="AnimalPage">. . .</NavLink>
         </div>
     )
