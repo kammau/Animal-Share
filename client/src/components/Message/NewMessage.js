@@ -55,7 +55,7 @@ function NewMessage({setShowNew}) {
 
                     <textarea rows="5" cols="33" name="messageBody" onChange={formik.handleChange} value={formik.values.messageBody} placeholder="Message Body" id="new_msg_body"></textarea>
 
-                    <button type="submit" id="send_msg_btn">Send</button>
+                    <button type="submit" className="forms_btn">Send</button>
                 </form>
             </div>
         </>

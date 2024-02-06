@@ -44,7 +44,7 @@ function Messages() {
                     return (
                         <MessageCard key={message.id} message={message} deleteMessage={deleteMessage}/>
                     )
-                }) : <h1 id="no_msg_header">No messages</h1>}
+                }) : <h1 className="page_headers">No messages</h1>}
             </div>
         </div>
     )

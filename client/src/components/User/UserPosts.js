@@ -44,7 +44,7 @@ function UserPosts({user}) {
     return (
         <>
             <div className="posts_body">
-                {posts ? posts.map((post) => <UserPostCard key={post.id} post={post} handleUpdate={handleUpdate} deletePost={deletePost}/>) : <h1>Looks like you don't have any posts!</h1>}
+                {posts ? posts.map((post) => <UserPostCard key={post.id} post={post} handleUpdate={handleUpdate} deletePost={deletePost}/>) : <h1 className="page_headers">Looks like you don't have any posts!</h1>}
             </div>
         </>
     )

@@ -45,12 +45,14 @@ function UserPostCard({post, handleUpdate, deletePost}) {
             {mode === "view" ? (
                 <div className="post_card">
                     <h1 className="post_title">{post.title}</h1>
-                    <img src={post.img} alt={post.title} className="post_img"/>
+                    <img src={post.imgOne} alt={post.title} className="post_img"/>
+                    <img src={post.imgTwo} alt={post.title} className="post_img" />
+                    <img src={post.imgThree} alt={post.title} className="post_img" />
                     <h3 className="post_body">{post.postBody}</h3>
                     <br />
                     {post.animals ? post.animals.map((animal) => {
                             return (
-                                <div className="animal_in_post">
+                                <div className="animal_in_post" key={animal.id}>
                                     <h1>{animal.name}</h1>
                                     <p>Species: {animal.species}</p>
                                     <p>Breed: {animal.breed}</p>

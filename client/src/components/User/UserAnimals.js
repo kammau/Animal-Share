@@ -36,8 +36,7 @@ function UserAnimals({user}) {
 
     return (
         <>
-            <h1>{user.username} Animals</h1>
-            {animals ? animals.map((animal) => <UserAnimalCard key={animal.id} animal={animal} handleUpdate={handleUpdate} handleDelete={handleDelete}/>): <h2>Looks like you don't have any animals!</h2>}
+            {animals ? animals.map((animal) => <UserAnimalCard key={animal.id} animal={animal} handleUpdate={handleUpdate} handleDelete={handleDelete}/>): <h2 className="page_headers">Looks like you don't have any animals!</h2>}
         </>
     )
 }

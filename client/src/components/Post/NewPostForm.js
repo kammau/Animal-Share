@@ -48,9 +48,9 @@ function NewPostForm({setAddBtn, setPosts, posts}) {
 
     return (
         <>
-            <button onClick={() => setAddBtn(false)}>-</button>
-            <div>
-                <h1>ADD A POST</h1>
+            <button onClick={() => setAddBtn(false)} className="add_btn">-</button>
+            <div className="forms_container">
+                <h1 className="forms_header">ADD A POST</h1>
                 <h2>Max Animals Per Post is 3</h2>
                 <br />
 
@@ -88,7 +88,7 @@ function NewPostForm({setAddBtn, setPosts, posts}) {
                     <input name="imgTwo" type="text" placeholder="Second Animal Image (Optional)" value={formik.values.imgTwo} onChange={formik.handleChange}/>
                     <input name="imgThree" type="text" placeholder="Third Animal Image (Optional)" value={formik.values.imgThree} onChange={formik.handleChange}/>
                     
-                    <button type="submit">Post</button>
+                    <button type="submit" className="forms_btn">Post</button>
                 </form>
             </div>
         </>

@@ -29,7 +29,7 @@ function MyAccount() {
 
     return (
         <div>
-            <h1 id="account_header">Hello {user.username}!</h1>
+            <h1 className="page_headers">Hello {user.username}!</h1>
 
             <div id="account_btns_container">
                 <button onClick={() => setView("posts")} className="account_btns">POSTS</button>

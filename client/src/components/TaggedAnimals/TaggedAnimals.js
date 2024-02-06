@@ -22,7 +22,7 @@ function TaggedAnimals() {
                 return (
                     <TaggedAnimalCard key={animal.id} animal={animal} setTaggedAnimals={setTaggedAnimals}/>
                 )
-            }) : <h1 id="no_tagged_animals_header">Looks like you don't have any tagged animals!</h1>}
+            }) : <h1 className="page_headers">Looks like you don't have any tagged animals!</h1>}
         </div>
     )
 }
