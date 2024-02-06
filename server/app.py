@@ -25,6 +25,11 @@ class Signup(Resource):
         username = request.get_json().get("username")
         password = request.get_json().get("password")
 
+        testingUser = User.query.filter(User.username == username).first()
+        
+        if bool(testingUser) == True:
+            return {}, 409
+
         if username and password:
             new_user = User(username=username)
             new_user.password_hash = password

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import { useDispatch } from "react-redux";
 import * as yup from "yup";
@@ -7,6 +7,7 @@ import { logIn } from "../reducers/sessionSlice";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 function Signup() {
+    const [conflict, setConflict] = useState(false)
 
     const dispatch = useDispatch();
 
@@ -33,6 +34,9 @@ function Signup() {
             .then((res) => {
                 if (res.ok) {
                     dispatch(logIn())
+                }
+                else if (res.status === 409) {
+                    setConflict(true)
                 }
             })
         }
@@ -65,6 +69,8 @@ function Signup() {
                     <button type="submit" className="log_sign_btn">SIGNUP</button>
                 </form>
                 <br />
+
+                {conflict ? <p className="logsig_errors">Sorry this username is already taken!</p> : null}
 
                 <section className="logsign_view_btns">
                     <NavLink to="/login" exact><button className="off_logsign_btn" onClick={() => dispatch(viewLogin())}>LOGIN</button></NavLink>
