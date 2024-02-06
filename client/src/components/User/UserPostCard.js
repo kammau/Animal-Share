@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 function UserPostCard({post, handleUpdate, deletePost}) {
     const [mode, setMode] = useState("view")
     const [userAnimals, setUserAnimals] = useState()
+    const [animalPhoto, setAnimalPhoto] = useState(1)
 
     useEffect(() => {
         fetch("/my_account/animals")
@@ -14,6 +15,30 @@ function UserPostCard({post, handleUpdate, deletePost}) {
         })
         .then((res) => setUserAnimals(res))
     }, [])
+
+    function imageSrc(animalPhoto) {
+        if (animalPhoto === 1) {
+            return post.imgOne
+        } 
+        else if (animalPhoto === 2) {
+            return post.imgTwo
+        }
+        else {
+            return post.imgThree
+        }
+    }
+
+    function animalPhotoNum(animalPhoto) {
+        if (animalPhoto === 1) {
+            setAnimalPhoto(2)
+        }
+        else if (animalPhoto === 2) {
+            setAnimalPhoto(3)
+        }
+        else {
+            setAnimalPhoto(1)
+        }
+    }
 
     const formik = useFormik({
         initialValues: {
@@ -45,9 +70,10 @@ function UserPostCard({post, handleUpdate, deletePost}) {
             {mode === "view" ? (
                 <div className="post_card">
                     <h1 className="post_title">{post.title}</h1>
-                    <img src={post.imgOne} alt={post.title} className="post_img"/>
-                    <img src={post.imgTwo} alt={post.title} className="post_img" />
-                    <img src={post.imgThree} alt={post.title} className="post_img" />
+                    <div>
+                        <img src={imageSrc(animalPhoto)} alt={post.title} className="post_img"/>
+                        <button onClick={() => animalPhotoNum(animalPhoto)}><img src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" alt="logout icon"/></button>
+                    </div>
                     <h3 className="post_body">{post.postBody}</h3>
                     <br />
                     {post.animals ? post.animals.map((animal) => {

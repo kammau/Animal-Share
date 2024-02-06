@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 
 function PostCard({post, tagAnimal}) {
+    const [animalPhoto, setAnimalPhoto] = useState(1)
+
+    function imageSrc(animalPhoto) {
+        if (animalPhoto === 1) {
+            return post.imgOne
+        } 
+        else if (animalPhoto === 2) {
+            return post.imgTwo
+        }
+        else {
+            return post.imgThree
+        }
+    }
+
+    function animalPhotoNum(animalPhoto) {
+        if (animalPhoto === 1) {
+            setAnimalPhoto(2)
+        }
+        else if (animalPhoto === 2) {
+            setAnimalPhoto(3)
+        }
+        else {
+            setAnimalPhoto(1)
+        }
+    }
+
     return (
         <div className="post_card">
             <div className="post_img_container">
-                <img src={post.img} alt={post.title} className="post_img"/>
+                <img src={imageSrc(animalPhoto)} alt={post.title} className="post_img"/>
+                <button onClick={() => animalPhotoNum(animalPhoto)}><img src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" alt="logout icon"/></button>
             </div>
             <h1 className="post_title">{post.title}</h1>
             <h3 className="post_body">{post.postBody}</h3>
