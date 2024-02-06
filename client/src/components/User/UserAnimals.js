@@ -35,9 +35,9 @@ function UserAnimals({user}) {
     }, [])
 
     return (
-        <>
+        <div className="animal_cards_container">
             {animals ? animals.map((animal) => <UserAnimalCard key={animal.id} animal={animal} handleUpdate={handleUpdate} handleDelete={handleDelete}/>): <h2 className="page_headers">Looks like you don't have any animals!</h2>}
-        </>
+        </div>
     )
 }
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import UserPosts from "./UserPosts";
 import UserAnimals from "./UserAnimals";
-import Settings from "./Settings";
 
 function MyAccount() {
     const [user, setUser] = useState()
@@ -20,9 +19,6 @@ function MyAccount() {
         else if (view === "animals") {
             return <UserAnimals user={user} />
         }
-        else if (view === "settings") {
-            return <Settings user={user} />
-        }
     }
 
     if (!user) return <h1>Loading...</h1>
@@ -34,7 +30,6 @@ function MyAccount() {
             <div id="account_btns_container">
                 <button onClick={() => setView("posts")} className="account_btns">POSTS</button>
                 <button onClick={() => setView("animals")} className="account_btns">ANIMALS</button>
-                <button onClick={() => setView("settings")} className="account_btns">SETTINGS</button>
             </div>
 
             {viewFunc()}

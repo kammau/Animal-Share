@@ -55,7 +55,7 @@ function Animals() {
 
     
     return (
-        <div id="animals_body">
+        <div>
 
             {/* SEARCH ANIMAL'S */}
             <SearchAnimals searchValue={searchValue} onSearchChange={setSearchValue} setSearchBy={setSearchBy}/>

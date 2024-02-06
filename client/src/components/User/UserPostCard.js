@@ -72,7 +72,7 @@ function UserPostCard({post, handleUpdate, deletePost}) {
                     <h1 className="post_title">{post.title}</h1>
                     <div>
                         <img src={imageSrc(animalPhoto)} alt={post.title} className="post_img"/>
-                        <button onClick={() => animalPhotoNum(animalPhoto)}><img src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" alt="logout icon"/></button>
+                        <button onClick={() => animalPhotoNum(animalPhoto)} className="img_scroll_btns"><img src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" alt="logout icon" className="tag_icon"/></button>
                     </div>
                     <h3 className="post_body">{post.postBody}</h3>
                     <br />
@@ -87,7 +87,7 @@ function UserPostCard({post, handleUpdate, deletePost}) {
                             )
                     }) : null}
                     <button onClick={() => deletePost(post)} className="message_btn_trash"><img src="https://cdn-icons-png.flaticon.com/512/1843/1843344.png" alt="trash icon" className="trash_icon"/></button>
-                    <button onClick={() => setMode("edit")}><img className="edit_icon" src="https://cdn3.iconfinder.com/data/icons/feather-5/24/edit-512.png" alt="edit icon"/></button>
+                    <button onClick={() => setMode("edit")} className="edit_btn"><img className="edit_icon" src="https://cdn3.iconfinder.com/data/icons/feather-5/24/edit-512.png" alt="edit icon"/></button>
                 </div>
             ) : (
                 <div className="post_card">
