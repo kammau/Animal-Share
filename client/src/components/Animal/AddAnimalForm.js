@@ -51,31 +51,34 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
                 <br />
                 <br />
                 <form onSubmit={formik.handleSubmit} autoComplete="off">
-                    <input name="name" type="text" value={formik.values.name} onChange={formik.handleChange} placeholder="NAME"/>
-                    <p>{formik.errors.name}</p>
+                    
+                    <div id="main_add_animal">
+                        <input name="name" type="text" value={formik.values.name} onChange={formik.handleChange} placeholder="NAME" className="forms_inputs"/>
+                        <p>{formik.errors.name}</p>
 
-                    <input name="age" type="number" value={formik.values.age} onChange={formik.handleChange} placeholder="AGE"/>
-                    <p>{formik.errors.age}</p>
+                        <input name="age" type="number" value={formik.values.age} onChange={formik.handleChange} placeholder="AGE" className="forms_inputs"/>
+                        <p>{formik.errors.age}</p>
 
-                    <input name="breed" type="text" value={formik.values.breed} onChange={formik.handleChange} placeholder="BREED"/>
-                    <p>{formik.errors.breed}</p>
+                        <input name="breed" type="text" value={formik.values.breed} onChange={formik.handleChange} placeholder="BREED" className="forms_inputs"/>
+                        <p>{formik.errors.breed}</p>
 
-                    <input name="species" type="text" value={formik.values.species} onChange={formik.handleChange}  placeholder="SPECIES"/>
-                    <p>{formik.errors.species}</p>
+                        <input name="species" type="text" value={formik.values.species} onChange={formik.handleChange}  placeholder="SPECIES" className="forms_inputs"/>
+                        <p>{formik.errors.species}</p>
 
-                    <input name="location" type="text" value={formik.values.location} onChange={formik.handleChange} placeholder="LOCATION (OPTIONAL)"/>
+                        <input name="location" type="text" value={formik.values.location} onChange={formik.handleChange} placeholder="LOCATION (OPTIONAL)" className="forms_inputs"/>
 
-                    <div value={formik.values.sex} onChange={formik.handleChange}>
-                        <label htmlFor="sex_m">Male</label>
-                        <input type="radio" id="sex_m" name="sex" value={"Male"}/>
+                        <div value={formik.values.sex} onChange={formik.handleChange} id="sex_select">
+                            <label htmlFor="sex_m">Male</label>
+                            <input type="radio" id="sex_m" name="sex" value={"Male"}/>
 
-                        <label htmlFor="sex_f">Female</label>
-                        <input type="radio" id="sex_f" name="sex" value={"Female"}/>
-                        <p>{formik.errors.sex}</p>
+                            <label htmlFor="sex_f">Female</label>
+                            <input type="radio" id="sex_f" name="sex" value={"Female"}/>
+                            <p>{formik.errors.sex}</p>
+                        </div>
+
+                        <input type="text" name="img" value={formik.values.img} onChange={formik.handleChange} placeholder="IMAGE URL" className="forms_inputs"/>
+                        <p>{formik.errors.img}</p>
                     </div>
-
-                    <input type="text" name="img" value={formik.values.img} onChange={formik.handleChange} placeholder="IMAGE URL"/>
-                    <p>{formik.errors.img}</p>
 
                     <button type="submit" className="forms_btn">Add</button>
                 </form>

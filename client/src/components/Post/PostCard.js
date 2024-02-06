@@ -1,7 +1,13 @@
 import React, { useState } from "react";
+import SpecificMessage from "../Message/SpecificMessage";
+import { useDispatch } from "react-redux";
+import { setSendTo } from "../reducers/sendToSlice";
 
 function PostCard({post, tagAnimal}) {
     const [animalPhoto, setAnimalPhoto] = useState(1)
+    const [messageView, setMessageView] = useState(false)
+
+    const dispatch = useDispatch();
 
     function imageSrc(animalPhoto) {
         if (animalPhoto === 1) {
@@ -27,6 +33,10 @@ function PostCard({post, tagAnimal}) {
         }
     }
 
+    function handleSendTo(to) {
+        dispatch(setSendTo(to))
+    }
+
     return (
         <div className="post_card">
             <div className="post_img_container">
@@ -49,7 +59,14 @@ function PostCard({post, tagAnimal}) {
                         </div>
                     )
             }) : null}
-            <button className="message_btn">
+            {messageView ? (
+                <div>
+                    {handleSendTo(post.user.username)}
+                    <button onClick={() => setMessageView(false)}>Cancel</button>
+                    <SpecificMessage />
+                </div>
+            ) : null}
+            <button className="message_btn" onClick={() => setMessageView(true)}>
                 <img src="https://cdn.iconscout.com/icon/free/png-256/free-message-2367724-1976874.png" alt="message icon" className="message_icon"/>
             </button>
         </div>

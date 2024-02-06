@@ -531,6 +531,15 @@ body {
     display: grid;
 }
 
+#main_add_animal {
+    position: absolute;
+    margin-top: 15px;
+}
+
+#sex_select {
+    margin-top: 25px;
+}
+
 /* NEW MESSAGE FORM */
 
 #new_message_container {

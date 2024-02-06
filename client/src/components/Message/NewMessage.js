@@ -40,7 +40,7 @@ function NewMessage({setShowNew}) {
 
     return (
         <>
-            <button className="new_msg_btn" onClick={() => setShowNew(false)}>-</button>
+            <button className="add_btn" onClick={() => setShowNew(false)}>-</button>
             <div id="new_message_container">
                 <form onSubmit={formik.handleSubmit} autoComplete="off" id="new_message_form">
                     <input type="text" name="messageTitle" onChange={formik.handleChange} value={formik.values.messageTitle} placeholder="Title" id="new_msg_title"/>
