@@ -250,11 +250,6 @@ class PostById(Resource):
         post = Post.query.filter(Post.id == id).first()
         animals_list = data["animals"]
 
-        print(animals_list)
-
-        # for attr in data:
-        #     setattr(post, attr, data[attr])
-
         post.title=data["title"]
         post.postBody=data["postBody"]
         post.imgOne=data["imgOne"]
@@ -274,6 +269,14 @@ class PostById(Resource):
         db.session.commit()
 
         return post.to_dict(), 202
+    
+    def delete(self, id):
+        post = Post.query.filter(Post.id == id).first()
+
+        db.session.delete(post)
+        db.session.commit()
+
+        return {}, 204
         
 class AnimalById(Resource):
     def patch(self, id):

@@ -17,20 +17,34 @@ function UserPosts({user}) {
         })
     }, [])
 
-    function handleUpdate(updatedPost) {
-        if (posts.length > 0) {
-            let filteredPosts = posts.filter((post) => post.id !== updatedPost.id)
-            setPosts([filteredPosts, {...updatedPost}])
-        } else {
-            setPosts(updatedPost)
-        }
+    function handleUpdate() {
+        fetch("/my_account/posts")
+        .then((res) => {
+            if (res.status === 200) {
+                return res.json()
+            }
+        })
+        .then((res) => setPosts(res))
+    }
+
+    function deletePost(post) {
+        fetch(`/my_account/posts/${post.id}`, {
+            method: "DELETE",
+        })
+        .then(() => {
+            if (posts.length > 0) {
+                let updatedPosts = posts.filter((p) => p.id !== post.id)
+                setPosts(updatedPosts)
+            } else {
+                setPosts()
+            }
+        })
     }
 
     return (
         <>
-            <h1>{user.username} Posts</h1>
-            <div>
-                {posts ? posts.map((post) => <UserPostCard key={post.id} post={post} handleUpdate={handleUpdate}/>) : <h1>Looks like you don't have any posts!</h1>}
+            <div className="posts_body">
+                {posts ? posts.map((post) => <UserPostCard key={post.id} post={post} handleUpdate={handleUpdate} deletePost={deletePost}/>) : <h1>Looks like you don't have any posts!</h1>}
             </div>
         </>
     )

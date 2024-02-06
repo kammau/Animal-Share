@@ -45,7 +45,7 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
 
     return (
         <>
-            <button id="add_animal_btn" onClick={() => setAddBtn(false)}>-</button>
+            <button className="add_btn" onClick={() => setAddBtn(false)}>-</button>
             <div id="animal_form_container">
                 <h2 id="animal_form_header">ADD AN ANIMAL</h2>
                 <br />

@@ -23,7 +23,7 @@ function Posts() {
     }
 
     return (
-        <div id="posts_body">
+        <div className="posts_body">
             {addBtn ? (
                 <NewPostForm setAddBtn={setAddBtn} posts={posts} setPosts={setPosts}/>
             ) : (

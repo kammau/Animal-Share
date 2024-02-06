@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 
-function UserPostCard({post, handleUpdate}) {
+function UserPostCard({post, handleUpdate, deletePost}) {
     const [mode, setMode] = useState("view")
     const [userAnimals, setUserAnimals] = useState()
 
@@ -34,7 +34,7 @@ function UserPostCard({post, handleUpdate}) {
                 body: JSON.stringify(values)
             })
             .then((res) => res.json())
-            .then((res) => handleUpdate(res))
+            .then(() => handleUpdate())
 
             setMode("view")
         }
@@ -58,6 +58,7 @@ function UserPostCard({post, handleUpdate}) {
                                 </div>
                             )
                     }) : null}
+                    <button onClick={() => deletePost(post)} className="message_btn_trash"><img src="https://cdn-icons-png.flaticon.com/512/1843/1843344.png" alt="trash icon" className="trash_icon"/></button>
                     <button onClick={() => setMode("edit")}><img className="edit_icon" src="https://cdn3.iconfinder.com/data/icons/feather-5/24/edit-512.png" alt="edit icon"/></button>
                 </div>
             ) : (
