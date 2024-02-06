@@ -16,10 +16,10 @@ function PostCard({post, tagAnimal}) {
     }
 
     function animalPhotoNum(animalPhoto) {
-        if (animalPhoto === 1) {
+        if (animalPhoto === 1 && post.imgTwo !== null) {
             setAnimalPhoto(2)
         }
-        else if (animalPhoto === 2) {
+        else if (animalPhoto === 2 && post.imgThree !== null) {
             setAnimalPhoto(3)
         }
         else {
@@ -31,7 +31,7 @@ function PostCard({post, tagAnimal}) {
         <div className="post_card">
             <div className="post_img_container">
                 <img src={imageSrc(animalPhoto)} alt={post.title} className="post_img"/>
-                <button onClick={() => animalPhotoNum(animalPhoto)}><img src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" alt="logout icon"/></button>
+                <button onClick={() => animalPhotoNum(animalPhoto)} className="img_scroll_btns"><img src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" alt="logout icon" className="tag_icon"/></button>
             </div>
             <h1 className="post_title">{post.title}</h1>
             <h3 className="post_body">{post.postBody}</h3>
