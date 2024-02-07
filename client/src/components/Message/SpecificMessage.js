@@ -36,15 +36,15 @@ function SpecificMessage() {
     })
 
     return (
-        <div>
+        <>
             <form onSubmit={formik.handleSubmit} autoComplete="off">
-                <input type="text" name="messageTitle" onChange={formik.handleChange} value={formik.values.messageTitle}/>
+                <input type="text" name="messageTitle" onChange={formik.handleChange} value={formik.values.messageTitle} className="specific_msg_in" placeholder="Title"/>
 
-                <textarea rows="5" cols="33" name="messageBody" onChange={formik.handleChange} value={formik.values.messageBody}></textarea>
+                <textarea rows="5" cols="33" name="messageBody" onChange={formik.handleChange} value={formik.values.messageBody} className="specific_msg_in" placeholder="Body"></textarea>
 
                 <button type="submit">Send</button>
             </form>
-        </div>
+        </>
     )
 }
 

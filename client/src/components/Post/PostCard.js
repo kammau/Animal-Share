@@ -60,10 +60,10 @@ function PostCard({post, tagAnimal}) {
                     )
             }) : null}
             {messageView ? (
-                <div>
+                <div className="specific_message">
                     {handleSendTo(post.user.username)}
-                    <button onClick={() => setMessageView(false)}>Cancel</button>
                     <SpecificMessage />
+                    <button onClick={() => setMessageView(false)}>Cancel</button>
                 </div>
             ) : null}
             <button className="message_btn" onClick={() => setMessageView(true)}>
