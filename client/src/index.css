@@ -369,7 +369,7 @@ body {
     height: fit-content;
     margin: 0 auto;
     padding: 10px;
-    position: relative;
+    
 }
 
 .post_card {
@@ -405,6 +405,10 @@ body {
 
 .post_body {
     font-size: 25px;
+    position: absolute;
+    width: 300px;
+    top: 100px;
+    right: 5px;
 }
 
 .post_img_container {

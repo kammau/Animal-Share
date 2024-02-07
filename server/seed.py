@@ -37,11 +37,11 @@ if __name__ == "__main__":
 
         animal1 = Animal(
             name="Moose",
-            img="https://lh3.googleusercontent.com/pw/ABLVV87qrB4D308G5Lz81MZ9aM9BsMpMBcvcpf0dJ-RLlCv2UxkV5yuXjfKQkMl218KzXUGV_VrhOW3n3w5gABU2hKE-17Ra7Ew2ILJhdEANT4JpV9L5tdS-Q7YJeml2jLyzLHrbqaFPuhJqHQfx3KQfsYDkLw=w1008-h756-s-no-gm?authuser=0",
-            species="Dog",
-            breed="McNab",
+            img="https://rawznaturalpetfood.com/wp-content/uploads/tuxedo-cats.jpg",
+            species="Cat",
+            breed="Tuxedo",
             age=7,
-            location="Mammoth Lakes, CA",
+            location="San Diego, CA",
             sex="M"
         )
         animal1.currentOwner = user1
@@ -54,7 +54,7 @@ if __name__ == "__main__":
             species="Dog",
             breed="Scotch Collie",
             age=8,
-            location="Mammoth Lakes, CA",
+            location="Riverside, CA",
             sex="F"
         )
         animal2.currentOwner = user1
@@ -83,9 +83,11 @@ if __name__ == "__main__":
         posts = []
 
         post1 = Post(
-            title="Looking for new home",
-            postBody="Looking for a new home for this sweet pup!",
-            imgOne="https://lh3.googleusercontent.com/pw/ABLVV87qrB4D308G5Lz81MZ9aM9BsMpMBcvcpf0dJ-RLlCv2UxkV5yuXjfKQkMl218KzXUGV_VrhOW3n3w5gABU2hKE-17Ra7Ew2ILJhdEANT4JpV9L5tdS-Q7YJeml2jLyzLHrbqaFPuhJqHQfx3KQfsYDkLw=w1008-h756-s-no-gm?authuser=0",
+            title="Moose needs a new home!",
+            postBody="Looking for a new home for this sweet kitty!",
+            imgOne="https://rawznaturalpetfood.com/wp-content/uploads/tuxedo-cats.jpg",
+            imgTwo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxtbKuCIz3gNgbmILS03gMPNcZVPiNU2QNIw&usqp=CAU",
+            imgThree="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhjDvW5YBNNJgdxqp-Vjq8FQELTDy0SQSLsg&usqp=CAU",
             numOfAnimals=1
         )
         post1.user = user1

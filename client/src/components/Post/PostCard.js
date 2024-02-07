@@ -44,6 +44,7 @@ function PostCard({post, tagAnimal}) {
                 <button onClick={() => animalPhotoNum(animalPhoto)} className="img_scroll_btns"><img src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" alt="logout icon" className="tag_icon"/></button>
             </div>
             <h1 className="post_title">{post.title}</h1>
+            <p>Posted By: {post.user.username}</p>
             <h3 className="post_body">{post.postBody}</h3>
             <br />
             {post.animals ? post.animals.map((animal) => {
