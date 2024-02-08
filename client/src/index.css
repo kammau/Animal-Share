@@ -240,6 +240,49 @@ body {
     font-size: 30px;
 }
 
+.animals_posts_btn {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 10px;
+    bottom: 185px;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+        box-shadow: 3px 3px #6fc5ff50;
+        transform: scale(1.1);
+    }
+}
+
+.animal_bio {
+    position: relative;
+    font-family: sans-serif;
+    background-color: #bcbcff98;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    margin-bottom: 100px;
+    margin-top: 100px;
+
+    &:hover {
+        background-color: #D8BFD8;
+        transform: scale(1.1);
+        box-shadow: 5px 5px 2px #452c63;
+    }
+}
+
+.bio_title {
+    text-decoration: underline;
+}
+
+#post_sec_title {
+    text-decoration: underline;
+    font-family: sans-serif;
+}
+
 /* TAG ANIMAL */
 
 .remove_btn {
@@ -423,6 +466,12 @@ body {
     margin-top: 50px;
 }
 
+.post_animal_img {
+    width: 175px;
+    height: 150px;
+    border-radius: 10px;
+}
+
 .animal_in_post {
     border: rgb(40, 73, 164) solid 1px;
     border-radius: 10px;
@@ -458,7 +507,7 @@ body {
     background-color: #3e567c;
     text-align: center;
     width: 50%;
-    height: 400px;
+    height: 450px;
     font-family: sans-serif;
     margin: 10px auto;
     padding: 10px;
@@ -523,7 +572,52 @@ body {
     }
 }
 
-#animals_select {
+.form_errors {
+    color: #fa8072;
+}
+
+.update_btn {
+    background-color: #023E8A;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.cancel_btn {
+    background-color: #023E8A;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: absolute;
+    left: 100px;
+    bottom: 16px;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.cancel_btn2 {
+    background-color: #023E8A;
+    width: 75px;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: absolute;
+    left: 50px;
+    bottom: 16px;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.animals_select {
     position: absolute;
     top: 50px;
     right: 50px;
@@ -542,6 +636,25 @@ body {
 
 #sex_select {
     margin-top: 25px;
+}
+
+#animal_select_spec {
+    margin-top: 10px;
+}
+
+#animal_num_spec {
+    margin-top: 10px;
+}
+
+#animal_bio_in {
+    color: white;
+    background-color: #00b4d867;
+    text-indent: 10px;
+    width: 300px;
+
+    &::placeholder {
+        color: white;
+    }
 }
 
 /* NEW MESSAGE FORM */

@@ -54,16 +54,16 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
                     
                     <div id="main_add_animal">
                         <input name="name" type="text" value={formik.values.name} onChange={formik.handleChange} placeholder="NAME" className="forms_inputs"/>
-                        <p>{formik.errors.name}</p>
+                        <p className="form_errors">{formik.errors.name}</p>
 
                         <input name="age" type="number" value={formik.values.age} onChange={formik.handleChange} placeholder="AGE" className="forms_inputs"/>
-                        <p>{formik.errors.age}</p>
+                        <p className="form_errors">{formik.errors.age}</p>
 
                         <input name="breed" type="text" value={formik.values.breed} onChange={formik.handleChange} placeholder="BREED" className="forms_inputs"/>
-                        <p>{formik.errors.breed}</p>
+                        <p className="form_errors">{formik.errors.breed}</p>
 
                         <input name="species" type="text" value={formik.values.species} onChange={formik.handleChange}  placeholder="SPECIES" className="forms_inputs"/>
-                        <p>{formik.errors.species}</p>
+                        <p className="form_errors">{formik.errors.species}</p>
 
                         <input name="location" type="text" value={formik.values.location} onChange={formik.handleChange} placeholder="LOCATION (OPTIONAL)" className="forms_inputs"/>
 
@@ -73,11 +73,13 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
 
                             <label htmlFor="sex_f">Female</label>
                             <input type="radio" id="sex_f" name="sex" value={"Female"}/>
-                            <p>{formik.errors.sex}</p>
+                            <p className="form_errors">{formik.errors.sex}</p>
                         </div>
 
                         <input type="text" name="img" value={formik.values.img} onChange={formik.handleChange} placeholder="IMAGE URL" className="forms_inputs"/>
-                        <p>{formik.errors.img}</p>
+                        <p className="form_errors">{formik.errors.img}</p>
+                    
+                        <textarea rows="4" cols="50" placeholder="Bio" id="animal_bio_in"></textarea>
                     </div>
 
                     <button type="submit" className="forms_btn">Add</button>

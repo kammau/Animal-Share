@@ -284,6 +284,11 @@ class PostById(Resource):
         return {}, 204
         
 class AnimalById(Resource):
+    def get(self, id):
+        animal = Animal.query.filter(Animal.id == id).first()
+
+        return animal.to_dict(), 200
+
     def patch(self, id):
         animal = Animal.query.filter(Animal.id == id).first()
         user = User.query.filter(User.id == session["user_id"]).first()

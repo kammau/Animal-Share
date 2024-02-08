@@ -51,6 +51,7 @@ function PostCard({post, tagAnimal}) {
                     return (
                         <div className="animal_in_post">
                             <h1>{animal.name}</h1>
+                            <img src={animal.img} className="post_animal_img"/>
                             <p>Species: {animal.species}</p>
                             <p>Breed: {animal.breed}</p>
                             <p>Age: {animal.age}</p>

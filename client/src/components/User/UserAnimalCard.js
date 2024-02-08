@@ -50,13 +50,13 @@ function UserAnimalCard({animal, handleUpdate, handleDelete}) {
                     <button onClick={() => handleDelete(animal.id)} className="message_btn_trash"><img className="trash_icon" src="https://cdn-icons-png.flaticon.com/512/1843/1843344.png" alt="trash icon"/></button>
                 </>
             ) : (
-                <>
+                <div>
                     <form onSubmit={formik.handleSubmit}>
                         <label htmlFor="name">Name:</label>
-                        <input type="text" value={formik.values.name} onChange={formik.handleChange} name="name"/>
+                        <input type="text" value={formik.values.name} onChange={formik.handleChange} name="name" className="forms_inputs"/>
 
                         <label htmlFor="species">Species:</label>
-                        <input type="text" value={formik.values.species} onChange={formik.handleChange} name="species"/>
+                        <input type="text" value={formik.values.species} onChange={formik.handleChange} name="species" className="forms_inputs"/>
 
 
                         <div value={formik.values.sex} onChange={formik.handleChange}>
@@ -68,15 +68,15 @@ function UserAnimalCard({animal, handleUpdate, handleDelete}) {
                         </div>
 
                         <label htmlFor="age">Age:</label>
-                        <input type="number" value={formik.values.age} onChange={formik.handleChange} name="age"/>
+                        <input type="number" value={formik.values.age} onChange={formik.handleChange} name="age" className="forms_inputs"/>
 
                         <label htmlFor="location">Location:</label>
-                        <input type="text" value={formik.values.location} onChange={formik.handleChange} name="location"/>
+                        <input type="text" value={formik.values.location} onChange={formik.handleChange} name="location" className="forms_inputs"/>
 
-                        <button type="submit">Update</button>
+                        <button type="submit" className="update_btn">Update</button>
                     </form>
-                    <button onClick={() => setMode("view")}>Cancel</button>
-                </>
+                    <button onClick={() => setMode("view")} className="cancel_btn">Cancel</button>
+                </div>
             )}
         </div>
     )

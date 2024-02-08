@@ -42,7 +42,8 @@ if __name__ == "__main__":
             breed="Tuxedo",
             age=7,
             location="San Diego, CA",
-            sex="M"
+            sex="M",
+            bio="Moose has been with my family for over 5 years but we have recently lost our home and are in need of a new loving one for him! He is very energetic and always ready for an adventure. He is healthy and knows how to walk with leash."
         )
         animal1.currentOwner = user1
 
@@ -55,7 +56,8 @@ if __name__ == "__main__":
             breed="Scotch Collie",
             age=8,
             location="Riverside, CA",
-            sex="F"
+            sex="F",
+            bio="Cera is an amazing pup and her previous owner just passed. She does have a lot of health issues, but with medicine she should live a long happy life!"
         )
         animal2.currentOwner = user1
 

@@ -66,7 +66,7 @@ function UserPostCard({post, handleUpdate, deletePost}) {
     })
 
     return (
-        <div>
+        <div className="post_card">
             {mode === "view" ? (
                 <div className="post_card">
                     <h1 className="post_title">{post.title}</h1>
@@ -90,31 +90,36 @@ function UserPostCard({post, handleUpdate, deletePost}) {
                     <button onClick={() => setMode("edit")} className="edit_btn"><img className="edit_icon" src="https://cdn3.iconfinder.com/data/icons/feather-5/24/edit-512.png" alt="edit icon"/></button>
                 </div>
             ) : (
-                <div className="post_card">
-                    <form onSubmit={formik.handleSubmit}>
+                <div>
+                    <form onSubmit={formik.handleSubmit} className="forms_container">
                         <label htmlFor="title">Title:</label>
-                        <input type="text" name="title" value={formik.values.title} onChange={formik.handleChange} />
+                        <br />
+                        <input type="text" name="title" value={formik.values.title} onChange={formik.handleChange} className="forms_inputs"/>
 
+                        <br />
                         <label htmlFor="postBody">Post Body:</label>
-                        <input type="text" name="postBody" value={formik.values.postBody} onChange={formik.handleChange}/>
+                        <input type="text" name="postBody" value={formik.values.postBody} onChange={formik.handleChange} className="forms_inputs"/>
 
+                        <br />
                         <label htmlFor="imgOne">First Image:</label>
-                        <input type="text" name="imgOne" value={formik.values.imgOne} onChange={formik.handleChange}/>
+                        <input type="text" name="imgOne" value={formik.values.imgOne} onChange={formik.handleChange} className="forms_inputs"/>
 
+                        <br />
                         <label htmlFor="imgTwo">Second Image:</label>
-                        <input type="text" name="imgTwo" value={formik.values.imgTwo} onChange={formik.handleChange}/>
+                        <input type="text" name="imgTwo" value={formik.values.imgTwo} onChange={formik.handleChange} className="forms_inputs"/>
 
+                        <br />
                         <label htmlFor="imgThree">Third Image:</label>
-                        <input type="text" name="imgThree" value={formik.values.imgThree} onChange={formik.handleChange} />
+                        <input type="text" name="imgThree" value={formik.values.imgThree} onChange={formik.handleChange}  className="forms_inputs"/>
 
-                        <select name="numOfAnimals" onChange={formik.handleChange} values={formik.values.numOfAnimals}>
+                        <select name="numOfAnimals" onChange={formik.handleChange} values={formik.values.numOfAnimals} className="forms_inputs" id="animal_num_spec">
                             <option disabled>Select Number of Animals</option>
                             <option name="one" value={1}>1</option>
                             <option name="two" value={2}>2</option>
                             <option name="three" value={3}>3</option>
                         </select>
 
-                        <div>
+                        <div id="animal_select_spec">
                             {userAnimals ? userAnimals.map((animal) => {
                                 return (
                                     <>
@@ -125,9 +130,9 @@ function UserPostCard({post, handleUpdate, deletePost}) {
                             }) : <p>Looks like you don't have any animals to choose from!</p>}
                         </div>
 
-                        <button type="submit">Update</button>
+                        <button type="submit" className="update_btn">Update</button>
                     </form>
-                    <button onClick={() => setMode("view")}>Cancel</button>
+                    <button onClick={() => setMode("view")} className="cancel_btn2">Cancel</button>
                 </div>
             )}
         </div>

@@ -12,6 +12,7 @@ import Messages from "./Message/Messages";
 import Animals from "./Animal/Animals";
 import TaggedAnimals from "./TaggedAnimals/TaggedAnimals";
 import MyAccount from "./User/MyAccount";
+import AnimalById from "./Animal/AnimalById";
 
 function App() {
     const dispatch = useDispatch();
@@ -48,6 +49,9 @@ function App() {
                         </Route>
                         <Route exact path="/my_account">
                             <MyAccount />
+                        </Route>
+                        <Route exact path="/animals/:id">
+                            <AnimalById />
                         </Route>
                     </Switch>
                 </>

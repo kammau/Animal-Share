@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setSendTo } from "../reducers/sendToSlice";
 import SpecificMessage from "../Message/SpecificMessage";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 function AnimalCard({animal, tagAnimal}) {
     const [messageView, setMessageView] = useState(false)
@@ -11,6 +12,7 @@ function AnimalCard({animal, tagAnimal}) {
     function handleSendTo(to) {
         dispatch(setSendTo(to))
     }
+
 
     return (
         <div className="animal_card" key={animal.id}>
@@ -38,6 +40,7 @@ function AnimalCard({animal, tagAnimal}) {
             ) : null}
 
             <button onClick={() => tagAnimal(animal)} className="tag_icon_btn"><img className="tag_icon" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/></button>
+            <NavLink to={`/animals/${animal.id}`}><button className="animals_posts_btn">MORE</button></NavLink>
         </div>
     )
 }

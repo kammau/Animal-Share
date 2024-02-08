@@ -56,10 +56,10 @@ function NewPostForm({setAddBtn, setPosts, posts}) {
                 <form onSubmit={formik.handleSubmit} autoComplete="off">
                     <div id="main_post_div">
                         <input name="title" type="text" placeholder="Title" value={formik.values.title} onChange={formik.handleChange} className="forms_inputs"/>
-                        <p>{formik.errors.title}</p>
+                        <p className="form_errors">{formik.errors.title}</p>
 
                         <input name="postBody" type="text" placeholder="Body" value={formik.values.postBody} onChange={formik.handleChange} className="forms_inputs"/>
-                        <p>{formik.errors.postBody}</p>
+                        <p className="form_errors">{formik.errors.postBody}</p>
 
                         <select name="numOfAnimals" onChange={formik.handleChange} values={formik.values.numOfAnimals} className="forms_inputs">
                             <option disabled>Select Number of Animals</option>
@@ -67,11 +67,11 @@ function NewPostForm({setAddBtn, setPosts, posts}) {
                             <option name="two" value={2}>2</option>
                             <option name="three" value={3}>3</option>
                         </select>
-                        <p>{formik.errors.numOfAnimals}</p>
+                        <p className="form_errors">{formik.errors.numOfAnimals}</p>
 
 
                         <input name="imgOne" type="text" placeholder="First Animal Image" value={formik.values.imgOne} onChange={formik.handleChange} className="forms_inputs"/>
-                        <p>{formik.errors.imgOne}</p>
+                        <p className="form_errors">{formik.errors.imgOne}</p>
 
                         <input name="imgTwo" type="text" placeholder="Second Animal Image (Optional)" value={formik.values.imgTwo} onChange={formik.handleChange} className="forms_inputs"/>
                         <br />
@@ -79,7 +79,7 @@ function NewPostForm({setAddBtn, setPosts, posts}) {
                         <input name="imgThree" type="text" placeholder="Third Animal Image (Optional)" value={formik.values.imgThree} onChange={formik.handleChange} className="forms_inputs"/>
                     </div>
 
-                    <div id="animals_select">
+                    <div className="animals_select">
                         <h2>Please Select 1-3 Animals</h2>
                         {animals ? animals.map((animal) => {
                             return (
@@ -89,7 +89,7 @@ function NewPostForm({setAddBtn, setPosts, posts}) {
                                 </>
                             )
                         }) : <p>Looks like you don't have any animals to choose from!</p>}
-                        <p>{formik.errors.animals}</p>
+                        <p className="form_errors">{formik.errors.animals}</p>
                     </div>
                     
                     <button type="submit" className="forms_btn">Post</button>

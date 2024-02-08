@@ -54,7 +54,6 @@ class Animal(db.Model, SerializerMixin):
     __tablename__ = "animals"
 
     serialize_rules = ("-currentOwner.currentAnimals", "-currentOwner.taggedAnimals", "-currentOwner.messages", "-posts.animals", "-posts.user", "-currentOwner.posts", "-taggedBy")
-    # serialize_only = ("id", "name", "img", "species", "breed", "age", "location", "sex")
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
@@ -64,6 +63,7 @@ class Animal(db.Model, SerializerMixin):
     age = db.Column(db.Integer)
     location = db.Column(db.String)
     sex = db.Column(db.String, nullable=False)
+    bio = db.Column(db.String)
 
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
