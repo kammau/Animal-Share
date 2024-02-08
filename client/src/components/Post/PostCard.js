@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SpecificMessage from "../Message/SpecificMessage";
 import { useDispatch } from "react-redux";
 import { setSendTo } from "../reducers/sendToSlice";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 function PostCard({post, tagAnimal}) {
     const [animalPhoto, setAnimalPhoto] = useState(1)
@@ -51,10 +52,11 @@ function PostCard({post, tagAnimal}) {
                     return (
                         <div className="animal_in_post">
                             <h1>{animal.name}</h1>
-                            <img src={animal.img} className="post_animal_img"/>
+                            <img src={animal.img} className="post_animal_img" alt={`${animal.name}`}/>
                             <p>Species: {animal.species}</p>
                             <p>Breed: {animal.breed}</p>
                             <p>Age: {animal.age}</p>
+                            <NavLink to={`/animals/${animal.id}`}><button className="post_more">MORE</button></NavLink>
                             <button onClick={() => tagAnimal(animal.id)} className="animal_post_tag">
                                 <img className="tag_icon" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/>
                             </button>

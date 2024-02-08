@@ -10,7 +10,8 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
         species: yup.string().required("Please enter your animals species"),
         location: yup.string(),
         sex: yup.string(),
-        img: yup.string().required("Please enter a picture of your animal")
+        img: yup.string().required("Please enter a picture of your animal"),
+        bio: yup.string().required("Please enter some basic information about your animal (25-150)").min(25, "Please enter at least 25 characters").max(150, "Max characters!")
     })
 
     const formik = useFormik({
@@ -21,7 +22,8 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
             species: "",
             location: "",
             sex: "",
-            img: ""
+            img: "",
+            bio: ""
         },
         validationSchema: formSchema,
         onSubmit: (values, {resetForm}) => {
@@ -80,6 +82,7 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
                         <p className="form_errors">{formik.errors.img}</p>
                     
                         <textarea rows="4" cols="50" placeholder="Bio" id="animal_bio_in"></textarea>
+                        <p className="form_errors">{formik.errors.bio}</p>
                     </div>
 
                     <button type="submit" className="forms_btn">Add</button>
