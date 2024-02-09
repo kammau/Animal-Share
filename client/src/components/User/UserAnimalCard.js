@@ -12,7 +12,8 @@ function UserAnimalCard({animal, handleUpdate, handleDelete}) {
             breed: animal.breed,
             sex: animal.sex,
             age: animal.age,
-            location: animal.location
+            location: animal.location,
+            img: animal.img
         },
         onSubmit: (values) => {
             fetch(`/my_account/animals/${animal.id}`, {
@@ -72,6 +73,9 @@ function UserAnimalCard({animal, handleUpdate, handleDelete}) {
 
                         <label htmlFor="location">Location:</label>
                         <input type="text" value={formik.values.location} onChange={formik.handleChange} name="location" className="forms_inputs"/>
+
+                        <label htmlFor="img">Image:</label>
+                        <input type="text" value={formik.values.img} onChange={formik.handleChange} name="img" className="forms_inputs"/>
 
                         <button type="submit" className="update_btn">Update</button>
                     </form>
