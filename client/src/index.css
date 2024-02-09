@@ -283,6 +283,18 @@ body {
     font-family: sans-serif;
 }
 
+.animal_msg_btns {
+    cursor: pointer;
+    display: inline;
+    color: white;
+    background-color: #023E8A;
+    transition: all 0.5s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 /* TAG ANIMAL */
 
 .remove_btn {
@@ -431,7 +443,7 @@ body {
     grid-template-columns: 1fr 2fr 1fr;
     column-gap: 5px;
     align-items: center;
-    border: rgb(7, 129, 68) solid 1px;
+    border: #c9c9d9 solid 1px;
     padding: 1rem;
     border-radius: 0.75em;
     font-family: sans-serif;
@@ -461,7 +473,7 @@ body {
     position: absolute;
     width: 300px;
     top: 100px;
-    right: 5px;
+    right: 75px;
 }
 
 .post_img_container {
@@ -478,6 +490,8 @@ body {
 
 .post_animal_img {
     position: relative;
+    border: solid 2px;
+    border-color: #07475495;
     margin: auto;
     width: 50%;
     height: 150px;
@@ -485,11 +499,12 @@ body {
 }
 
 .animal_in_post {
+    color: white;
     text-align: center;
     border: rgb(40, 73, 164) solid 1px;
     border-radius: 10px;
     width: 350px;
-    height: fit-content;
+    height: 515px;
     background-color: #427AA1;
     display: grid;
     transition: all 0.5s;
@@ -835,8 +850,14 @@ body {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.5s;
-    position: absolute;
-    left: 95px;
+    position: relative;
+    left: 140px;
+    top: 65px;
+
+    &:hover {
+        box-shadow: 3px 3px #6fc5ff50;
+        transform: scale(1.1);
+    }
 }
 
 .message_btn_in_post {

@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 function PostCard({post, tagAnimal}) {
     const [animalPhoto, setAnimalPhoto] = useState(1)
     const [messageView, setMessageView] = useState(false)
+    const [animalView, setAnimalView] = useState(false)
 
     const dispatch = useDispatch();
 
@@ -48,28 +49,33 @@ function PostCard({post, tagAnimal}) {
             <p>Posted By: {post.user.username}</p>
             <h3 className="post_body">{post.postBody}</h3>
             <br />
-            <div className="animals_in_posts">
-                {post.animals ? post.animals.map((animal) => {
-                        return (
-                            <div className="animal_in_post">
-                                <h1>{animal.name}</h1>
-                                <img src={animal.img} className="post_animal_img" alt={`${animal.name}`}/>
-                                <p>Species: {animal.species}</p>
-                                <p>Breed: {animal.breed}</p>
-                                <p>Age: {animal.age}</p>
-                                <NavLink to={`/animals/${animal.id}`}><button className="post_more">MORE</button></NavLink>
-                                <button onClick={() => tagAnimal(animal.id)}className="animal_post_tag">
-                                    <img className="tag_icon" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/>
-                                </button>
-                            </div>
-                        )
-                }) : null}
-            </div>
+            <button onClick={() => {animalView ? setAnimalView(false) : setAnimalView(true)}}>
+                {animalView ? "X" : "Animals in post"}
+            </button>
+            {animalView ? (
+                <div className="animals_in_posts">
+                    {post.animals.length > 0 ? post.animals.map((animal) => {
+                            return (
+                                <div className="animal_in_post">
+                                    <h1>{animal.name}</h1>
+                                    <img src={animal.img} className="post_animal_img" alt={`${animal.name}`}/>
+                                    <p>Species: {animal.species}</p>
+                                    <p>Breed: {animal.breed}</p>
+                                    <p>Age: {animal.age}</p>
+                                    <NavLink to={`/animals/${animal.id}`}><button className="post_more">MORE</button></NavLink>
+                                    <button onClick={() => tagAnimal(animal.id)}className="animal_post_tag">
+                                        <img className="tag_icon" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/>
+                                    </button>
+                                </div>
+                            )
+                    }) : <h3>Looks like this post does not have any animals!</h3>}
+                </div>
+            ) : null}
             {messageView ? (
                 <div className="specific_message">
                     {handleSendTo(post.user.username)}
                     <SpecificMessage />
-                    <button onClick={() => setMessageView(false)}>Cancel</button>
+                    <button onClick={() => setMessageView(false)} className="animal_msg_btns">Cancel</button>
                 </div>
             ) : null}
             <button className="message_btn_in_post" onClick={() => setMessageView(true)}>

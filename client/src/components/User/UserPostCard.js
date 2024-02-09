@@ -68,7 +68,7 @@ function UserPostCard({post, handleUpdate, deletePost}) {
     return (
         <div className="post_card">
             {mode === "view" ? (
-                <div className="post_card">
+                <div>
                     <h1 className="post_title">{post.title}</h1>
                     <div>
                         <img src={imageSrc(animalPhoto)} alt={post.title} className="post_img"/>
