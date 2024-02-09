@@ -70,7 +70,7 @@ function PostCard({post, tagAnimal}) {
                     <button onClick={() => setMessageView(false)}>Cancel</button>
                 </div>
             ) : null}
-            <button className="message_btn" onClick={() => setMessageView(true)}>
+            <button className="message_btn_in_post" onClick={() => setMessageView(true)}>
                 <img src="https://cdn.iconscout.com/icon/free/png-256/free-message-2367724-1976874.png" alt="message icon" className="message_icon"/>
             </button>
         </div>

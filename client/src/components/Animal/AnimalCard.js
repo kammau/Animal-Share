@@ -32,10 +32,10 @@ function AnimalCard({animal, tagAnimal}) {
                 <img src="https://cdn.iconscout.com/icon/free/png-256/free-message-2367724-1976874.png" alt="message icon" className="message_icon"/>
             </button>
             {messageView ? (
-                <div>
+                <div className="spef_msg_an">
                     {handleSendTo(animal.currentOwner.username)}
-                    <button onClick={() => setMessageView(false)}>Cancel</button>
                     <SpecificMessage />
+                    <button onClick={() => setMessageView(false)} className="animal_msg_btns">Cancel</button>
                 </div>
             ) : null}
 

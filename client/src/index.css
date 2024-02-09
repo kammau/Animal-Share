@@ -204,7 +204,7 @@ body {
     padding: 1rem;
     border-radius: 0.75em;
     font-family: sans-serif;
-    width: 100%;
+    width: fit-content;
     margin-bottom: 50px;
     background-color: #427AA1;
     transition: all 0.5s;
@@ -287,13 +287,19 @@ body {
 
 .remove_btn {
     font-size: 25px;
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
     border-radius: 50px;
     cursor: pointer;
     position: absolute;
-    right: 25px;
+    right: 12px;
     bottom: 10px;
+    transition: all 0.5s;
+
+    &:hover {
+        box-shadow: 3px 3px #6fc5ff50;
+        transform: scale(1.1);
+    }
 }
 
 
@@ -377,6 +383,10 @@ body {
     margin: 0 auto;
     padding: 10px;
     position: relative;
+}
+
+.spef_msg_an {
+    margin-bottom: 125px;
 }
 
 /* ANIMAL SEARCH */
@@ -813,6 +823,25 @@ body {
     width: 65px;
     height: 65px;
     border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: absolute;
+    left: 85px;
+
+    &:hover {
+        box-shadow: 3px 3px #6fc5ff50;
+        transform: scale(1.1);
+    }
+}
+
+.message_btn_in_post {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50px;
+    text-align: center;
     cursor: pointer;
     transition: all 0.5s;
 

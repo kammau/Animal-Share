@@ -42,7 +42,7 @@ function SpecificMessage() {
 
                 <textarea rows="5" cols="33" name="messageBody" onChange={formik.handleChange} value={formik.values.messageBody} className="specific_msg_in" placeholder="Body"></textarea>
 
-                <button type="submit">Send</button>
+                <button type="submit" className="animal_msg_btns">Send</button>
             </form>
         </>
     )
