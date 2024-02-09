@@ -49,8 +49,8 @@ function PostCard({post, tagAnimal}) {
             <p>Posted By: {post.user.username}</p>
             <h3 className="post_body">{post.postBody}</h3>
             <br />
-            <button onClick={() => {animalView ? setAnimalView(false) : setAnimalView(true)}}>
-                {animalView ? "X" : "Animals in post"}
+            <button onClick={() => {animalView ? setAnimalView(false) : setAnimalView(true)}} className="animals_in_p_btn">
+                {animalView ? "X" : <img src="https://cdn-icons-png.flaticon.com/512/12/12638.png" className="tag_icon" alt="paw print"/>}
             </button>
             {animalView ? (
                 <div className="animals_in_posts">

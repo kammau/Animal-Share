@@ -544,6 +544,20 @@ body {
     border: none;
 }
 
+.animals_in_p_btn {
+    border-radius: 50px;
+    border: #d8d8d8 solid 2px;
+    font-size: 20px;
+    transition: all 0.5s;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 /* FORM'S: */
 .forms_container {
     background-color: #3e567c;
