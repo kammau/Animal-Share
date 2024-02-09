@@ -20,7 +20,7 @@ function SpecificMessage() {
             messageBody: ""
         },
         validationSchema: formSchema,
-        onSubmit: (values) => {
+        onSubmit: (values, {resetForm}) => {
             fetch("/messages", {
                 method: "POST",
                 headers: {
@@ -32,6 +32,8 @@ function SpecificMessage() {
                     reciever: recieverStore
                 })
             })
+
+            resetForm()
         }
     })
 

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
-function UserPostCard({post, handleUpdate, deletePost}) {
+function UserPostCard({post, handleUpdate, deletePost, tagAnimal}) {
     const [mode, setMode] = useState("view")
     const [userAnimals, setUserAnimals] = useState()
     const [animalPhoto, setAnimalPhoto] = useState(1)
+    const [animalView, setAnimalView] = useState(false)
 
     useEffect(() => {
         fetch("/my_account/animals")
@@ -76,16 +78,28 @@ function UserPostCard({post, handleUpdate, deletePost}) {
                     </div>
                     <h3 className="post_body">{post.postBody}</h3>
                     <br />
-                    {post.animals ? post.animals.map((animal) => {
-                            return (
-                                <div className="animal_in_post" key={animal.id}>
-                                    <h1>{animal.name}</h1>
-                                    <p>Species: {animal.species}</p>
-                                    <p>Breed: {animal.breed}</p>
-                                    <p>Age: {animal.age}</p>
-                                </div>
-                            )
-                    }) : null}
+                    <button onClick={() => {animalView ? setAnimalView(false) : setAnimalView(true)}} className="animals_in_p_btn">
+                        {animalView ? "X" : <img src="https://cdn-icons-png.flaticon.com/512/12/12638.png" className="tag_icon" alt="paw print"/>}
+                    </button>
+                    {animalView ? (
+                        <div className="animals_in_posts">
+                            {post.animals.length > 0 ? post.animals.map((animal) => {
+                                return (
+                                    <div className="animal_in_post" key={animal.id}>
+                                        <h1>{animal.name}</h1>
+                                        <img src={animal.img} className="post_animal_img" alt={`${animal.name}`} />
+                                        <p>Species: {animal.species}</p>
+                                        <p>Breed: {animal.breed}</p>
+                                        <p>Age: {animal.age}</p>
+                                        <NavLink to={`/animals/${animal.id}`}><button className="post_more">MORE</button></NavLink>
+                                        <button onClick={() => tagAnimal(animal.id)}className="animal_post_tag">
+                                            <img className="tag_icon" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/>
+                                        </button>
+                                    </div>
+                                )
+                            }) : <h3>Looks like this post does not have any animals!</h3>}
+                        </div>
+                    ) : null}
                     <button onClick={() => deletePost(post)} className="message_btn_trash"><img src="https://cdn-icons-png.flaticon.com/512/1843/1843344.png" alt="trash icon" className="trash_icon"/></button>
                     <button onClick={() => setMode("edit")} className="edit_btn"><img className="edit_icon" src="https://cdn3.iconfinder.com/data/icons/feather-5/24/edit-512.png" alt="edit icon"/></button>
                 </div>

@@ -41,10 +41,20 @@ function UserPosts({user}) {
         })
     }
 
+    function tagAnimal(id) {
+        fetch(`/animals/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(id)
+        })
+    }
+
     return (
         <>
             <div className="posts_body">
-                {posts ? posts.map((post) => <UserPostCard key={post.id} post={post} handleUpdate={handleUpdate} deletePost={deletePost}/>) : <h1 className="page_headers">Looks like you don't have any posts!</h1>}
+                {posts ? posts.map((post) => <UserPostCard key={post.id} post={post} handleUpdate={handleUpdate} deletePost={deletePost} tagAnimal={tagAnimal}/>) : <h1 className="page_headers">Looks like you don't have any posts!</h1>}
             </div>
         </>
     )
