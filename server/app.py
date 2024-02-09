@@ -126,6 +126,7 @@ class Animals(Resource):
             age=data["age"],
             location=data["location"],
             sex=data["sex"],
+            bio=data["bio"],
             currentOwner = user
         )
         

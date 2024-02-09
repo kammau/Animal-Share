@@ -14,19 +14,19 @@ function PostCard({post, tagAnimal}) {
         if (animalPhoto === 1) {
             return post.imgOne
         } 
-        else if (animalPhoto === 2) {
+        else if (animalPhoto === 2 && post.imgTwo !== "") {
             return post.imgTwo
         }
-        else {
+        else if (animalPhoto === 3 && post.imgThree !== "") {
             return post.imgThree
         }
     }
 
     function animalPhotoNum(animalPhoto) {
-        if (animalPhoto === 1 && post.imgTwo !== null) {
+        if (animalPhoto === 1 && post.imgTwo !== "") {
             setAnimalPhoto(2)
         }
-        else if (animalPhoto === 2 && post.imgThree !== null) {
+        else if (animalPhoto === 2 && post.imgThree !== "") {
             setAnimalPhoto(3)
         }
         else {
@@ -48,21 +48,23 @@ function PostCard({post, tagAnimal}) {
             <p>Posted By: {post.user.username}</p>
             <h3 className="post_body">{post.postBody}</h3>
             <br />
-            {post.animals ? post.animals.map((animal) => {
-                    return (
-                        <div className="animal_in_post">
-                            <h1>{animal.name}</h1>
-                            <img src={animal.img} className="post_animal_img" alt={`${animal.name}`}/>
-                            <p>Species: {animal.species}</p>
-                            <p>Breed: {animal.breed}</p>
-                            <p>Age: {animal.age}</p>
-                            <NavLink to={`/animals/${animal.id}`}><button className="post_more">MORE</button></NavLink>
-                            <button onClick={() => tagAnimal(animal.id)} className="animal_post_tag">
-                                <img className="tag_icon" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/>
-                            </button>
-                        </div>
-                    )
-            }) : null}
+            <div className="animals_in_posts">
+                {post.animals ? post.animals.map((animal) => {
+                        return (
+                            <div className="animal_in_post">
+                                <h1>{animal.name}</h1>
+                                <img src={animal.img} className="post_animal_img" alt={`${animal.name}`}/>
+                                <p>Species: {animal.species}</p>
+                                <p>Breed: {animal.breed}</p>
+                                <p>Age: {animal.age}</p>
+                                <NavLink to={`/animals/${animal.id}`}><button className="post_more">MORE</button></NavLink>
+                                <button onClick={() => tagAnimal(animal.id)}className="animal_post_tag">
+                                    <img className="tag_icon" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/tag-512.png" alt="tag icon"/>
+                                </button>
+                            </div>
+                        )
+                }) : null}
+            </div>
             {messageView ? (
                 <div className="specific_message">
                     {handleSendTo(post.user.username)}

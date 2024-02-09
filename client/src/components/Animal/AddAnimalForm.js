@@ -11,7 +11,7 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
         location: yup.string(),
         sex: yup.string(),
         img: yup.string().required("Please enter a picture of your animal"),
-        bio: yup.string().required("Please enter some basic information about your animal (25-150)").min(25, "Please enter at least 25 characters").max(150, "Max characters!")
+        bio: yup.string().required("Please enter some basic information about your animal (25-150)").min(25, "Please enter at least 25 characters").max(150, "Please enter no more than 150 characters")
     })
 
     const formik = useFormik({
@@ -81,7 +81,7 @@ function AddAnimalForm({animals, setAnimals, setAddBtn}) {
                         <input type="text" name="img" value={formik.values.img} onChange={formik.handleChange} placeholder="IMAGE URL" className="forms_inputs"/>
                         <p className="form_errors">{formik.errors.img}</p>
                     
-                        <textarea rows="4" cols="50" placeholder="Bio" id="animal_bio_in"></textarea>
+                        <textarea rows="4" cols="50" name="bio" placeholder="Bio" id="animal_bio_in" value={formik.values.bio} onChange={formik.handleChange}></textarea>
                         <p className="form_errors">{formik.errors.bio}</p>
                     </div>
 

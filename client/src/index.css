@@ -435,7 +435,7 @@ body {
     padding: 1rem;
     border-radius: 0.75em;
     font-family: sans-serif;
-    width: 100%;
+    width: 110%;
     height: fit-content;
     margin-bottom: 50px;
     background-color: #E6E6FA;
@@ -477,12 +477,15 @@ body {
 }
 
 .post_animal_img {
-    width: 175px;
+    position: relative;
+    margin: auto;
+    width: 50%;
     height: 150px;
     border-radius: 10px;
 }
 
 .animal_in_post {
+    text-align: center;
     border: rgb(40, 73, 164) solid 1px;
     border-radius: 10px;
     width: 350px;
@@ -497,6 +500,12 @@ body {
         transform: scale(1.1);
         box-shadow: 3px 3px 2px #074754; 
     }
+}
+
+.animals_in_posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
 }
 
 .animal_post_tag {
@@ -820,18 +829,14 @@ body {
 }
 
 .post_more {
+    text-decoration: none;
     width: 65px;
     height: 65px;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.5s;
     position: absolute;
-    left: 85px;
-
-    &:hover {
-        box-shadow: 3px 3px #6fc5ff50;
-        transform: scale(1.1);
-    }
+    left: 95px;
 }
 
 .message_btn_in_post {
