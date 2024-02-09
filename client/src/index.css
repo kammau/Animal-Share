@@ -463,9 +463,13 @@ body {
 .post_title {
     text-decoration: underline;
     position: absolute;
-    top: 8px;
+    top: 0;
     left: 16px;
     font-size: 30px;
+    background-color: #D8BFD8;
+    border-radius: 50px;
+    border: #E6E6FA solid 2px;
+    padding: 5px;
 }
 
 .post_body {
@@ -474,6 +478,10 @@ body {
     width: 300px;
     top: 100px;
     right: 75px;
+    background-color: #D8BFD8;
+    border-radius: 50px;
+    border: #E6E6FA solid 2px;
+    padding: 15px;
 }
 
 .post_img_container {
@@ -485,7 +493,7 @@ body {
     height: 350px;
     width: 350px;
     border-radius: 20px;
-    margin-top: 50px;
+    margin-top: 75px;
 }
 
 .post_animal_img {
@@ -775,8 +783,8 @@ body {
 /* SPECFIC MESSAGE */
 .specific_message {
     position: absolute;
-    right: 125px;
-    bottom: 100px;
+    right: 75px;
+    top: 250px;
 }
 
 .specific_msg_in {
