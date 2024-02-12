@@ -16,17 +16,20 @@ function TaggedAnimalCard({animal, setTaggedAnimals}) {
         fetch(`/tagged_animals/${animal.id}`, {
             method: "DELETE",
         })
-
-        fetch("/tagged_animals")
-        .then((res) => res.json())
-        .then((res) => {
-            if (res.status === 200) {
-                setTaggedAnimals(res)
-            }
-            else {
-                setTaggedAnimals()
-            }
+        .then((res) => res.json)
+        .then(() => {
+            fetch("/tagged_animals")
+            .then((res) => {
+                if (res.status === 200) {
+                    return res.json().then((res) => setTaggedAnimals(res))
+                }
+                else {
+                    return setTaggedAnimals()
+                }
+            })
         })
+
+
     }
 
     return (

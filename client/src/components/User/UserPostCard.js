@@ -22,19 +22,19 @@ function UserPostCard({post, handleUpdate, deletePost, tagAnimal}) {
         if (animalPhoto === 1) {
             return post.imgOne
         } 
-        else if (animalPhoto === 2) {
+        else if (animalPhoto === 2 && post.imgTwo !== "") {
             return post.imgTwo
         }
-        else {
+        else if (animalPhoto === 3 && post.imgThree !== "") {
             return post.imgThree
         }
     }
 
     function animalPhotoNum(animalPhoto) {
-        if (animalPhoto === 1) {
+        if (animalPhoto === 1 && post.imgTwo !== "") {
             setAnimalPhoto(2)
         }
-        else if (animalPhoto === 2) {
+        else if (animalPhoto === 2 && post.imgThree !== "") {
             setAnimalPhoto(3)
         }
         else {
