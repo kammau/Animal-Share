@@ -809,6 +809,12 @@ body {
     }
 }
 
+#specific_message_back {
+    background-color: #3d94cf;
+    padding: 5px;
+    border-radius: 10px;
+}
+
 
 
 
@@ -927,3 +933,4 @@ body {
     box-shadow: 3px 3px #6fc5ff50;
     transform: scale(1.1);
 }
+
