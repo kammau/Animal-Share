@@ -26,8 +26,8 @@ function MessageCard({message, deleteMessage}) {
                 {replyView ? (
                     <div>
                         {handleSendTo(message.sender)}
-                        <button onClick={() => setReplyView(false)} className="cancel_btn">Cancel</button>
                         <SpecificMessage />
+                        <button onClick={() => setReplyView(false)} className="animal_msg_btns">Cancel</button>
                     </div>
                 ) : null}
             </div>

@@ -136,23 +136,6 @@ class Animals(Resource):
         db.session.commit()
 
         return new_animal.to_dict(), 201
-    
-
-
-class AnimalById(Resource):
-    def patch(self, id):
-        animal = Animal.query.filter(Animal.id == id).first()
-        user = User.query.filter(User.id == session["user_id"]).first()
-
-        user.taggedAnimals.append(animal)
-        animal.taggedBy.append(user)
-
-        db.session.add(user)
-        db.session.add(animal)
-
-        db.session.commit()
-
-        return {}, 202
         
 
 # MESSAGES:
@@ -294,8 +277,10 @@ class AnimalById(Resource):
         animal = Animal.query.filter(Animal.id == id).first()
         user = User.query.filter(User.id == session["user_id"]).first()
 
+        user.taggedAnimals.append(animal)
         animal.taggedBy.append(user)
 
+        db.session.add(user)
         db.session.add(animal)
         db.session.commit()
 
