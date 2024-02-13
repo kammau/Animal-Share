@@ -32,7 +32,7 @@ function NewPostForm({setAddBtn, setPosts, posts}) {
             animals: [],
         },
         validationSchema: formSchema,
-        onSubmit: (values) => {
+        onSubmit: (values, {resetForm}) => {
             fetch("/posts", {
                 method: "POST",
                 headers: {
@@ -42,6 +42,8 @@ function NewPostForm({setAddBtn, setPosts, posts}) {
             })
             .then((res) => res.json())
             .then((res) => setPosts([...posts, res]))
+
+            resetForm()
         }
     })
 
