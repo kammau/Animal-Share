@@ -334,6 +334,14 @@ class UserAnimalById(Resource):
         db.session.commit()
 
         return animal.to_dict(), 202
+    
+    def delete(self, id):
+        animal = Animal.query.filter(Animal.id == id).first()
+
+        db.session.delete(animal)
+        db.session.commit()
+
+        return {}, 202
 
 
 
