@@ -101,7 +101,7 @@ function UserAnimalCard({animal, handleUpdate, handleDelete}) {
 
                         <button type="submit" className="update_btn">Update</button>
                     </form>
-                    <button onClick={() => setMode("view")} className="cancel_btn">Cancel</button>
+                    <button onClick={() => setMode("view")} className="animal_msg_btns">Cancel</button>
                 </div>
             )}
         </div>

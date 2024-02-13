@@ -78,8 +78,8 @@ function AnimalById() {
                         {messageView ? (
                             <div>
                                 {handleSendTo(animal.currentOwner.username)}
-                                <button onClick={() => setMessageView(false)} className="cancel_btn">Cancel</button>
                                 <SpecificMessage />
+                                <button onClick={() => setMessageView(false)} className="animal_msg_btns">Cancel</button>
                             </div>
                         ) : null}
 
