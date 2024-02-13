@@ -1,7 +1,7 @@
 # phase-5-project
 
-## What Is Petify?
-Petify is an interactive full-stack project that incorporates languages and technologies such as python3, flask-sqlalchemy, react, js, and redux. This web application is for pet owners looking to re-home their pets more easily and efficiently. It also allows people who may be looking for a new companion to be able to in an easier fashion without being overwhelmed.
+## What Is Animal Share?
+Animal Share is an interactive full-stack project that incorporates languages and technologies such as python3, flask-sqlalchemy, react, js, and redux. This web application is for pet owners looking to re-home their pets more easily and efficiently. It also allows people who may be looking for a new companion to be able to in an easier fashion without being overwhelmed.
 
 ## Setup
 To begin setup, fork, and clone this repository and head over to its directory in your terminal. To install the dependencies for the front end, in the `/client` directory type `npm install`. After that is complete, open a new terminal in this repos main directory and enter the pipenv virtual environment by typing `pipenv shell`. Head over to the `/server` directory and type `python seed.py`, to begin seeding the database. Once that has been completed you can launch the backend by typing `python app.py`. Back in your original terminal window type `npm start` in the `/client` directory to launch the front end. You are now ready to use this web application!
@@ -10,7 +10,7 @@ To begin setup, fork, and clone this repository and head over to its directory i
 On opening this web application, you will be brought to the Signup page. You can toggle between the Login page and the Signup page with the two buttons at the bottom of the form. To Login or Signup type in a username and password, which will be stored in the database for future logins.
 
 ## Animals
-Selecting Animals in the NavBar will take you to the Animals page. You should see two animal cards rendered with the seed data. To tag an animal click on the tag icon this will store the animal in your Tagged Animals section for later. To message an animal's current owner press the message icon to fill out and send a message. 
+Selecting Animals in the NavBar will take you to the Animals page. You should see two animal cards rendered with the seed data. To tag an animal click on the tag icon this will store the animal in your Tagged Animals section for later. To message an animal's current owner press the message icon to fill out and send a message. To find more information about the animal, press the More button. This will take you to that animal-specific page where you can find their bio, information card, and any posts they may appear in.
 
 ### Search Animals
 If you want to narrow your animal search down, you can do so by using the select box next to the search bar and selecting a specific search filter. The search filters go by breed, age, species, and sex. After selecting a filter, you can then use the search bar to enter a specific attribute. For example, if I had the species filter on I may type Cat to find all the cat animals. If a filter is not selected, the search will automatically default to breed.
