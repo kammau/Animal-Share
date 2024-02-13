@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import * as yup from "yup";
 
 function UserPostCard({post, handleUpdate, deletePost, tagAnimal}) {
     const [mode, setMode] = useState("view")
@@ -17,6 +18,15 @@ function UserPostCard({post, handleUpdate, deletePost, tagAnimal}) {
         })
         .then((res) => setUserAnimals(res))
     }, [])
+
+    const formSchema = yup.object().shape({
+        title: yup.string().required("Please give your post a title"),
+        postBody: yup.string().required("Please enter text for your post").min(10, "Must have at least 10 characters").max(200, "Must not exceed 200 characters"),
+        numOfAnimals: yup.number().required("Please enter number of animals in post"),
+        imgOne: yup.string().required("Must have at least one Animals image"),
+        imgTwo: yup.string().notRequired(),
+        imgThree: yup.string().notRequired()
+    })
 
     function imageSrc(animalPhoto) {
         if (animalPhoto === 1) {
@@ -52,6 +62,7 @@ function UserPostCard({post, handleUpdate, deletePost, tagAnimal}) {
             numOfAnimals: post.numOfAnimals,
             animals: []
         },
+        validationSchema: formSchema,
         onSubmit: (values) => {
             fetch(`/my_account/posts/${post.id}`, {
                 method: "PATCH",
@@ -109,22 +120,27 @@ function UserPostCard({post, handleUpdate, deletePost, tagAnimal}) {
                         <label htmlFor="title">Title:</label>
                         <br />
                         <input type="text" name="title" value={formik.values.title} onChange={formik.handleChange} className="forms_inputs"/>
+                        <p className="form_errors">{formik.errors.title}</p>
 
                         <br />
                         <label htmlFor="postBody">Post Body:</label>
                         <input type="text" name="postBody" value={formik.values.postBody} onChange={formik.handleChange} className="forms_inputs"/>
+                        <p className="form_errors">{formik.errors.postBody}</p>
 
                         <br />
                         <label htmlFor="imgOne">First Image:</label>
                         <input type="text" name="imgOne" value={formik.values.imgOne} onChange={formik.handleChange} className="forms_inputs"/>
+                        <p className="form_errors">{formik.errors.imgOne}</p>
 
                         <br />
                         <label htmlFor="imgTwo">Second Image:</label>
                         <input type="text" name="imgTwo" value={formik.values.imgTwo} onChange={formik.handleChange} className="forms_inputs"/>
+                        <p className="form_errors">{formik.errors.imgTwo}</p>
 
                         <br />
                         <label htmlFor="imgThree">Third Image:</label>
                         <input type="text" name="imgThree" value={formik.values.imgThree} onChange={formik.handleChange}  className="forms_inputs"/>
+                        <p className="form_errors">{formik.errors.imgThree}</p>
 
                         <select name="numOfAnimals" onChange={formik.handleChange} values={formik.values.numOfAnimals} className="forms_inputs" id="animal_num_spec">
                             <option disabled>Select Number of Animals</option>
@@ -132,6 +148,7 @@ function UserPostCard({post, handleUpdate, deletePost, tagAnimal}) {
                             <option name="two" value={2}>2</option>
                             <option name="three" value={3}>3</option>
                         </select>
+                        <p className="form_errors">{formik.errors.numOfAnimals}</p>
 
                         <div id="animal_select_spec">
                             {userAnimals ? userAnimals.map((animal) => {
